@@ -1,0 +1,555 @@
+── fable (claude-fable-5) · exit 0 ──
+계산이 끝났습니다. 결과를 바탕으로 리뷰를 작성합니다.
+
+---
+
+# H-PH-9 적대적 리뷰
+
+## 1. 가장 강한 진짜 결과
+
+**이 문서 고유의 결과 중 생존하는 것은 없다.** 문서 안에서 참이고 비자명한 유일한 항목은 "496 = dim(E₈×E₈) = dim(SO(32))이 완전수"인데, 이는 1984년 Green–Schwarz 변칙 상쇄(=양자 이론의 일관성 조건) 직후부터 알려진 기존의 curiosity이고, 구조적 설명도 이미 있다: 모든 짝수 완전수는 삼각수 T(M_p)이고 dim SO(n) = T(n−1)이므로, dim SO(32) = T(31) = 496은 "31이 메르센 소수"라는 사실의 자동 귀결이다. 완전수성은 변칙 상쇄 계산 어디에도 입력되지 않는다. φ(496)=240=|E₈ 근계| 역시 φ(2⁴·31)=8·30=240이라는 산술과 240=112+128이라는 E₈ 구조 사이에 알려진 연결이 없는 수치 일치다. 문서가 새로 보탠 것은 재라벨링뿐이다.
+
+## 2. 가장 심각한 결함
+
+**차원 있는(dimensionful) 양을 임의의 인간 단위로 맞춘 것.** 질량 공식들은 전부 MeV 단위의 정수를 표적으로 삼는다. MeV는 전자볼트라는 인간 관습의 산물이라, 단위를 eV나 kg으로 바꾸면 m_τ=1776, m_μ=106 같은 정수 일치는 전부 소멸한다. 물리 이론은 무차원 비율만 단위 무관하게 예측할 수 있다 — 이 문서의 "적중"은 (임의 단위 선택) × (사후 공식 탐색) × (느슨한 상대오차 채점)의 곱이다. 우주론 항목은 더 노골적이다: 13.8 Gyr ↔ 138은 자릿수까지 10배 어긋난 단위 유희이고, CMB 2.725 K ≈ e는 켈빈이 임의 단위인 데다 CMB 온도 자체가 시대에 따라 변하는 양이다(재결합기엔 ~3000 K였다).
+
+그리고 측정 정밀도를 무시한 채점이 이 결함을 은폐한다. m_μ = 105.6583745(24) MeV인데 "106"은 **~10⁵σ로 배제**된 값이다. m_τ = 1776.86(12)에 대해 "1776"은 **~7σ 배제**다. 1/α = 137.035999…가 10자리 알려져 있는데 "137"은 4번째 자리에서 이미 틀렸다. 문서가 "0.048% 오차"라 부르는 것은 물리학 기준으로는 이미 반증된 예측이다. "CERN combined 6.4σ"는 체리피킹한 p값들을 독립 예측인 양 곱한 허구의 수치다.
+
+## 3. "5/5 차원 매칭" 항목별 감사
+
+| τ | 문서 주장 | 실제 | 판정 |
+|---|---|---|---|
+| 4 | 민코프스키 시공간 | 표준 | 참이나 정보량 0 (4는 어디에나 있음) |
+| 6 | 칼라비-야우 실차원 | CY 3-fold=실6차원, 표준 | 참 — 단, 10−4의 파생값 |
+| 10 | 초끈 임계차원 | 표준 | 참 |
+| 14 | **"G₂ 홀로노미 다양체"** | **거짓.** G₂ 홀로노미 다양체는 **7차원**. 14는 군 G₂의 차원(리 군의 차원 ≠ 다양체 차원) | **범주 오류로 만든 가짜 적중** |
+| 26 | 보손 끈 임계차원 | 표준이나, 보손 끈은 페르미온이 없고 타키온이 있어 통일 후보가 아님 | 절반 인정 |
+
+리스트가 시공간 차원(4, 10, 26), 콤팩트 다양체 차원(6), **군의 차원**(14)을 뒤섞고 있다 — 5/5를 만들기 위해 4번째 슬롯에서 범주를 바꿨다. 결정적으로: **τ(P_k)=2p는 항상 짝수이므로, 현대 통일 그림의 중심인 M이론의 11차원과 G₂ 다양체의 7차원은 이 수열에서 구조적으로 영원히 나올 수 없다.** 실제 점수는 후하게 쳐도 3.5/5이고, 수열의 다음 항 34, 38, 62 (p=17, 19, 31)에는 아무 물리도 배정되지 않은 채 매칭이 "편리한 지점에서" 멈춘다. 5/5가 아니다.
+
+## 4. 몬테카를로 널 모형 판정
+
+**p < 0.0002는 무의미한 숫자다.** 세 층위에서 틀렸다:
+
+- **(a) 추첨이 없었다.** τ(P_k)=2p는 결정론적 수열이다. "무작위로 5개 뽑으면"이라는 널 모형(=귀무가설 하의 확률 모형)은 실제로 일어난 어떤 과정과도 대응하지 않는다. 검정해야 할 것은 숫자의 무작위성이 아니라 **매핑 선택의 자유도**다.
+- **(b) 표적 집합이 사후 구성됐다.** {4,6,10,14,26}이라는 "물리적으로 의미 있는 리스트"는 수열을 본 뒤 조립됐고, 14는 3번에서 본 대로 오분류로 끼워 넣은 것이다. 사전에 표준 리스트 {4, 7, 10, 11, 26}을 고정했다면 매칭은 붕괴한다.
+- **(c) look-elsewhere(=다중 비교로 인한 유의성 부풀림).** {4,6,10,14,26} = 2×{2,3,5,7,13}, 즉 **소수 5개의 2배**일 뿐이다. 메르센 지수는 소수이므로 이 집합은 "2×소수" 수열의 부분수열이고, 단순히 2×(첫 소수들) = 4,6,10,14,22만 해도 같은 리스트에 4/5를 적중한다. 여기에 슬롯마다 불변량을 골라 쓰는 자유(τ, σ, φ, σφ, σ/τ, R, …)와 물리 정수 풀(3,4,8,10,11,12,16,24,26,32,56,240,248,496,…)에서 고르는 자유를 곱하면 유효 시도 횟수는 수천을 넘는다. kissing number "5/5"가 전형이다: 다섯 슬롯에 **다섯 개의 서로 다른 공식**(φP₁, P₁, σP₁, σφ, φP₃)을 배정했고, 차원 {1,2,3,4,8}은 정확히 값이 알려진 차원들만 골라낸 것이다.
+
+## 5. Look-elsewhere 정량화 — 실측
+
+알파벳 {2, 4, 6, 12, 48}, 연산 {+, −, ×, ÷, ^}로 표현식을 전수 열거했다(캡처: `/tmp/expr_density.py` 실행 출력):
+
+| 원자 수 | 서로 다른 양수 값 | 임의 표적(0.5~2×10⁵, 로그균등)이 3% 내 적중될 확률 | 0.05% 내 |
+|---|---|---|---|
+| ≤4개 (m_τ=12³+48이 정확히 4개) | 7,451 | **100%** | 23% |
+| ≤5개 (문서는 최대 7개까지 사용) | 110,118 | 100% | **89.7%** |
+
+표적별로 보면, ≤4원자만으로도 τ 질량 1776.86의 3% 이내에 **31개**의 값이 존재하고(0.5% 이내 4개), ≤5원자에서는 9개 페르미온 전부가 0.05% 이내로 적중 가능하며 up·charm·bottom은 **정확히 일치하는** 표현식까지 존재한다. 즉 "m_τ 오차 0.048%"는 기적이 아니라 **이 표현식 계열의 기본 명중률**이다 — 아무 숫자나 표적으로 줘도 4분의 1 확률로 그 정밀도가 나오고, 공식을 하나만 더 길게 쓰면 거의 확실히 나온다. 문서 스스로 인정한 "평균 오차 1.9%"는 이 계열에서는 성과가 아니라 바닥값이다.
+
+## 6. "진짜 유도" 항목 검증
+
+| 항목 | 산술 | 물리 식별의 정보량 | 판정 |
+|---|---|---|---|
+| σ(6)=12 = SM 게이지 차원 | 참 (완전수 정의상 σ=2n) | 12는 게이지 보손 12개, 페르미온 향 12개(쿼크6+렙톤6) 등 무수한 것과 일치. 6에서 SU(3)×SU(2)×U(1)이라는 **구조**는 전혀 안 나옴 | 작은 정수 우연 |
+| 12 = 8+3+1 "유일 분해" | 분해 자체는 참 | **유일하지 않음**: 단순 리 대수 차원만으로도 3+3+3+3, 8+1+1+1+1 등 가능. "정확히 3개 항, 서로 다른 단순 인자"를 요구해야 유일 — 즉 답을 조건에 심은 것 | 거짓 유일성 |
+| τ(6)=4 = 시공간 차원 | 참 | 왜 τ인가? 슬롯마다 불변량을 골랐음. 4는 어디에나 있음 | 정보량 0 |
+| φ(6)=2 = 중력자 편광 | 참 | 2는 광자 편광, 스핀 상태, 모든 질량 없는 헬리시티 쌍과도 일치 | 정보량 0 |
+| σ/τ=3 = 세대 수 | 참 | 3은 색, 공간 차원, 세대 무엇과도 매칭됨 | 정보량 0 |
+| K=2/3 = τ(6)/P₁ | — | **4/6 = 2/3은 항등식이다. 유도가 아니다.** 분수 2/3을 다른 표기로 쓴 것에 불과. Koide 관계 0.666661≈2/3 자체는 진짜 흥미로운 경험적 사실(1981, Koide)이지만, 그 **이유**에 대해 이 문서는 0비트를 보탠다 | 항등식 재표기 |
+
+"S(n)=0이 강제한다"는 것은 6이 완전수라는 산술뿐이고, 물리 라벨은 전부 자유 선택이다. 여섯 항목 모두 정보를 담지 않는다.
+
+## 7. 판정
+
+**🔴 수비학(numerology).**
+
+문서의 유일한 미덕은 FITTED/[MODEL] 태그로 사후성을 스스로 표기한 정직성인데, 헤드라인("p<0.0002, 6.4σ")에서 그 양보를 스스로 무효화한다. 핵심 매칭 5/5는 범주 오류(14=G₂ 군 차원 ≠ 7차원 다양체)로 부풀려졌고 11차원은 구조적으로 도달 불가하며, 몬테카를로는 존재하지 않는 추첨을 검정한 무의미한 p값이고, 질량 공식은 임의 단위 위에서 명중률 ~100%인 표현식 계열의 사후 탐색이며, 정밀 측정치(m_μ 9자리)와 대조하면 이미 수천 σ로 **반증된** 상태다. "진짜 유도" 항목들은 전부 작은 정수의 재라벨링 또는 항등식이다. 살아남는 것은 문서 이전부터 알려진 496 curiosity 하나뿐이고, 그것도 문서의 기여가 아니다.
+
+**최저비용 결정 절차: 추가 측정이 필요 없다 — 이미 결정됐다.** m_μ = 105.6583745(24) MeV는 "106"을, 1/α = 137.035999…는 "137"을 이미 배제한다. 그래도 문서에 반증 기회를 준다면 단 하나를 요구하면 된다: **수열의 다음 항 τ=34, 38, 62 (p=17, 19, 31)의 물리적 의미를, 결과를 보기 전에 사전 등록(pre-registration)하라.** 매핑에 실제 정보가 있다면 수열은 계속 적중해야 하고, 없다면 — 지금까지의 모든 증거가 가리키듯 — 거기서 멈춘다.
+
+── sol (gpt-5.6-sol) · exit 0 ──
+OpenAI Codex v0.144.6
+--------
+workdir: /Users/mini/dancinlab/universe
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: high
+reasoning summaries: none
+session id: 019f954e-4eda-7461-a528-79600f09c6ed
+--------
+user
+# Task: adversarial review of a numerology-adjacent physics hypothesis document
+
+Answer in KOREAN. Be rigorous, specific, and adversarial — your job is to find where this fails, and to
+say clearly what (if anything) genuinely survives. Do not be polite about weak arguments, and do not
+dismiss the parts that are actually correct.
+
+## The document under review
+
+`H-PH-9: Perfect Number Unification Pattern — Standard Model + Gravity + Mass`, from a private research
+repo. ~2,800 lines, 47 sections. Self-assessed status: "Structural (p < 0.0002, CERN combined 6.4σ)".
+
+### Its central claim
+
+For even perfect numbers P_k = 2^(p-1)(2^p - 1) with M_p = 2^p - 1 Mersenne prime, the divisor count is
+τ(P_k) = 2p. The first five values are 4, 6, 10, 14, 26. The document maps these onto string theory
+dimensions:
+
+| P_k | τ | σ | φ | claimed physical meaning |
+|---|---|---|---|---|
+| 6 | 4 | 12 | 2 | Minkowski 4D observable spacetime |
+| 28 | 6 | 56 | 12 | Calabi-Yau compact dimensions |
+| 496 | 10 | 992 | 240 | superstring spacetime |
+| 8128 | 14 | 16256 | 4032 | G₂ holonomy manifold |
+| 33550336 | 26 | — | — | bosonic string spacetime |
+
+Supporting arithmetic it treats as significant:
+- σ(6)=12 = dim(su(3)⊕su(2)⊕u(1)) with the unique decomposition 12 = 8+3+1
+- φ(6)=2 = graviton polarization DOF; σ/τ = 3 = number of fermion generations
+- R(6) = σφ/(nτ) = 24/24 = 1, called the "Standard Model + Gravity unification equation"
+- τ(P₁)+τ(P₂) = 4+6 = 10 = τ(P₃); τ(P₅)−τ(P₃) = 26−10 = 16 = rank(E₈×E₈) = rank(SO(32))
+- 496 = dim(E₈×E₈) = dim(SO(32)); φ(496) = 240 = |E₈ root system|; σ(28) = 56 = dim of E₇ fundamental rep
+- kissing numbers: k(1)=2=φ(P₁), k(2)=6=P₁, k(3)=12=σ(P₁), k(4)=24=σφ, k(8)=240=φ(P₃) — "5/5 exact"
+
+Physics "predictions" it derives from the fixed set {σ=12, τ=4, φ=2, P₁=6, R(P₃)=48}:
+- 1/α = σ² − P₁ − R = 144−6−1 = 137 (measured 137.036, error 0.026%)
+- Koide ratio K = 2/3 = τ(6)/P₁ = 4/6 (measured 0.666661)
+- Koide angle δ = 2/9 = φτ²/σ²
+- m_τ = σ³ + R(P₃) = 1728 + 48 = 1776 MeV (measured 1776.86, error 0.048%)
+- m_μ = σ(28)·φ(6) − τ(28) = 112 − 6 = 106 MeV (measured 105.66, 0.3%)
+- m_down = τ(1 + φ/σ) = 14/3 = 4.667 (measured 4.67, 0.07%)
+- m_top = σ³(σ² − στ + τ) = 172800 (measured 172500, 0.17%)
+- m_bottom = φ^σ = 2^12 = 4096 (measured 4180, 2.0%)
+- m_strange = σ(σ−τ) = 96 (measured 93.4, 2.8%)
+- m_charm = σ²(σ−τ+R) = 1296 (measured 1270, 2.0%)
+- m_electron = φ/τ = 0.5 (measured 0.511, 2.2%); m_up = φ = 2 (measured 2.16, 7.4%)
+- claimed: 3 of 9 fermions under 0.2% error, average error 1.9%
+- age of universe 13.8 Gyr = σ²−P₁ = 138; Hubble ~70 = σP₁−φ = 70; CMB 2.725 K ≈ e
+
+### Its own defence against the Texas sharpshooter objection
+
+Monte Carlo, N = 1,000,000: "when drawing 5 even numbers at random from {4, 6, ..., 62}, how often do
+you match all of {4, 6, 10, 14, 26}?" Result: 10/1M for 5/5, 179/1M for "4 strong matches", stated as
+p < 0.0002. Combinatorially C(26,1)/C(30,5) = 0.000182. Conclusion asserted: "this mapping is not
+coincidental."
+
+### What the document itself concedes
+
+It separates "genuinely derived (forced by S(n)=0)" — σ(6)=12, 12=8+3+1, τ(6)=4, φ(6)=2, σ/τ=3,
+Koide 2/3 and δ=2/9 — from "FITTED (formula choice is post-hoc)": 1/α, Higgs mass, all fermion mass
+formulas, Weinberg angle denominators. Appendix B admits quark formulas are post-hoc, and that the
+CP exponent 4 in J = A/σ⁴ is unproven. Several sections are tagged [MODEL] or [CONJECTURAL].
+
+## What I want back
+
+1. **The single strongest genuine result** in here, if any — something that is true, non-trivial, and not
+   reachable by free-parameter fitting. If there is none, say so plainly.
+
+2. **The single most serious defect.** Be concrete about the mechanism of the error, not just the label.
+
+3. **Audit the 5/5 dimensional match, item by item.** Is 4 = Minkowski, 6 = Calabi-Yau real dimension,
+   10 = superstring, 14 = G₂ holonomy, 26 = bosonic string each a genuine, standard identification?
+   Pay particular attention to whether "14 = G₂ holonomy manifold" is correct, and to the fact that
+   M-theory's 11 dimensions do not appear anywhere in the sequence 4, 6, 10, 14, 26. State whether the
+   claimed match is really 5/5.
+
+4. **Judge the Monte Carlo null model.** Is "draw 5 even numbers at random from {4..62}" the right null
+   for this claim? Consider: (a) the sequence 2p over Mersenne exponents is deterministic, not a draw;
+   (b) the target set was chosen after seeing the numbers; (c) how many other well-known integer
+   sequences of small even numbers would have produced a comparable "match" against some list of
+   physically meaningful integers. Is p < 0.0002 a meaningful number here?
+
+5. **The look-elsewhere problem in the mass formulas.** The formulas are unconstrained arithmetic
+   expressions over the small set {2, 4, 6, 12, 48}. Estimate how much hitting power that expression
+   family has: roughly how many distinct values within, say, 3% of a given target can be built from
+   short expressions over that alphabet? What does that do to a quoted "0.048% error" for one particle?
+
+6. **Which of the "genuinely derived" items actually survive** your scrutiny? For each of σ(6)=12 = SM
+   gauge dimension, 12 = 8+3+1, τ(6)=4 = spacetime, φ(6)=2 = graviton DOF, σ/τ=3 = generations,
+   K = 2/3 = τ/P₁ — say whether the identification carries information or is a coincidence of small
+   integers, and why. Note explicitly that 2/3 = 4/6 is an identity, not a derivation.
+
+7. **A verdict** in one of: 🟢 실질적 결과 있음 · 🟠 부분적 · 🧱 판정 보류(측정 불가) · 🔴 수비학(numerology).
+   One paragraph of justification. Then: what single measurement or calculation would most cheaply
+   settle it?
+
+Format: Korean, concise, tables where a table fits. No filler, no hedging into vagueness.
+
+codex
+요구하신 기준대로 산술적 사실, 표준 물리학의 차원 진술, 통계적 유의성 주장을 분리해 검증하겠습니다. 특히 G₂의 ‘14’가 군의 차원인지 다양체의 차원인지, 그리고 식 문법의 탐색 자유도가 질량 적중률을 얼마나 부풀리는지 정량적으로 보겠습니다.
+web search: 
+web search: site:arxiv.org G2 holonomy manifolds seven dimensional G2 dimension 14 ...
+web search: 
+web search: site:arxiv.org/abs "manifold of G2 holonomy" "seven-dimensional" ...
+web search: 
+web search: G2 holonomy seven dimensional manifolds Bryant Salamon pdf ...
+codex
+핵심 오류는 이미 드러납니다. \(G_2\)-홀로노미 다양체는 7차원이고, 14는 다양체 차원이 아니라 예외 리군 \(G_2\) 자체의 차원입니다. 따라서 문서가 정의한 다섯 번째 ‘정확 일치’ 중 하나는 범주를 바꿔 끼운 오답입니다. 나머지 네 항목과 통계·질량식 탐색량은 별도로 계산 중입니다.
+exec
+/bin/zsh -lc "python3 -c 'from fractions import Fraction
+C={Fraction(x) for x in (2,4,6,12,48)}
+S=[set(),C]
+B=10**7
+for n in range(2,6):
+ o=set()
+ for i in range(1,n):
+  for a in S[i]:
+   for b in S[n-i]:
+    vals=(a+b,a-b,a*b) + ((a/b,) if b else ())
+    for v in vals:
+     if abs(v)<=B and v.denominator<=1000000:o.add(v)
+ S.append(o)
+ U=set().union(*S[1:])
+ print(n,len(S[n]),len(U))
+targets=[.511,2.16,4.67,93.4,105.66,1270,1776.86,4180,172500,137.036]
+for n in (3,4,5):
+ U=set().union(*S[1:n+1])
+ print(\"leaves\",n)
+ for t in targets:
+  band=sum(1 for v in U if v>0 and abs(float(v)-t)/t<=.03)
+  nearest=min((abs(float(v)-t)/t,float(v)) for v in U if v>0)
+  print(t,band,nearest)
+'" in /Users/mini/dancinlab/universe
+ succeeded in 780ms:
+2 47 47
+3 494 494
+4 4685 4685
+5 49354 49354
+leaves 3
+0.511 1 (0.02152641878669278, 0.5)
+2.16 2 (0.003086419753086285, 2.1666666666666665)
+4.67 2 (0.0007137758743753675, 4.666666666666667)
+93.4 3 (0.006423982869378953, 94.0)
+105.66 2 (0.015710770395608524, 104.0)
+1270 0 (0.09291338582677165, 1152.0)
+1776.86 1 (0.027497945814526695, 1728.0)
+4180 0 (0.10239234449760766, 4608.0)
+172500 0 (0.35888695652173913, 110592.0)
+137.036 2 (0.00703464782976735, 138.0)
+leaves 4
+0.511 17 (0.000707831952367171, 0.5106382978723404)
+2.16 16 (0.003086419753086285, 2.1666666666666665)
+4.67 5 (0.0007137758743753675, 4.666666666666667)
+93.4 19 (0.004282655246252738, 93.0)
+105.66 3 (0.003217868635245158, 106.0)
+1270 2 (0.01732283464566929, 1248.0)
+1776.86 12 (0.00048399986493021397, 1776.0)
+4180 1 (0.010526315789473684, 4224.0)
+172500 0 (0.0383304347826087, 165888.0)
+137.036 5 (0.00703464782976735, 138.0)
+leaves 5
+0.511 169 (0.0002174385736028608, 0.5111111111111111)
+2.16 102 (0.0, 2.16)
+4.67 83 (0.00028451206181408136, 4.671328671328672)
+93.4 197 (5.787371954387367e-05, 93.4054054054054)
+105.66 56 (0.000567859170925632, 105.6)
+1270 35 (0.0015748031496062992, 1272.0)
+1776.86 72 (0.00048399986493021397, 1776.0)
+4180 27 (0.0009569377990430622, 4176.0)
+172500 6 (0.0017391304347826088, 172800.0)
+137.036 63 (0.0002627046907382101, 137.0)
+
+web search: 
+web search: Green Schwarz anomaly cancellation dimension 496 SO(32) E8 E8 original paper ...
+web search: 
+web search: site:cds.cern.ch string theory critical dimension 26 10 lecture notes pdf ...
+web search: 
+web search: site:cds.cern.ch "six real dimensions" "Calabi-Yau threefold" ...
+exec
+/bin/zsh -lc "python3 -c 'from fractions import Fraction
+C={Fraction(x) for x in (2,4,6,12,48)};S=[set(),C];B=10**7
+for n in range(2,6):
+ o=set()
+ for i in range(1,n):
+  for a in S[i]:
+   for b in S[n-i]:
+    for v in ((a+b),(a-b),(a*b),*(() if not b else (a/b,))):
+     if abs(v)<=B and v.denominator<=1000000:o.add(v)
+ S.append(o)
+U=set().union(*S[1:]);print(len(U),sum(v>0 for v in U),sum(v==0 for v in U),sum(v<0 for v in U))
+for t,e in [(1776.86,.000484),(105.66,.00322),(172500,.00174)]:
+ print(t,sum(v>0 and abs(float(v)-t)/t<=e for v in U))'" in /Users/mini/dancinlab/universe
+ succeeded in 526ms:
+49354 27789 1 21564
+1776.86 1
+105.66 5
+172500 1
+
+web search: 
+web search: 
+codex
+## 1. 가장 강한 진짜 결과
+
+가장 강한 것은 \(496\)의 정확한 중첩이다.
+
+\[
+P_3=2^4(2^5-1)=496
+=\dim SO(32)
+=\dim(E_8\oplus E_8),
+\]
+
+\[
+\phi(496)=496\left(1-\frac12\right)\left(1-\frac1{31}\right)=240
+=|\,E_8\text{의 근계}\,|.
+\]
+
+\(SO(32)\)와 \(E_8\times E_8\)가 10차원 초중력의 이상 상쇄에 등장한다는 것은 실제 물리학이다. [Green–Schwarz 원 논문](https://www.sciencedirect.com/science/article/pii/037026938491565X)도 두 군을 명시한다.
+
+이것은 정확하고 비자명하며 임의 계수 피팅도 아니다. 다만 **새 물리 결과는 아니다**. 완전수 조건에서 Green–Schwarz 이상 다항식의 인수분해나 군의 trace identity가 유도되지 않는다. “496이 같다”는 관찰만 살아남는다.
+
+## 2. 가장 심각한 결함
+
+**사후선택된 가설 공간을 사전지정된 단일 가설처럼 취급한 것**이다.
+
+문서는 수열, 산술함수 \(\sigma,\tau,\phi\), 인덱스, 물리적 정수 목록, 식 문법, 단위와 질량 정의를 데이터를 본 뒤 선택했다. 그런 다음 선택된 한 조합만 고정되어 있었다고 가정하여 확률을 계산한다. 실제 귀무가설은 다음 전체 탐색을 포함해야 한다.
+
+\[
+\{\text{정수수열}\}\times
+\{\text{산술함수}\}\times
+\{\text{물리적 숫자·표현 차원}\}\times
+\{\text{식 문법}\}\times
+\{\text{단위·스케일}\}.
+\]
+
+이 시행 횟수는 정의조차 되어 있지 않다. 따라서 \(p<0.0002\)와 “6.4σ”는 계산된 유의도가 아니라 **누락된 시행 횟수를 1로 놓은 숫자**다.
+
+## 3. “차원 5/5” 감사
+
+| 값 | 주장 | 판정 | 문제 |
+|---:|---|---|---|
+| 4 | Minkowski 시공간 | 조건부 정답 | 관측 우주의 국소 시공간을 \(3+1\)차원으로 다루는 것은 표준적이다. 그러나 \(\tau(6)\)와의 연결은 없다. |
+| 6 | Calabi–Yau 압축 차원 | 조건부 정답 | 10차원 초끈을 4차원으로 압축할 때 Calabi–Yau 3-fold는 실수 6차원이다. 그러나 일반 Calabi–Yau가 반드시 6차원인 것은 아니다. 또한 \(6=10-4\)라 독립 적중이 아니다. |
+| 10 | 초끈 시공간 | 정답 | 임계 초끈의 시공간 차원은 10이다. |
+| 14 | \(G_2\) 홀로노미 다양체 | **오답** | \(G_2\)-홀로노미 다양체는 **7차원**이다. 14는 다양체가 아니라 리군 \(G_2\)의 차원이다. |
+| 26 | 보손 끈 시공간 | 정답 | 임계 보손 끈은 26차원이다. 다만 타키온과 시공간 페르미온 부재 때문에 현실적 통일 모형은 아니다. |
+
+10과 26의 표준 임계차원은 [CERN 초끈 강의](https://cds.cern.ch/record/2275452/files/chap_10_superstring_theory.pdf)에 명시되어 있다. 반면 M이론의 \(G_2\) 압축은 **11차원 \(=4+7\)**이며, CERN 논문도 “7-manifold with \(G_2\) holonomy”라고 쓴다. [CERN \(G_2\) compactification](https://cds.cern.ch/record/2224414?ln=en), [M이론 11차원 리뷰](https://arxiv.org/abs/hep-th/0111237).
+
+따라서 결론은 다음과 같다.
+
+- 사실 판정: **4/5**, 14는 명백한 범주 오류.
+- 독립적인 차원 일치: 최대 **3개**. 6은 10과 4에서 이미 따라온다.
+- \(\tau(P_k)=2p\)는 항상 짝수이므로 M이론의 11차원은 원리상 절대 나타나지 않는다.
+
+즉 “5/5 exact”는 거짓이다.
+
+## 4. Monte Carlo 귀무모형
+
+잘못된 귀무모형이다.
+
+1. \(\{4,6,10,14,26\}\)은 무작위 표본이 아니라 메르센 소수 지수 \(2,3,5,7,13\)을 두 배 한 결정론적 수열이다. 결정론적 수열에도 통계 검정을 할 수 있지만, 그 수열을 생성했다고 볼 정당한 확률모형이 필요하다. “4에서 62 사이의 균등한 짝수”에는 그런 근거가 없다.
+
+2. 목표 집합을 숫자를 본 뒤 골랐다. 특정한 5원소 집합은 어느 것이든 균등모형 아래 희귀하다. 이것은 의미론적 물리 대응의 희귀성을 측정하지 않는다.
+
+3. 정확한 고정 집합 하나의 확률은
+
+\[
+\frac1{\binom{30}{5}}
+=\frac1{142506}
+\simeq 7.02\times10^{-6}.
+\]
+
+백만 회 중 10회는 이 값과 대략 맞는다. 그러나 문서의
+
+\[
+\frac{\binom{26}{1}}{\binom{30}{5}}
+=1.82\times10^{-4}
+\]
+
+는 **26개의 성공 집합**을 세는 다른 사건이다. 정확한 5/5 사건과 같은 계산이 아니다.
+
+4. 비교 대상에는 다른 정수수열, 군·격자·다포체의 차원, 표현 차원, kissing number, 임계차원, 내부차원 등이 전부 포함되어야 한다. 이 목록과 선택 규칙이 사전등록되지 않았으므로 trial factor는 계산 불가능하다.
+
+따라서 \(p<0.0002\)는 이 주장에 대한 의미 있는 p값이 아니다. 참고로 \(p=0.0002\) 자체도 HEP식 단측 환산으로 약 \(3.54\sigma\)이지 \(6.4\sigma\)가 아니다. 별도 likelihood, 공분산, 독립성 검정이 없는 “CERN combined 6.4σ”에는 통계적 근거가 없다.
+
+## 5. 질량식의 look-elsewhere 효과
+
+보수적으로 다음만 허용해 직접 열거했다.
+
+- 알파벳: \(\{2,4,6,12,48\}\), 반복 허용
+- 연산: \(+,-,\times,/\)
+- 최대 5개 상수 잎
+- 지수, 자유 정수, \(R\) 같은 추가 함수는 제외
+
+이 제한만으로도 서로 다른 양의 유리수 **27,789개**가 생긴다. 각 표적의 \(\pm3\%\) 안에 들어오는 서로 다른 값의 수는 다음과 같다.
+
+| 표적 | 후보 수 |
+|---:|---:|
+| \(m_e=0.511\) | 169 |
+| \(m_u=2.16\) | 102 |
+| \(m_d=4.67\) | 83 |
+| \(m_s=93.4\) | 197 |
+| \(m_\mu=105.66\) | 56 |
+| \(m_c=1270\) | 35 |
+| \(m_\tau=1776.86\) | 72 |
+| \(m_b=4180\) | 27 |
+| \(m_t=172500\) | 6 |
+
+이는 **수식 개수**가 아니라 서로 다른 결과값 수다. 같은 값을 만드는 식은 훨씬 많다. 지수와 더 긴 식을 허용하면 탐색력은 폭증한다.
+
+특히 \(m_\tau\) 주변에는 6% 폭 안에 후보가 72개다. 국소적으로 균일하다고만 보아도 평균 간격은 약 \(6\%/72=0.083\%\), 표적에서 가장 가까운 값의 전형적 거리는 약 \(0.04\%\)다. 따라서 \(1776\)의 오차 \(0.0484\%\)는 이 탐색 밀도에서 놀랍지 않다.
+
+더 근본적으로 질량은 차원이 있다. 순수 정수식이 “MeV”를 산출한다는 것은 \(1\ {\rm MeV}\)라는 척도를 몰래 넣은 것이다. eV나 GeV로 바꾸면 패턴이 사라진다. 또한 쿼크 질량은 renormalization scheme과 scale에 의존하며, PDG 표에서도 \(u,d,s\), \(c,b\), \(t\)가 서로 다른 정의로 제시된다. [PDG quark summary](https://pdg.lbl.gov/2025/web/viewer.html?file=..%2Ftables%2Frpp2025-sum-quarks.pdf). 이를 한 숫자표에 섞어 맞추는 것은 물리적 질량 예측이 아니다.
+
+우주 나이 13.8, \(H_0\simeq70\), CMB \(2.725\simeq e\)도 같은 단위 의존적 숫자놀이이다.
+
+## 6. “진짜로 유도됨” 항목 감사
+
+| 항목 | 산술 | 물리적 정보량 |
+|---|---|---|
+| \(\sigma(6)=12=\dim G_{\rm SM}\) | 참 | 거의 없음. 같은 차원은 같은 군을 뜻하지 않는다. 군 구조, 표현, chirality, 결합상수는 전혀 나오지 않는다. |
+| \(12=8+3+1\) | 참 | “유일”은 거짓. \(3+3+3+3\), \(8+1+1+1+1\) 등 다른 리대수 차원 분해가 많다. 이미 SM 군을 지정하면 \(8+3+1\)은 단순 차원 계산이다. |
+| \(\tau(6)=4=\) 시공간 | 참/사후 동일시 | 4가 나왔다는 것 외에 Lorentz signature, 국소성, 계량, 장방정식이 없다. |
+| \(\phi(6)=2=\) 중력자 DOF | 참/순환적 | 4차원 무질량 spin-2의 편광이 2인 것은 \(D(D-3)/2\)에서 나온다. 먼저 \(\tau=4\)를 시공간 차원으로 선언한 뒤 \(\phi=2\)를 비교하므로 독립 증거가 아니다. |
+| \(\sigma/\tau=12/4=3=\) 세대 | 참/우연 | 세대 구조나 Yukawa 행렬을 생성하는 메커니즘이 없다. 작은 정수 3을 기존 관측값에 붙인 것이다. |
+| \(K=2/3=\tau/P_1=4/6\) | 항등식 | **\(2/3=4/6\)은 유도가 아니라 항등식이다.** 산술함수와 세 렙톤 질량을 연결하는 방정식이 없으므로 Koide 관계를 설명하거나 예측하지 않는다. |
+
+Koide 관계 자체는 흥미로운 경험적 규칙이다. 그러나 \(2/3\)을 다른 방식으로 다시 쓰는 것은 이 문서의 성과가 아니다. \(\delta=2/9\)도 동일하다. \(\phi\tau^2/\sigma^2=2/9\)라는 산술 항등식은 렙톤 질량의 위상구조를 유도하지 않는다.
+
+## 7. 판결
+
+### 🔴 수비학(numerology)
+
+정확한 산술과 표준 물리 숫자가 몇 군데 만나는 것은 사실이며, 특히 496 중첩은 보존할 가치가 있는 비자명한 관찰이다. 그러나 동역학, 라그랑지언, 대칭 깨짐, 표현 내용, 스케일 생성 또는 사전등록된 예측이 전혀 없다. 5/5의 한 항목은 명백히 틀렸고, Monte Carlo는 선택 과정을 누락했으며, 질량식은 큰 표현 탐색 공간과 단위 선택으로 거의 임의의 표적을 맞출 수 있다. 그러므로 “구조적 유의성”, \(p<0.0002\), 6.4σ, “Standard Model + Gravity unification”은 성립하지 않는다.
+
+가장 싼 결판 방법은 **문법·단위·허용 상수·대상 관측량을 지금 사전등록하고, 아직 사용하지 않은 단 하나의 무차원 관측량을 수치와 오차까지 예측한 뒤 독립 측정으로 블라인드 검정하는 것**이다. 후향적 적중을 더 추가하는 계산은 아무것도 해결하지 못한다.
+tokens used
+77,733
+## 1. 가장 강한 진짜 결과
+
+가장 강한 것은 \(496\)의 정확한 중첩이다.
+
+\[
+P_3=2^4(2^5-1)=496
+=\dim SO(32)
+=\dim(E_8\oplus E_8),
+\]
+
+\[
+\phi(496)=496\left(1-\frac12\right)\left(1-\frac1{31}\right)=240
+=|\,E_8\text{의 근계}\,|.
+\]
+
+\(SO(32)\)와 \(E_8\times E_8\)가 10차원 초중력의 이상 상쇄에 등장한다는 것은 실제 물리학이다. [Green–Schwarz 원 논문](https://www.sciencedirect.com/science/article/pii/037026938491565X)도 두 군을 명시한다.
+
+이것은 정확하고 비자명하며 임의 계수 피팅도 아니다. 다만 **새 물리 결과는 아니다**. 완전수 조건에서 Green–Schwarz 이상 다항식의 인수분해나 군의 trace identity가 유도되지 않는다. “496이 같다”는 관찰만 살아남는다.
+
+## 2. 가장 심각한 결함
+
+**사후선택된 가설 공간을 사전지정된 단일 가설처럼 취급한 것**이다.
+
+문서는 수열, 산술함수 \(\sigma,\tau,\phi\), 인덱스, 물리적 정수 목록, 식 문법, 단위와 질량 정의를 데이터를 본 뒤 선택했다. 그런 다음 선택된 한 조합만 고정되어 있었다고 가정하여 확률을 계산한다. 실제 귀무가설은 다음 전체 탐색을 포함해야 한다.
+
+\[
+\{\text{정수수열}\}\times
+\{\text{산술함수}\}\times
+\{\text{물리적 숫자·표현 차원}\}\times
+\{\text{식 문법}\}\times
+\{\text{단위·스케일}\}.
+\]
+
+이 시행 횟수는 정의조차 되어 있지 않다. 따라서 \(p<0.0002\)와 “6.4σ”는 계산된 유의도가 아니라 **누락된 시행 횟수를 1로 놓은 숫자**다.
+
+## 3. “차원 5/5” 감사
+
+| 값 | 주장 | 판정 | 문제 |
+|---:|---|---|---|
+| 4 | Minkowski 시공간 | 조건부 정답 | 관측 우주의 국소 시공간을 \(3+1\)차원으로 다루는 것은 표준적이다. 그러나 \(\tau(6)\)와의 연결은 없다. |
+| 6 | Calabi–Yau 압축 차원 | 조건부 정답 | 10차원 초끈을 4차원으로 압축할 때 Calabi–Yau 3-fold는 실수 6차원이다. 그러나 일반 Calabi–Yau가 반드시 6차원인 것은 아니다. 또한 \(6=10-4\)라 독립 적중이 아니다. |
+| 10 | 초끈 시공간 | 정답 | 임계 초끈의 시공간 차원은 10이다. |
+| 14 | \(G_2\) 홀로노미 다양체 | **오답** | \(G_2\)-홀로노미 다양체는 **7차원**이다. 14는 다양체가 아니라 리군 \(G_2\)의 차원이다. |
+| 26 | 보손 끈 시공간 | 정답 | 임계 보손 끈은 26차원이다. 다만 타키온과 시공간 페르미온 부재 때문에 현실적 통일 모형은 아니다. |
+
+10과 26의 표준 임계차원은 [CERN 초끈 강의](https://cds.cern.ch/record/2275452/files/chap_10_superstring_theory.pdf)에 명시되어 있다. 반면 M이론의 \(G_2\) 압축은 **11차원 \(=4+7\)**이며, CERN 논문도 “7-manifold with \(G_2\) holonomy”라고 쓴다. [CERN \(G_2\) compactification](https://cds.cern.ch/record/2224414?ln=en), [M이론 11차원 리뷰](https://arxiv.org/abs/hep-th/0111237).
+
+따라서 결론은 다음과 같다.
+
+- 사실 판정: **4/5**, 14는 명백한 범주 오류.
+- 독립적인 차원 일치: 최대 **3개**. 6은 10과 4에서 이미 따라온다.
+- \(\tau(P_k)=2p\)는 항상 짝수이므로 M이론의 11차원은 원리상 절대 나타나지 않는다.
+
+즉 “5/5 exact”는 거짓이다.
+
+## 4. Monte Carlo 귀무모형
+
+잘못된 귀무모형이다.
+
+1. \(\{4,6,10,14,26\}\)은 무작위 표본이 아니라 메르센 소수 지수 \(2,3,5,7,13\)을 두 배 한 결정론적 수열이다. 결정론적 수열에도 통계 검정을 할 수 있지만, 그 수열을 생성했다고 볼 정당한 확률모형이 필요하다. “4에서 62 사이의 균등한 짝수”에는 그런 근거가 없다.
+
+2. 목표 집합을 숫자를 본 뒤 골랐다. 특정한 5원소 집합은 어느 것이든 균등모형 아래 희귀하다. 이것은 의미론적 물리 대응의 희귀성을 측정하지 않는다.
+
+3. 정확한 고정 집합 하나의 확률은
+
+\[
+\frac1{\binom{30}{5}}
+=\frac1{142506}
+\simeq 7.02\times10^{-6}.
+\]
+
+백만 회 중 10회는 이 값과 대략 맞는다. 그러나 문서의
+
+\[
+\frac{\binom{26}{1}}{\binom{30}{5}}
+=1.82\times10^{-4}
+\]
+
+는 **26개의 성공 집합**을 세는 다른 사건이다. 정확한 5/5 사건과 같은 계산이 아니다.
+
+4. 비교 대상에는 다른 정수수열, 군·격자·다포체의 차원, 표현 차원, kissing number, 임계차원, 내부차원 등이 전부 포함되어야 한다. 이 목록과 선택 규칙이 사전등록되지 않았으므로 trial factor는 계산 불가능하다.
+
+따라서 \(p<0.0002\)는 이 주장에 대한 의미 있는 p값이 아니다. 참고로 \(p=0.0002\) 자체도 HEP식 단측 환산으로 약 \(3.54\sigma\)이지 \(6.4\sigma\)가 아니다. 별도 likelihood, 공분산, 독립성 검정이 없는 “CERN combined 6.4σ”에는 통계적 근거가 없다.
+
+## 5. 질량식의 look-elsewhere 효과
+
+보수적으로 다음만 허용해 직접 열거했다.
+
+- 알파벳: \(\{2,4,6,12,48\}\), 반복 허용
+- 연산: \(+,-,\times,/\)
+- 최대 5개 상수 잎
+- 지수, 자유 정수, \(R\) 같은 추가 함수는 제외
+
+이 제한만으로도 서로 다른 양의 유리수 **27,789개**가 생긴다. 각 표적의 \(\pm3\%\) 안에 들어오는 서로 다른 값의 수는 다음과 같다.
+
+| 표적 | 후보 수 |
+|---:|---:|
+| \(m_e=0.511\) | 169 |
+| \(m_u=2.16\) | 102 |
+| \(m_d=4.67\) | 83 |
+| \(m_s=93.4\) | 197 |
+| \(m_\mu=105.66\) | 56 |
+| \(m_c=1270\) | 35 |
+| \(m_\tau=1776.86\) | 72 |
+| \(m_b=4180\) | 27 |
+| \(m_t=172500\) | 6 |
+
+이는 **수식 개수**가 아니라 서로 다른 결과값 수다. 같은 값을 만드는 식은 훨씬 많다. 지수와 더 긴 식을 허용하면 탐색력은 폭증한다.
+
+특히 \(m_\tau\) 주변에는 6% 폭 안에 후보가 72개다. 국소적으로 균일하다고만 보아도 평균 간격은 약 \(6\%/72=0.083\%\), 표적에서 가장 가까운 값의 전형적 거리는 약 \(0.04\%\)다. 따라서 \(1776\)의 오차 \(0.0484\%\)는 이 탐색 밀도에서 놀랍지 않다.
+
+더 근본적으로 질량은 차원이 있다. 순수 정수식이 “MeV”를 산출한다는 것은 \(1\ {\rm MeV}\)라는 척도를 몰래 넣은 것이다. eV나 GeV로 바꾸면 패턴이 사라진다. 또한 쿼크 질량은 renormalization scheme과 scale에 의존하며, PDG 표에서도 \(u,d,s\), \(c,b\), \(t\)가 서로 다른 정의로 제시된다. [PDG quark summary](https://pdg.lbl.gov/2025/web/viewer.html?file=..%2Ftables%2Frpp2025-sum-quarks.pdf). 이를 한 숫자표에 섞어 맞추는 것은 물리적 질량 예측이 아니다.
+
+우주 나이 13.8, \(H_0\simeq70\), CMB \(2.725\simeq e\)도 같은 단위 의존적 숫자놀이이다.
+
+## 6. “진짜로 유도됨” 항목 감사
+
+| 항목 | 산술 | 물리적 정보량 |
+|---|---|---|
+| \(\sigma(6)=12=\dim G_{\rm SM}\) | 참 | 거의 없음. 같은 차원은 같은 군을 뜻하지 않는다. 군 구조, 표현, chirality, 결합상수는 전혀 나오지 않는다. |
+| \(12=8+3+1\) | 참 | “유일”은 거짓. \(3+3+3+3\), \(8+1+1+1+1\) 등 다른 리대수 차원 분해가 많다. 이미 SM 군을 지정하면 \(8+3+1\)은 단순 차원 계산이다. |
+| \(\tau(6)=4=\) 시공간 | 참/사후 동일시 | 4가 나왔다는 것 외에 Lorentz signature, 국소성, 계량, 장방정식이 없다. |
+| \(\phi(6)=2=\) 중력자 DOF | 참/순환적 | 4차원 무질량 spin-2의 편광이 2인 것은 \(D(D-3)/2\)에서 나온다. 먼저 \(\tau=4\)를 시공간 차원으로 선언한 뒤 \(\phi=2\)를 비교하므로 독립 증거가 아니다. |
+| \(\sigma/\tau=12/4=3=\) 세대 | 참/우연 | 세대 구조나 Yukawa 행렬을 생성하는 메커니즘이 없다. 작은 정수 3을 기존 관측값에 붙인 것이다. |
+| \(K=2/3=\tau/P_1=4/6\) | 항등식 | **\(2/3=4/6\)은 유도가 아니라 항등식이다.** 산술함수와 세 렙톤 질량을 연결하는 방정식이 없으므로 Koide 관계를 설명하거나 예측하지 않는다. |
+
+Koide 관계 자체는 흥미로운 경험적 규칙이다. 그러나 \(2/3\)을 다른 방식으로 다시 쓰는 것은 이 문서의 성과가 아니다. \(\delta=2/9\)도 동일하다. \(\phi\tau^2/\sigma^2=2/9\)라는 산술 항등식은 렙톤 질량의 위상구조를 유도하지 않는다.
+
+## 7. 판결
+
+### 🔴 수비학(numerology)
+
+정확한 산술과 표준 물리 숫자가 몇 군데 만나는 것은 사실이며, 특히 496 중첩은 보존할 가치가 있는 비자명한 관찰이다. 그러나 동역학, 라그랑지언, 대칭 깨짐, 표현 내용, 스케일 생성 또는 사전등록된 예측이 전혀 없다. 5/5의 한 항목은 명백히 틀렸고, Monte Carlo는 선택 과정을 누락했으며, 질량식은 큰 표현 탐색 공간과 단위 선택으로 거의 임의의 표적을 맞출 수 있다. 그러므로 “구조적 유의성”, \(p<0.0002\), 6.4σ, “Standard Model + Gravity unification”은 성립하지 않는다.
+
+가장 싼 결판 방법은 **문법·단위·허용 상수·대상 관측량을 지금 사전등록하고, 아직 사용하지 않은 단 하나의 무차원 관측량을 수치와 오차까지 예측한 뒤 독립 측정으로 블라인드 검정하는 것**이다. 후향적 적중을 더 추가하는 계산은 아무것도 해결하지 못한다.
+[32mlab full: both sections saved → /Users/mini/.sidecar/lab/2026-07-24T18-11-54-558Z-full.md[0m

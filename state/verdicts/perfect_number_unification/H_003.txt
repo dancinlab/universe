@@ -1,0 +1,32 @@
+alphabet: {'phi': 2, 'tau': 4, 'P1': 6, 'sigma': 12, 'R': 48}
+operations: + - * /   (exponentiation EXCLUDED -> conservative lower bound)
+complexity cap: 5 atom leaves
+
+  distinct values with <= 1 leaves: 5
+  distinct values with <= 2 leaves: 47
+  distinct values with <= 3 leaves: 494
+  distinct values with <= 4 leaves: 4,685
+  distinct values with <= 5 leaves: 49,354
+  distinct POSITIVE values (the mass/constant candidates): 27,789
+
+target          measured   doc value  doc err%  rivals in 3% band  nearest err%
+------------------------------------------------------------------------------
+m_electron         0.511       0.500     2.200                169       0.02174
+m_up               2.160       2.000     7.400                102       0.00000
+m_down             4.670       4.667     0.070                 83       0.02845
+m_strange         93.400      96.000     2.800                197       0.00579
+m_muon           105.660     106.000     0.300                 56       0.05679
+m_charm         1270.000    1296.000     2.000                 35       0.15748
+m_tau           1776.860    1776.000     0.048                 72       0.04840
+m_bottom        4180.000    4096.000     2.000                 27       0.09569
+m_top         172500.000  172800.000     0.170                  6       0.17391
+1/alpha          137.036     137.000     0.026                 63       0.02627
+
+density — deterministic probe grid, fraction covered within x% by SOME reachable value:
+  within 0.05% : 366/540 =  67.8%
+  within  0.5% : 456/540 =  84.4%
+  within  3.0% : 530/540 =  98.1%
+
+interpretation: a quoted per-particle error is evidence only if this family could not
+easily have hit the target. Where the 3% band already holds many rivals, the individual
+error figure carries no information about the hypothesis.

@@ -24,6 +24,7 @@ universe/
 | --- | --- | --- |
 | H_001 | 🔴 FALSIFIED | 스즈키 2026 논문이 제타 영점과 원자 에너지 준위의 직접 관련을 발견했다 |
 | H_002 | 🟢 VERIFIED | 제타 영점의 정규화된 간격 분포는 포아송이 아니라 GUE 를 따른다 |
+| H_003 | 🔴 FALSIFIED | 완전수 τ(P_k)=2p 가 끈이론 차원을 재현하고 표준모형+중력을 통일한다 (외부 문서 H-PH-9) |
 
 전체 목록은 `HYPOTHESES/HYPOTHESES.jsonl`, 규칙과 등급 정의는 `HYPOTHESES/CLAUDE.md` 를 본다.
 
