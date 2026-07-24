@@ -1,0 +1,58 @@
+source: data/arxiv-2606.09096v1-fulltext.txt  (150952 chars)
+source: arxiv-2606.09096-abstract.txt
+
+C1 — physical vocabulary in the full text
+   atom                   0
+   atomic                 0
+   hydrogen               0
+   energy level           0
+   electron               0
+   electronvolt           0
+   eV                     0
+   quantum jump           0
+   Schrodinger            0
+   Schrödinger            0
+   Hamiltonian            0
+   spectrum of an atom    0
+
+     mathematical vocabulary, for contrast
+   screw function         25
+   Weil quadratic form    7
+   self-adjoint           54
+   nontrivial zeros       3
+   Riemann zeta           5
+   nonlocal               1
+   conjecture             2
+   theorem                68
+   -> physical terms total = 0; C1 (paper is about atoms) = FAIL
+
+C2 — subject classification
+   Number Theory (math.NT); Functional Analysis (math.FA)
+   -> physics classes found: none; C2 = FAIL
+
+C3 — is the headline result proved?
+   quote: Based on this framework, we formulate a conjecture stating that a self-adjoint operator whose eigenvalues are the imaginary parts of the nontrivial zeros of the Riemann zeta function can be obtained as the limit, as a → 
+   occurrences: 'conjecture' = 2, 'theorem' = 68
+   -> headline stated as a conjecture: True; C3 (proved theorem) = FAIL
+
+C4 — the numbers the video presented as 'spacings'
+   Bohr levels E_n = -13.6 / n^2 :
+     n=4  E_n =  -0.8500 eV   quoted  -0.85 -> MATCHES a quoted value
+     n=5  E_n =  -0.5440 eV   quoted  -0.54 -> MATCHES a quoted value
+     n=6  E_n =  -0.3778 eV   quoted  -0.38 -> MATCHES a quoted value
+     n=7  E_n =  -0.2776 eV   quoted  -0.28 -> MATCHES a quoted value
+   actual adjacent spacings between those levels:
+     E_5 - E_4 =  0.3060 eV
+     E_6 - E_5 =  0.1662 eV
+     E_7 - E_6 =  0.1002 eV
+   -> every quoted number is a LEVEL, not a spacing: True
+   C4 (the stated hydrogen-spacing correspondence holds) = FAIL
+
+criteria passed: 0/4  (C1=False C2=False C3=False C4=False)
+falsifiers:
+  F1 subject classification is pure mathematics only : FIRED
+  F2 headline result is stated as a conjecture       : FIRED
+  F3 no physical objects in the paper                : FIRED
+  F4 hydrogen-spacing correspondence absent          : FIRED
+
+verdict_class: FALSIFIED  (rule: VERIFIED=4/4, PARTIAL=2-3, FALSIFIED<=1)

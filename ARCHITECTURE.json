@@ -107,7 +107,33 @@
             "role": "🔴 FALSIFIED",
             "id": "gate-h001",
             "type": "gate",
-            "detail": "사전등록 반증조건 4개 전부 발동. arXiv:2606.09096 은 math.NT·math.FA 분류의 순수수학 논문이며 초록이 'we formulate a conjecture' 로 명시. 원자·수소·eV 부재. 영상이 든 -0.28~-0.85 eV 는 간격이 아니라 n=7,6,5,4 준위값."
+            "detail": "사전등록 반증조건 4개 전부 발동(0/4). 근거는 모델 판단이 아니라 본문 30쪽 평문 150,952자 전수 기계 스캔이며 재실행 시 출력이 바이트 단위로 동일하다.",
+            "children": [
+              {
+                "name": "C1 물리 어휘 부재",
+                "role": "FAIL",
+                "id": "gate-h001-c1",
+                "detail": "atom·hydrogen·energy level·electron·eV·Hamiltonian·Schrödinger 빈도 합계 0. 대조군 수학 어휘는 theorem 68·self-adjoint 54·screw function 25 로, 같은 스캔이 변환 무결성을 스스로 보인다."
+              },
+              {
+                "name": "C2 분류",
+                "role": "FAIL",
+                "id": "gate-h001-c2",
+                "detail": "math.NT · math.FA 뿐이고 물리 분류 0건."
+              },
+              {
+                "name": "C3 추측 대 정리",
+                "role": "FAIL",
+                "id": "gate-h001-c3",
+                "detail": "초록이 'we formulate a conjecture' 로 명시. 논문은 리만가설을 증명하지 않는다."
+              },
+              {
+                "name": "C4 수소 산술",
+                "role": "FAIL",
+                "id": "gate-h001-c4",
+                "detail": "영상이 '간격'이라 부른 -0.28·-0.38·-0.54·-0.85 eV 는 보어 준위값 n=7..4 와 전부 일치. 실제 인접 간격 0.3060·0.1662·0.1002 eV 와는 하나도 안 맞는다."
+              }
+            ]
           },
           {
             "name": "H_002 · 제타 영점 간격의 GUE 보편성",

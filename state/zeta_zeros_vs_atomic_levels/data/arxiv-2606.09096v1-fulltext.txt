@@ -1,0 +1,2154 @@
+ 
+ Weil’s quadratic form via the screw function 
+ Report GitHub Issue 
+ × 
+ Title: 
+ Content selection saved. Describe the issue below: 
+ Description: 
+ Submit without GitHub 
+ Submit in GitHub 
+ arXiv is now an independent nonprofit! 
+ Learn more 
+ × 
+ Back to arXiv 
+ Why HTML? 
+ Report Issue 
+ Back to Abstract 
+ Download PDF 
+ Abstract. 
+ 1 Introduction 
+ 1.1 Historical Background and Motivation 
+ 1.2 Main Results 
+ 2 Preliminaries 
+ 2.1 Precise definition of operators 
+ 2.2 Expansion near the origin 
+ 2.3 Quadratic form formulas 
+ 2.4 Formulas in Fourier transforms 
+ 2.5 Distributional formulas 
+ 3 Proof of Theorem  1.1 
+ 3.1 The Relation between A a A_{a} and B a B_{a} 
+ 3.2 Completion of the proof 
+ 4 Proof of Theorem  1.3 
+ 4.1 Compact embedding result 
+ 4.2 Scaling transformation of the Rayleigh quotient 
+ 4.3 Proof of upper semicontinuity 
+ 4.4 Proof of lower semicontinuity 
+ 4.5 A remark on the continuity of λ a \lambda_{a} via parity decomposition 
+ 5 Proof of Theorem  1.4 
+ 5.1 Positivity of the lower bound 
+ 5.2 Positivity improving property 
+ 5.3 Simplicity of the lowest eigenvalue and parity of eigenfunctions 
+ 6 Proof of Theorem  1.5 
+ 6.1 Symmetry of the minimal operator 
+ 6.2 Adjoint of the minimal operator 
+ 6.3 Self-adjoint extensions of the minimal operator 
+ 6.4 Proof of Theorem  1.5 
+ 7 Heuristic justification of the formula in Corollary  1.6 
+ 7.1 The Hilbert Space ℋ ​ ( A ∞ ) \mathcal{H}(A_{\infty}) 
+ 7.2 Isomorphism with a de Branges space 
+ 7.3 Correspondence between 𝒟 ∞ \mathscr{D}_{\infty} and M M 
+ 7.4 An operator unitarily equivalent to M M 
+ 7.5 Infinitesimal generator of translations ( a = ∞ a=\infty ) 
+ 7.6 Operator picture via embedding 
+ 7.7 Factorization of A ∞ A_{\infty} 
+ 8 From distribution kernels to continuous kernels 
+ 8.1 Passing from A a A_{a} to G a G_{a} 
+ 8.2 The Inverse Neumann Laplacian 
+ 8.3 The Hilbert Space ℋ ​ ( S a ) \mathcal{H}(S_{a}) 
+ 8.4 Relation to Bombieri’s Problem 1 
+ 8.5 Reformulation as a generalized eigenvalue problem 
+ References 
+ License: arXiv.org perpetual non-exclusive license
+arXiv:2606.09096v1 [math.NT] 08 Jun 2026 
+ Weil’s quadratic form 
+ via the screw function 
+ Masatoshi Suzuki
+ (Date: Version of ) 
+ Abstract. 
+ We establish a unified framework for understanding the results on the Weil quadratic form obtained by
+Yoshida (1992), Bombieri (2001, 2003), Connes–Consani (2023), and
+Connes–Consani–Moscovici (2025+) from the perspective of the screw function introduced in Suzuki (2023). An advantage of the approach via the screw function is that it provides a method to study the Weil quadratic form, which is originally defined in terms of distributions, by means of continuous functions.
+Based on this framework, we formulate a conjecture stating that a self-adjoint operator whose
+eigenvalues are the imaginary parts of the nontrivial zeros of the Riemann zeta function can be obtained as the limit,
+as a → ∞ a\to\infty , of self-adjoint operators arising from nonlocal realizations of
+the first-order differential operator on the finite interval [ − a , a ] [-a,a] .
+All these results are obtained without assuming the Riemann Hypothesis.
+This conjecture may be compared with the limit formula for the Riemann zeta function expressed
+in terms of zeta-regularized products proposed by Connes, Consani, and Moscovici, and
+it sheds new light on the spectral-theoretic interpretation of the nontrivial zeros of the Riemann zeta function. 
+ Key words and phrases: 
+Riemann Hypothesis;
+Weil quadratic form;
+screw function;
+de Branges spaces;
+Hilbert–Pólya operator
+ Mathematics Subject Classification: 
+11M26 42A82 46E22 47B25 
+ 1. Introduction 
+ 1.1. Historical Background and Motivation 
+ For test functions f f , the Weil functional f ↦ W ​ ( f ) f\mapsto W(f) is defined by 
+ W ​ ( f ) \displaystyle W(f) 
+ := ∫ − ∞ ∞ f ​ ( x ) ​ ( e x / 2 + e − x / 2 ) ​ 𝑑 x − ∑ n = 1 ∞ Λ ​ ( n ) n ​ f ​ ( log ⁡ n ) − ∑ n = 1 ∞ Λ ​ ( n ) n ​ f ​ ( − log ⁡ n ) \displaystyle=\int_{-\infty}^{\infty}f(x)(e^{x/2}+e^{-x/2})dx-\sum_{n=1}^{\infty}\frac{\Lambda(n)}{\sqrt{n}}f(\log n)-\sum_{n=1}^{\infty}\frac{\Lambda(n)}{\sqrt{n}}f(-\log n) 
+ − ( log ⁡ 4 ​ π + C 0 ) ​ f ​ ( 0 ) − ∫ 0 ∞ { f ​ ( x ) + f ​ ( − x ) − 2 ​ e − x / 2 ​ f ​ ( 0 ) } ​ e x / 2 ​ d ​ x e x − e − x , \displaystyle\quad-(\log 4\pi+C_{0})f(0)-\int_{0}^{\infty}\left\{f(x)+f(-x)-2e^{-x/2}f(0)\right\}\frac{e^{x/2}dx}{e^{x}-e^{-x}}, 
+ where Λ ​ ( n ) \Lambda(n) denotes the von Mangoldt function,
+defined as Λ ​ ( n ) = log ⁡ p \Lambda(n)=\log p if n = p k n=p^{k} with k ∈ ℤ > 0 k\in\mathbb{Z}_{>0} ,
+and Λ ​ ( n ) = 0 \Lambda(n)=0 otherwise,
+and C 0 C_{0} is the Euler–Mascheroni constant.
+Although the precise class of test functions will be specified as needed later,
+our primary object of interest is the symmetric (or Hermitian) quadratic form 
+ Q W ​ ( v 1 , v 2 ) := W ​ ( v 1 ∗ v 2 ~ ) , Q W ​ ( v ) := Q W ​ ( v , v ) , Q_{W}(v_{1},v_{2}):=W(v_{1}\ast\widetilde{v_{2}}),\quad Q_{W}(v):=Q_{W}(v,v), 
+ where 
+ ( v 1 ∗ v 2 ) ​ ( x ) := ∫ − ∞ ∞ v 1 ​ ( y ) ​ v 2 ​ ( x − y ) ​ 𝑑 y and v ~ ​ ( x ) := v ​ ( − x ) ¯ . (v_{1}\ast v_{2})(x):=\int_{-\infty}^{\infty}v_{1}(y)v_{2}(x-y)\,dy\quad\text{and}\quad\widetilde{v}(x):=\overline{v(-x)}. 
+ The Riemann Hypothesis (RH) states that
+all nontrivial zeros of the Riemann zeta function ζ ​ ( s ) \zeta(s) 
+lie on the critical line ℜ ⁡ ( s ) = 1 / 2 \Re(s)=1/2 .
+A fundamental result due to Weil [ 15 ] states that
+RH is equivalent to the condition that 
+ Q W ​ ( v ) ≥ 0 for all  ​ v ∈ C c ∞ ​ ( ℝ ) , Q_{W}(v)\geq 0\quad\text{for all }v\in C_{c}^{\infty}(\mathbb{R}), 
+ a property known as Weil’s positivity criterion for RH
+(although Weil did not formulate the criterion in terms of compactly supported smooth test functions; see [ 15 , 16 ] and [ 13 , Section 3.2] ).
+In the commentary to his Collected Works,
+Weil emphasized the distributional nature of this criterion
+and suggested that it deserved further investigation by analysts.
+Despite this invitation,
+the functional W W and the quadratic form Q W Q_{W} have not been extensively studied,
+with notable exceptions such as the works of
+Yoshida [ 17 ] , Bombieri [ 1 , 2 ] ,
+Connes and Consani [ 3 ] , and
+Connes, Consani, and Moscovici [ 4 ] . 
+ The study of the localization of the Weil quadratic form Q W Q_{W} was pioneered by Yoshida [ 17 ] ,
+who established that RH is equivalent to the positive definiteness of Q W Q_{W} 
+on the space 
+ C c ∞ ​ ( − a , a ) := { v ∈ C c ∞ ​ ( ℝ ) | supp ​ ( v ) ⊂ [ − a , a ] } C_{c}^{\infty}(-a,a):=\{v\in C_{c}^{\infty}(\mathbb{R})~|~{\rm supp}(v)\subset[-a,a]\} 
+ for every a > 0 a>0 . In [ 17 , Proposition 1] ,
+Yoshida further demonstrated that the condition Q W ​ ( v ) > 0 Q_{W}(v)>0 
+for all non-zero odd functions v ∈ C c ∞ ​ ( ℝ ) v\in C_{c}^{\infty}(\mathbb{R}) implies RH,
+while a similar condition for all non-zero even functions implies RH except for possible real zeros.
+Crucially, he initiated the variational study of Q W Q_{W} 
+by considering the infimum of the Rayleigh quotient Q W ​ ( v ) / ‖ v ‖ L 2 2 Q_{W}(v)/\|v\|_{L^{2}}^{2} on the localized space 
+ K ​ ( a ) := { v | v ​ ( x ) = f ​ ( x ) ​ 𝟏 [ − a , a ] ​ ( x ) ​ for some  f ∈ C ∞ ​ ( ℝ )  which has period  2 ​ a } , K(a):=\{v~|~v(x)=f(x)\mathbf{1}_{[-a,a]}(x)~\text{for some $f\in C^{\infty}(\mathbb{R})$ which has period $2a$}\}, 
+ proving that it is positive for sufficiently small a > 0 a>0 [ 17 , Lemma 2] 
+or for appropriate subspaces K N ​ ( a ) K_{N}(a) of finite codimension [ 17 , Lemma 3] .
+The non-degeneracy of Q W Q_{W} on the “completion” K ​ ( a ) ^ ( ↪ L 2 ​ ( − a , a ) ) \widehat{K(a)}~(\hookrightarrow L^{2}(-a,a)) 
+was shown to be equivalent to RH in [ 17 , Theorem 2] .
+Note that the hat in K ​ ( a ) ^ \widehat{K(a)} does not denote the Fourier transform. 
+ Building on this foundation,
+Bombieri [ 1 , 2 ] addressed the minimization of the Rayleigh quotient
+on the Sobolev space H 0 1 ​ ( − a , a ) H_{0}^{1}(-a,a) [ 1 , Problem 1] (and [ 2 , Problem B] )
+and on L 2 ​ ( ℰ ) L^{2}(\mathcal{E}) for a finite union of intervals ℰ \mathcal{E} [ 1 , Problem 2] 
+(and [ 2 , Problem A] ).
+While the existence of a minimizer for the lower bound on L 2 ​ ( ℰ ) L^{2}(\mathcal{E}) 
+was established in [ 1 , Theorem 3] (and [ 2 , Theorem 4.3] ),
+the subsequent argument concerning the continuity of this lower bound with respect to a a 
+remains an analytically delicate issue. Specifically, although it was claimed in [ 1 , Theorem 5] that
+the lower bound varies continuously when the minimization is restricted to the subspaces of
+either even or odd functions, this assertion calls for a more careful analysis.
+In view of Yoshida’s result, such continuity would essentially reproduce the equivalence
+between the failure of RH and the existence of
+a degenerating element v ∈ 𝔇 ​ ( Q W ) v\in\mathfrak{D}(Q_{W}) 
+satisfying Q W ​ ( v ) = 0 Q_{W}(v)=0 , offering a simplification of the original proof that relied on explicit formulas.
+See the discussion following Theorem  1.3 for further details. 
+ More recently, a rigorous operator-theoretic refinement has been provided by Connes and Consani [ 3 ] and Connes, Consani, and Moscovici [ 4 ] .
+They established that the localized closed symmetric form 
+ Q W a := Q W | L 2 ​ ( − a , a ) Q_{W}^{\,a}:=Q_{W}|_{L^{2}(-a,a)} 
+ is lower bounded and lower semicontinuous [ 3 , Section 2] ,
+leading to the construction of a canonical,
+densely defined self-adjoint operator A a A_{a} on L 2 ​ ( − a , a ) L^{2}(-a,a) 
+such that 
+ Q W a ​ ( v ) = ⟨ A a ​ v , v ⟩ L 2 Q_{W}^{\,a}(v)=\langle A_{a}v,v\rangle_{L^{2}} 
+ (1.1) 
+ for v ∈ 𝔇 ​ ( A a ) ⊂ 𝔇 ​ ( Q W a ) ⊂ L 2 ​ ( − a , a ) v\in\mathfrak{D}(A_{a})\subset\mathfrak{D}(Q_{W}^{\,a})\subset L^{2}(-a,a) [ 4 , Section 3] 
+(here we reformulate their results, originally stated on [ 1 / λ , λ ] [1/\lambda,\lambda] ,
+in terms of the variable a = log ⁡ λ a=\log\lambda ),
+where the bracket is the standard L 2 L^{2} inner product 
+ ⟨ v 1 , v 2 ⟩ L 2 = ∫ − ∞ ∞ v 1 ​ ( x ) ​ v 2 ​ ( x ) ¯ ​ 𝑑 x . \langle v_{1},v_{2}\rangle_{L^{2}}=\int_{-\infty}^{\infty}v_{1}(x)\overline{v_{2}(x)}dx. 
+ This operator A a A_{a} ,
+which can be viewed as a refinement of Bombieri’s Lagrangian
+( [ 1 , Lemma 1] , [ 2 , Sections 5–6] ),
+possesses a discrete lower bounded spectrum [ 4 , Theorem 3.6] and
+a corresponding ground state [ 4 , Corollary 3.7] .
+Furthermore, it was shown in [ 4 , Theorem 5.10] that,
+when Q W a Q_{W}^{\,a} is restricted to a certain finite-dimensional subspace of L 2 ​ ( − a , a ) L^{2}(-a,a) ,
+the Fourier transform of the eigenfunction corresponding to the lowest eigenvalue
+possesses only real zeros. 
+ First, we aim to unify these various results through
+the framework of the screw function associated with ζ ​ ( s ) \zeta(s) ,
+which was introduced in [ 13 ] .
+This approach not only provides transparent re-derivations of previous results,
+but also leads to more refined results presented below.
+A key advantage of this screw function approach is that it enables us to understand Weil’s quadratic form through continuous (and well-behaved) functions,
+thereby avoiding the delicate distribution-theoretic aspects of Weil’s original formulation.
+The connection between the Weil quadratic form and the screw function,
+already emphasized in [ 13 , Proposition 3.1] ,
+was expected to provide new insight into the study of the Weil quadratic form.
+Indeed, [ 13 ] reinterpreted some of the results
+by Yoshida  [ 17 ] , Bombieri  [ 1 , 2 ] , and Connes–Consani  [ 3 ] 
+from the viewpoint of screw functions.
+However, these earlier works had not yet been placed within a fully unified framework.
+Since then, the theoretical foundations of the screw-function approach to zeta functions
+have been substantially developed. 
+ In particular, [ 14 ] established a completely new picture of the Hilbert space obtained as
+the completion of C c ∞ ​ ( ℝ ) C_{c}^{\infty}(\mathbb{R}) with respect to Q W Q_{W} under RH.
+This was made possible by the favorable analytic properties of the screw function as an integral kernel,
+such as positivity and smoothness.
+Our main objective is to understand what new insights about Q W Q_{W} 
+can be obtained by localizing the global framework of [ 14 ] 
+to the interval [ − a , a ] [-a,a] ,
+thereby returning to Yoshida’s original viewpoint.
+This line of investigation was further motivated by recent results in
+ [ 4 , Theorem 5.10, Sections 7–8] .
+Let 
+ ξ ​ ( s ) := s ​ ( s − 1 ) ​ π − s / 2 ​ Γ ​ ( s / 2 ) ​ ζ ​ ( s ) \xi(s):=s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s) 
+ be the Riemann ξ \xi -function, where Γ ​ ( s ) \Gamma(s) is the usual gamma function. Let v a v_{a} be the eigenfunction corresponding to the lowest eigenvalue of A a A_{a} (denoted by ξ λ \xi_{\lambda} with a = log ⁡ λ a=\log\lambda in their notation). Denote by 
+ f ^ ​ ( z ) := ∫ − ∞ ∞ f ​ ( x ) ​ e i ​ z ​ x ​ 𝑑 x \widehat{f}(z):=\int_{-\infty}^{\infty}f(x)\,e^{izx}dx 
+ the Fourier transform of f f .
+Motivated by the Hilbert–Pólya operator constructed in [ 14 , Section 6] ,
+we next formulate an analogue of the conjectural limiting formula
+discussed in [ 4 , Section 7] , 
+ lim a → ∞ c a ​ v a ^ ​ ( z ) = ξ ​ ( 1 / 2 + i ​ z ) . \lim_{a\to\infty}c_{a}\widehat{v_{a}}(z)=\xi(1/2+iz). 
+ (1.2) 
+ This line of investigation led to a unified perspective on the earlier works mentioned above
+and ultimately to Corollary  1.6 ,
+which constitutes the main conjectural statement of the present paper. 
+ 1.2. Main Results 
+ Before presenting the main results,
+we emphasize that none of them depends on RH.
+The first step in the study of the Weil quadratic form via screw functions
+is to obtain an explicit description of the self-adjoint operator A a A_{a} in ( 1.1 ).
+While the existence of A a A_{a} was established abstractly
+in [ 4 , Section 3] via the theory of quadratic forms,
+the use of screw functions provides a constructive and explicit formula for A a A_{a} . 
+ Let g ​ ( t ) g(t) be a continuous real-valued even function on ℝ \mathbb{R} ,
+defined by 
+ g ​ ( t ) \displaystyle g(t) 
+ = − 4 ​ ( e t / 2 + e − t / 2 − 2 ) + ∑ n ≤ exp ⁡ ( | t | ) Λ ​ ( n ) n ​ ( | t | − log ⁡ n ) \displaystyle=-4(e^{t/2}+e^{-t/2}-2)+\sum_{n\leq\exp(|t|)}\frac{\Lambda(n)}{\sqrt{n}}(|t|-\log n) 
+ (1.3) 
+ − | t | 2 ​ ( ψ ​ ( 1 / 4 ) − log ⁡ π ) − 1 4 ​ ( Φ ​ ( 1 , 2 , 1 / 4 ) − e − | t | / 2 ​ Φ ​ ( e − 2 ​ | t | , 2 , 1 / 4 ) ) , \displaystyle\quad-\frac{|t|}{2}(\psi(1/4)-\log\pi)-\frac{1}{4}\left(\Phi(1,2,1/4)-e^{-|t|/2}\Phi(e^{-2|t|},2,1/4)\right), 
+ where ψ ​ ( s ) \psi(s) is the digamma function
+and Φ ​ ( z , s , a ) = ∑ n = 0 ∞ ( n + a ) − s ​ z n \Phi(z,s,a)=\sum_{n=0}^{\infty}(n+a)^{-s}z^{n} 
+is the Hurwitz–Lerch zeta function.
+A function g g on ℝ \mathbb{R} satisfying g ​ ( t ) = g ​ ( − t ) ¯ g(t)=\overline{g(-t)} 
+is called a screw function on the real line
+if the kernel g ​ ( t − u ) − g ​ ( t ) − g ​ ( − u ) + g ​ ( 0 ) g(t-u)-g(t)-g(-u)+g(0) is nonnegative for all t , u ∈ ℝ t,u\in\mathbb{R} .
+As shown in [ 13 , Theorem 1.2] ,
+the above function g g is a screw function
+in the sense of Krein–Langer  [ 8 , Section 5] 
+if and only if RH holds.
+For this reason, we shall refer to it as the screw function associated with ζ ​ ( s ) \zeta(s) .
+We define the integral operator G G by 
+ ( G ​ u ) ​ ( x ) := ∫ − ∞ ∞ g ​ ( x − y ) ​ u ​ ( y ) ​ 𝑑 y . (Gu)(x):=\int_{-\infty}^{\infty}g(x-y)u(y)\,dy. 
+ (1.4) 
+ The integral on the right-hand side converges absolutely for u ∈ C c ∞ ​ ( ℝ ) u\in C_{c}^{\infty}(\mathbb{R}) ,
+since g g is continuous.
+However, as noted immediately after Theorem 1.6 in [ 13 ] ,
+ g ​ ( t ) g(t) does not tend to zero as | t | → ∞ |t|\to\infty ,
+and hence the integral does not necessarily converge for a general u ∈ L 2 ​ ( ℝ ) u\in L^{2}(\mathbb{R}) .
+Within the theory of screw functions,
+it would be more natural to consider the integral operator G ~ \widetilde{G} 
+with the kernel g ​ ( t − u ) − g ​ ( t ) − g ​ ( − u ) + g ​ ( 0 ) g(t-u)-g(t)-g(-u)+g(0) (cf. Section  8 );
+nevertheless, for applications to Q W Q_{W} ,
+the simpler operator G G is sufficient. 
+ Throughout this paper, for each a > 0 a>0 ,
+we view L 2 ​ ( − a , a ) L^{2}(-a,a) as a closed subspace of L 2 ​ ( ℝ ) L^{2}(\mathbb{R}) by extending functions to be zero outside ( − a , a ) (-a,a) .
+Let L 0 2 ​ ( − a , a ) L_{0}^{2}(-a,a) denote the closed subspace of L 2 ​ ( − a , a ) L^{2}(-a,a) 
+consisting of functions u u satisfying u ^ ​ ( 0 ) = ∫ − a a u ​ ( x ) ​ 𝑑 x = 0 \widehat{u}(0)=\int_{-a}^{a}u(x)dx=0 .
+We denote by P a P_{a} the orthogonal projection from L 2 ​ ( ℝ ) L^{2}(\mathbb{R}) onto L 0 2 ​ ( − a , a ) L_{0}^{2}(-a,a) 
+(see ( 2.1 )), and define 
+ G a := P a ​ G ​ P a : L 0 2 ​ ( − a , a ) → L 0 2 ​ ( − a , a ) . G_{a}:=P_{a}GP_{a}:L_{0}^{2}(-a,a)\to L_{0}^{2}(-a,a). 
+ (1.5) 
+ The self-adjointness of the operator G a G_{a} 
+follows immediately from the fact that g g is real-valued and even.
+By [ 13 , Proposition 3.1] ,
+the integral operator G a G_{a} associated with the screw function
+is directly related to Weil’s quadratic form Q W Q_{W} 
+via differentiation of test functions.
+Let D = i ​ d / d ​ x D=i\,d/dx denote the differential operator on L 2 ​ ( − a , a ) L^{2}(-a,a) 
+with Dirichlet boundary conditions, and let D ∗ D^{\ast} be its adjoint. We then define 
+ B a := D ∗ ​ G a ​ D : L 2 ​ ( − a , a ) → L 2 ​ ( − a , a ) , 𝔇 ​ ( B a ) = H 0 1 ​ ( − a , a ) . B_{a}:=D^{\ast}G_{a}D:L^{2}(-a,a)\to L^{2}(-a,a),\quad\mathfrak{D}(B_{a})=H_{0}^{1}(-a,a). 
+ (1.6) 
+ This operator is symmetric but fails to be self-adjoint.
+Then, the operator A a A_{a} in ( 1.1 ) can be characterized as follows. 
+ Theorem 1.1 . 
+ For each a > 0 a>0 , the self-adjoint operator A a A_{a} defined by
+( 1.1 ) is the Friedrichs extension of the symmetric
+operator B a B_{a} defined by ( 1.6 ). 
+ This result provides a concrete operator-theoretic realization of
+the spectral interpretation of Q W a Q_{W}^{\,a} established in [ 4 ] 
+through the use of screw functions,
+thereby clarifying the connection between this spectral interpretation
+and the classical variational approach of Yoshida  [ 17 ] . 
+ Moreover, as shown in [ 4 , Theorem 3.6] ,
+for each a > 0 a>0 , the spectrum of the self-adjoint operator A a A_{a} is bounded from below and discrete,
+with + ∞ +\infty as its only accumulation point.
+In particular, the largest lower bound of the spectrum of A a A_{a} , denoted by λ a \lambda_{a} ,
+is an eigenvalue. Therefore,
+there exists a nonzero function v ∈ 𝔇 ​ ( A a ) v\in\mathfrak{D}(A_{a}) attaining the infimum 
+ λ a = inf 0 ≠ v ∈ 𝔇 ​ ( Q W a ) Q W a ​ ( v ) ‖ v ‖ L 2 2 . \lambda_{a}=\inf_{0\neq v\in\mathfrak{D}(Q_{W}^{\,a})}\frac{Q_{W}^{\,a}(v)}{\|v\|_{L^{2}}^{2}}. 
+ (1.7) 
+ Furthermore, the domain 𝔇 ​ ( A a ) \mathfrak{D}(A_{a}) 
+is strictly larger than 𝔇 ​ ( B a ) = H 0 1 ​ ( − a , a ) \mathfrak{D}(B_{a})=H_{0}^{1}(-a,a) 
+and contains functions such as constants.
+As will be shown later (Lemma 3.1 ),
+we have 
+ Q W a ​ ( v ) = ⟨ B a ​ v , v ⟩ L 2 for v ∈ H 0 1 ​ ( − a , a ) . Q_{W}^{\,a}(v)=\langle B_{a}v,v\rangle_{L^{2}}\quad\text{for}\quad v\in H_{0}^{1}(-a,a). 
+ (1.8) 
+ Since the form-norm closure of C c ∞ ​ ( − a , a ) ( ⊂ H 0 1 ​ ( − a , a ) ) C_{c}^{\infty}(-a,a)~(\subset H_{0}^{1}(-a,a)) with respect to Q W a Q_{W}^{\,a} 
+contains the core of the quadratic form Q W a Q_{W}^{\,a} as in the proof of Theorem  1.1 ,
+we obtain the following result. 
+ Corollary 1.2 . 
+ For each a > 0 a>0 , any function attaining the infimum in ( 1.7 )
+belongs to the closure of C c ∞ ​ ( − a , a ) C_{c}^{\infty}(-a,a) with respect to the form norm
+associated with Q W a Q_{W}^{\,a} .
+In particular, λ a \lambda_{a} is the infimum of the Rayleigh quotient 
+ ⟨ B a ​ v , v ⟩ L 2 ‖ v ‖ L 2 2 \frac{\langle B_{a}v,v\rangle_{L^{2}}}{\|v\|_{L^{2}}^{2}} 
+ over C c ∞ ​ ( − a , a ) C_{c}^{\infty}(-a,a) . 
+ This is analogous to [ 1 , Problem 2] 
+(and [ 2 , Problem A] ) and [ 4 , Theorem 3.6] ,
+but here the class over which the infimum is taken is made explicit.
+For the relation between the Rayleigh quotient in
+ [ 1 , Problem 1] (and [ 2 , Problem B] )
+and the operator G a G_{a} , see Section  8.4 . 
+ One expects that the eigenvalues of the self-adjoint operator A a A_{a} 
+vary continuously in a a .
+However, because A a A_{a} is unbounded and its domain is difficult to describe explicitly,
+it is not straightforward to prove such continuity.
+Indeed, in [ 1 , Theorem 5] 
+(and [ 2 , Theorem 4.4] ),
+analogues of the infimum in ( 1.7 )
+are considered on the spaces of even and odd functions,
+and their continuity with respect to a a is asserted,
+but the details of the proof are not fully provided there. 
+ In contrast, by exploiting the asymptotic expansion
+( 2.2 ) of the screw function near the origin,
+which involves a logarithmic singularity,
+one can prove the continuity of the lowest eigenvalue λ a \lambda_{a} 
+without imposing any parity restriction. 
+ Theorem 1.3 . 
+ The lowest eigenvalue λ a \lambda_{a} is continuous in a a . 
+ Since the continuity of λ a \lambda_{a} can be established without assuming RH,
+Theorem  1.3 immediately yields, as a corollary,
+another proof of Yoshida’s result [ 17 ] that
+RH is equivalent to the nondegeneracy of Q W a Q_{W}^{\,a} for every a > 0 a>0 .
+Indeed, the failure of RH is equivalent to the existence of some a > 0 a>0 
+for which λ a < 0 \lambda_{a}<0 .
+Since λ a > 0 \lambda_{a}>0 for sufficiently small a > 0 a>0 [ 17 , Lemma 2] ,
+it follows that if RH is false, then Q W a Q_{W}^{\,a} must be degenerate
+for some value of a a by continuity of λ a \lambda_{a} . 
+ We now turn to the eigenfunction corresponding to the lowest eigenvalue,
+following the approach of [ 4 ] .
+Roughly speaking,
+ [ 4 , Theorem 5.10] 
+(see also  [ 4 , Section 7] )
+shows that if the lowest eigenvalue λ a \lambda_{a} is simple
+and its eigenfunction
+ v a ∈ 𝔇 ​ ( A a ) v_{a}\in\mathfrak{D}(A_{a}) is even,
+then all zeros of the Fourier transform v a ^ ​ ( z ) \widehat{v_{a}}(z) 
+(corresponding to ξ λ ^ ​ ( z ) \widehat{\xi_{\lambda}}(z) in  [ 4 ] )
+are real.
+More precisely, they study restrictions of Q W a Q_{W}^{\,a} 
+to suitable finite-dimensional subspaces of L 2 ​ ( − a , a ) L^{2}(-a,a) ,
+obtaining the corresponding reality result at each finite-dimensional level.
+In our framework, however,
+the simplicity of λ a \lambda_{a} 
+and the evenness of the corresponding eigenfunction
+follow naturally for sufficiently small a a 
+by once again exploiting the asymptotic expansion
+( 2.2 ) of the screw function. 
+ Theorem 1.4 . 
+ For sufficiently small a > 0 a>0 ,
+the lowest eigenvalue λ a \lambda_{a} is positive,
+simple, and satisfies 
+ λ a = log ⁡ 1 a + μ 1 − log ⁡ ( 2 ​ π ) + ψ ​ ( 2 ) − 1 + O ​ ( a ) \lambda_{a}=\log\frac{1}{a}+\mu_{1}-\log(2\pi)+\psi(2)-1+O(a) 
+ as a → 0 + a\to 0+ , for some constant μ 1 > 0 \mu_{1}>0 .
+Furthermore, the corresponding eigenfunction is even. 
+ Let us return to the eigenfunction v a v_{a} 
+corresponding to the lowest eigenvalue.
+The fact that all zeros of its Fourier transform v a ^ ​ ( z ) \widehat{v_{a}}(z) are real
+follows from the property that it serves as the characteristic function
+(given by a zeta-regularized product)
+of a self-adjoint perturbation of the differential operator d / d ​ x d/dx 
+with periodic boundary conditions
+ [ 4 , Theorem 5.10] .
+However, since such a differential operator cannot be defined directly
+as an operator on L 2 ​ ( − a , a ) L^{2}(-a,a) ,
+the authors of [ 4 ] instead consider restrictions of Q W a Q_{W}^{\,a} 
+to finite-dimensional subspaces V V .
+Consequently, what is actually established there is not directly
+the reality of the zeros of v a ^ ​ ( z ) \widehat{v_{a}}(z) itself,
+but rather the reality of the zeros of the Fourier transform
+of a function minimizing the Rayleigh quotient of Q W a | V Q_{W}^{\,a}|_{V} . 
+ Instead of considering perturbations of the differential operator d / d ​ x d/dx 
+with periodic boundary conditions,
+we construct an analogue of v a ^ ​ ( z ) \widehat{v_{a}}(z) 
+by considering self-adjoint extensions of the minimal operator
+ 𝒟 a \mathscr{D}_{a} 
+in a Hilbert space different from the usual L 2 L^{2} space.
+Choose λ \lambda such that λ a > λ \lambda_{a}>\lambda , and define
+ T a = T a , λ := A a − λ ​ I T_{a}=T_{a,\lambda}:=A_{a}-\lambda I .
+Since T a T_{a} is positive, 
+ ‖ v ‖ T a 2 := ⟨ T a ​ v , v ⟩ L 2 = Q W a ​ ( v ) − λ ​ ‖ v ‖ L 2 2 \|v\|_{T_{a}}^{2}:=\langle T_{a}v,v\rangle_{L^{2}}=Q_{W}^{\,a}(v)-\lambda\|v\|_{L^{2}}^{2} 
+ (1.9) 
+ defines a norm on C c ∞ ​ ( − a , a ) C_{c}^{\infty}(-a,a) .
+Let ℋ ​ ( T a ) \mathcal{H}(T_{a}) denote the corresponding completion.
+Then C c ∞ ​ ( − a , a ) C_{c}^{\infty}(-a,a) embeds injectively into ℋ ​ ( T a ) \mathcal{H}(T_{a}) .
+We therefore consider the differential operator
+ 𝒟 a := i ​ d / d ​ x \mathscr{D}_{a}:=i\,d/dx on ℋ ​ ( T a ) \mathcal{H}(T_{a}) with domain 
+ 𝔇 ​ ( 𝒟 a ) := C c ∞ ​ ( − a , a ) . \mathfrak{D}(\mathscr{D}_{a}):=C_{c}^{\infty}(-a,a). 
+ (1.10) 
+ It turns out that 𝒟 a \mathscr{D}_{a} is a symmetric operator
+with deficiency indices ( 1 , 1 ) (1,1) 
+(Lemmas  6.1 and 6.2 ).
+Hence 𝒟 a \mathscr{D}_{a} admits a family of self-adjoint extensions
+ 𝒟 ¯ a , θ \overline{\mathscr{D}}_{a,\theta} parametrized by θ ∈ [ 0 , 2 ​ π ) \theta\in[0,2\pi) .
+A function arising from the boundary form of the adjoint operator
+ 𝒟 a ∗ \mathscr{D}_{a}^{\ast} provides a counterpart to v a ^ ​ ( z ) \widehat{v_{a}}(z) in [ 4 ] , as follows. 
+ Theorem 1.5 . 
+ Let a > 0 a>0 and θ ∈ [ 0 , 2 ​ π ) \theta\in[0,2\pi) .
+Let v ± ​ ( a , x ) v_{\pm}(a,x) be eigenfunctions of the adjoint operator 𝒟 a ∗ \mathscr{D}_{a}^{\ast} 
+corresponding respectively to the eigenvalues ± i \pm i ,
+normalized so that
+ ‖ v + ​ ( a , ⋅ ) ‖ T a = ‖ v − ​ ( a , ⋅ ) ‖ T a \|v_{+}(a,\cdot)\|_{T_{a}}=\|v_{-}(a,\cdot)\|_{T_{a}} .
+Then the function 
+ W ​ ( a , θ ; z ) := ( z − i ) ​ ∫ − a a v + ​ ( a , x ) ​ e i ​ z ​ x ​ 𝑑 x + e i ​ θ ​ ( z + i ) ​ ∫ − a a v − ​ ( a , x ) ​ e i ​ z ​ x ​ 𝑑 x W(a,\theta;z):=(z-i)\int_{-a}^{a}v_{+}(a,x)e^{izx}dx+e^{i\theta}(z+i)\int_{-a}^{a}v_{-}(a,x)e^{izx}dx 
+ (1.11) 
+ is entire in z z .
+The eigenvalues of the self-adjoint operator
+ 𝒟 ¯ a , θ \overline{\mathscr{D}}_{a,\theta} 
+are precisely the zeros of W ​ ( a , θ ; z ) W(a,\theta;z) .
+Furthermore, all zeros of W ​ ( a , θ ; z ) W(a,\theta;z) are real. 
+ The equation W ​ ( a , θ ; z ) = 0 W(a,\theta;z)=0 is equivalent to 
+ e i ​ θ = − ( ( z − i ) ​ ∫ − a a v + ​ ( x ) ​ e i ​ z ​ x ​ 𝑑 x ) / ( ( z + i ) ​ ∫ − a a v − ​ ( x ) ​ e i ​ z ​ x ​ 𝑑 x ) . e^{i\theta}=-\left.\left((z-i)\int_{-a}^{a}v_{+}(x)e^{izx}\,dx\right)\right/\penalty 50\left((z+i)\int_{-a}^{a}v_{-}(x)e^{izx}\,dx\right). 
+ This is analogous to the equation
+ e i ​ θ = exp ⁡ ( i ​ z ​ a ) / exp ⁡ ( − i ​ z ​ a ) e^{i\theta}=\exp(iza)/\exp(-iza) ,
+which characterizes the eigenvalues of the self-adjoint extension
+ ∂ θ \partial_{\theta} of the minimal operator
+ ∂ = i ​ d / d ​ x \partial=i\,d/dx on L 2 ​ ( − a , a ) L^{2}(-a,a) 
+through the boundary values of its eigenfunctions. 
+ Let us compare Theorem  1.5 
+with [ 4 , Theorem 5.10] .
+First, the two results are parallel in that both establish
+the reality of the zeros of a certain function
+through its relation to the self-adjointness of a differential operator.
+However, whereas the result in [ 4 ] requires strong assumptions,
+such as the simplicity of λ a \lambda_{a} 
+and the evenness of the corresponding eigenfunction,
+our Theorem  1.5 has the advantage of being proved unconditionally.
+In fact, its proof does not require detailed information on the arithmetic terms
+appearing in the Weil form Q W a Q_{W}^{\,a} .
+It relies essentially only on the fact that
+the prime contribution to Q W a Q_{W}^{\,a} involves only finitely many primes for fixed a > 0 a>0 .
+Moreover, they obtain a determinant representation
+of v a ^ ​ ( z ) \widehat{v_{a}}(z) in terms of a zeta-regularized determinant
+(by restricting to finite-dimensional subspaces),
+thereby interpreting v a ^ ​ ( z ) \widehat{v_{a}}(z) as a characteristic function.
+By contrast, our expression ( 1.11 )
+arises from a Lagrangian condition. 
+ A further difference appears in the approach to RH,
+as discussed in [ 4 , Sections 7 and 8] .
+While their function v a ^ ​ ( z ) \widehat{v_{a}}(z) is expected
+to approximate ξ ​ ( 1 / 2 − i ​ z ) \xi(1/2-iz) in the limit a → ∞ a\to\infty 
+through the conjectural formula ( 1.2 ),
+our function W ​ ( a , θ ; z ) W(a,\theta;z) is expected,
+as explained below,
+to approximate the reciprocal of its logarithmic derivative. 
+ Corollary 1.6 . 
+ If one can choose θ = θ ​ ( a ) \theta=\theta(a) and ϕ ​ ( a , z ) \phi(a,z) 
+( ≠ ∞ \neq\infty for any a > 0 a>0 and z ∈ ℂ z\in\mathbb{C} )
+such that 
+ lim a → ∞ e ϕ ​ ( a , z ) ​ W ​ ( a , θ ; z ) = z 2 ​ ξ ​ ( 1 / 2 − i ​ z ) ξ ′ ​ ( 1 / 2 − i ​ z ) , \lim_{a\to\infty}e^{\phi(a,z)}\,W(a,\theta;z)=z^{2}\,\frac{\xi(1/2-iz)}{\xi^{\prime}(1/2-iz)}, 
+ (1.12) 
+ holds uniformly on every compact subset K ⊂ ℂ K\subset\mathbb{C} ,
+then RH holds. 
+ A direct computation of the eigenfunctions shows that
+every eigenvalue of 𝒟 ¯ a , θ \overline{\mathscr{D}}_{a,\theta} 
+has multiplicity one.
+The right-hand side of ( 1.12 )
+is consistent with this simplicity of the spectrum.
+The exponential factor exp ⁡ ( ϕ ​ ( a , z ) ) \exp(\phi(a,z)) is included
+to allow for a possible normalization in the limit process.
+It is plausible that no such correction is actually needed,
+but we do not pursue this question here. 
+ The reason why the limit formula ( 1.12 )
+is expected to hold will be discussed in Section  7 .
+Briefly speaking, it is motivated by the determination of the structure of
+ ℋ ​ ( A ∞ ) := ℋ ​ ( T ∞ , 0 ) \mathcal{H}(A_{\infty}):=\mathcal{H}(T_{\infty,0}) 
+under RH in [ 14 , Theorem 1.1] ,
+together with the construction of the Hilbert–Pólya operator
+described in [ 14 , Section 6] . 
+ Under RH, one has A a > 0 A_{a}>0 , so that λ = 0 \lambda=0 
+may be chosen in T a T_{a} for every a > 0 a>0 .
+The limit formula ( 1.12 )
+is formulated with the situation T a = A a T_{a}=A_{a} 
+(i.e. λ = 0 \lambda=0 ) in mind,
+and indeed Section  7 proceeds under the assumption A a > 0 A_{a}>0 .
+Nevertheless, when A a > 0 A_{a}>0 ,
+both ℋ ​ ( T a ) \mathcal{H}(T_{a}) and ℋ ​ ( A a ) \mathcal{H}(A_{a}) are defined
+and are isomorphic as Hilbert spaces.
+Hence the zeros of W ​ ( a , θ ; z ) W(a,\theta;z) are expected to be independent
+of the choice of λ \lambda used in the definition of T a T_{a} .
+However, in any attempt to prove the limit formula
+( 1.12 ), control of λ \lambda ( < λ a ) (<\lambda_{a}) 
+will likely play an important role.
+Such control is expected to require a detailed analysis of the arithmetic contribution
+coming from the prime terms in Q W a Q_{W}^{\,a} ,
+which lies beyond the arguments used in the proof of Theorem  1.5 ,
+where only the finiteness of the prime contribution for fixed a a plays a role. 
+ Since the reality of the zeros of W ​ ( a , θ ; z ) W(a,\theta;z) 
+for each a > 0 a>0 has already been established in
+Theorem  1.5 ,
+it would suffice to prove ( 1.12 )
+as an identity of complex functions in order to deduce RH.
+As explained in Section  8 ,
+the eigenfunctions v ± ​ ( a , x ) v_{\pm}(a,x) are
+solutions of Fredholm integral equations of the first kind
+associated with the integral operator G a G_{a} 
+whose kernel is the continuous function g ​ ( x − y ) g(x-y) .
+Consequently, the conjectural limit formula
+( 1.12 ) in Corollary  1.6 
+can be formulated as a purely analytic statement,
+independently of ℋ ​ ( T a ) \mathcal{H}(T_{a}) . 
+ The organization of this paper is as follows.
+In Section  2 ,
+we study the asymptotic expansion of the screw function g g 
+near the origin and derive from it several formulas for the quadratic form
+ ⟨ B a ​ v , v ⟩ \langle B_{a}v,v\rangle .
+The latter formulas will be used repeatedly in the proofs
+of the main results.
+Using the results of Section  2 ,
+we prove Theorem  1.1 in Section  3 
+and Theorem  1.3 in Section  4 .
+In both proofs,
+the compactness of the embedding
+ 𝔇 ​ ( Q W a ) → L 2 ​ ( − a , a ) \mathfrak{D}(Q_{W}^{\,a})\to L^{2}(-a,a) 
+plays an essential role.
+Theorem  1.4 is proved in Section  5 .
+In addition to the results of Section  2 ,
+the proof relies on the theory of Dirichlet forms.
+In Section  6 ,
+we prove Theorem  1.5 
+using von Neumann’s theory of self-adjoint extensions.
+Section  7 
+explains the motivation for the limit formula in
+Corollary  1.6 
+by relating it to the results of [ 14 ] .
+The main tool there is the theory of de Branges spaces.
+Finally, in Section  8 ,
+we relate the theory of the quadratic forms
+ Q W a ​ ( v ) = ⟨ A a ​ v , v ⟩ L 2 Q_{W}^{\,a}(v)=\langle A_{a}v,v\rangle_{L^{2}} 
+developed in this paper
+to the theory of the quadratic forms
+ ⟨ G a ​ u , u ⟩ L 2 \langle G_{a}u,u\rangle_{L^{2}} .
+While the former belongs to the theory of distributions
+and is analytically more delicate,
+the latter has the advantage of being treatable within
+the theory of integral operators with continuous kernels. 
+ 2. Preliminaries 
+ 2.1. Precise definition of operators 
+ Let 
+ L 0 2 ​ ( − a , a ) = { u ∈ L 2 ​ ( − a , a ) ∣ u ^ ​ ( 0 ) = 0 } , L_{0}^{2}(-a,a)=\{u\in L^{2}(-a,a)\mid\widehat{u}(0)=0\}, 
+ as in Section  1 .
+Then
+ D = i ​ d / d ​ x D=i\,d/dx 
+denotes the differentiation operator on L 2 ​ ( − a , a ) L^{2}(-a,a) 
+with Dirichlet boundary conditions v ​ ( ± a ) = 0 v(\pm a)=0 ,
+whose domain and range are
+ 𝔇 ​ ( D ) = H 0 1 ​ ( − a , a ) \mathfrak{D}(D)=H_{0}^{1}(-a,a) 
+and
+ ℜ ​ ( D ) = L 0 2 ​ ( − a , a ) \mathfrak{R}(D)=L_{0}^{2}(-a,a) ,
+respectively.
+Let D ∗ D^{\ast} denote the adjoint of D D with respect to
+the standard L 2 L^{2} inner product.
+While D ∗ D^{\ast} acts as the same differential operator i ​ d / d ​ x i\,d/dx ,
+its domain is 𝔇 ​ ( D ∗ ) = H 1 ​ ( − a , a ) \mathfrak{D}(D^{\ast})=H^{1}(-a,a) and
+its range is ℜ ​ ( D ∗ ) = L 2 ​ ( − a , a ) \mathfrak{R}(D^{\ast})=L^{2}(-a,a) .
+Consequently, D D is not self-adjoint.
+Define the projection P a : L 2 ​ ( ℝ ) → L 0 2 ​ ( − a , a ) P_{a}:L^{2}(\mathbb{R})\to L_{0}^{2}(-a,a) by 
+ ( P a ​ u ) ​ ( x ) := u ​ ( x ) − 1 2 ​ a ​ u ^ ​ ( 0 ) = u ​ ( x ) − 1 2 ​ a ​ ∫ − a a u ​ ( y ) ​ 𝑑 y (P_{a}u)(x):=u(x)-\frac{1}{2a}\widehat{u}(0)=u(x)-\frac{1}{2a}\int_{-a}^{a}u(y)\,dy 
+ (2.1) 
+ for x ∈ ( − a , a ) x\in(-a,a) , and ( P a ​ u ) ​ ( x ) = 0 (P_{a}u)(x)=0 otherwise.
+Then, 
+ ( P a ​ K ​ u ) ​ ( x ) \displaystyle(P_{a}Ku)(x) 
+ = ( K ​ u ) ​ ( x ) − 1 2 ​ a ​ ∫ − a a ( K ​ u ) ​ ( t ) ​ 𝑑 t , x ∈ ( − a , a ) . \displaystyle=(Ku)(x)-\frac{1}{2a}\int_{-a}^{a}(Ku)(t)\,dt,\quad x\in(-a,a). 
+ This defines the operator G a G_{a} in ( 1.5 ).
+The kernel function g g is continuous,
+and its first derivative is piecewise continuous with
+only a discrete set of discontinuities at which finite one-sided limits exist.
+It follows that for any u ∈ L 0 2 ​ ( − a , a ) u\in L_{0}^{2}(-a,a) , we have G a ​ u ∈ 𝔇 ​ ( D ∗ ) = H 1 ​ ( − a , a ) G_{a}u\in\mathfrak{D}(D^{\ast})=H^{1}(-a,a) .
+Consequently, the operator B a B_{a} on L 2 ​ ( − a , a ) L^{2}(-a,a) 
+with domain 𝔇 ​ ( B a ) := H 0 1 ​ ( − a , a ) \mathfrak{D}(B_{a}):=H_{0}^{1}(-a,a) is well-defined by ( 1.6 ).
+Since G a G_{a} is self-adjoint, the relation
+ ⟨ B a ​ v , w ⟩ L 2 = ⟨ v , B a ​ w ⟩ L 2 \langle B_{a}v,w\rangle_{L^{2}}=\langle v,B_{a}w\rangle_{L^{2}} 
+holds for all v , w ∈ 𝔇 ​ ( B a ) v,w\in\mathfrak{D}(B_{a}) .
+Thus, B a B_{a} is a symmetric operator, but it is not self-adjoint.
+Indeed, the domain of the adjoint operator, 𝔇 ​ ( B a ∗ ) \mathfrak{D}(B_{a}^{\ast}) ,
+consists of all w w such that the functional v ↦ ⟨ B a ​ v , w ⟩ v\mapsto\langle B_{a}v,w\rangle is L 2 L^{2} -continuous, which also includes functions w ∈ H 1 ​ ( − a , a ) w\in H^{1}(-a,a) that do not vanish on the boundary.
+That is, 𝔇 ​ ( B a ) ⊊ 𝔇 ​ ( B a ∗ ) \mathfrak{D}(B_{a})\subsetneq\mathfrak{D}(B_{a}^{\ast}) . 
+ 2.2. Expansion near the origin 
+ We derive an asymptotic formula for the screw function g g in a neighborhood of the origin.
+The resulting asymptotic formula will be used repeatedly throughout the paper.
+ [ 6 , 9.554] with z = e − 2 ​ t z=e^{-2t} , m = 2 m=2 , and v = 1 / 4 v=1/4 yields 
+ e − t / 2 ​ Φ ​ ( e − 2 ​ t , 2 , 1 / 4 ) \displaystyle e^{-t/2}\Phi(e^{-2t},2,1/4) 
+ = 2 ​ t ​ ( log ⁡ ( 2 ​ t ) + ψ ​ ( 1 / 4 ) − ψ ​ ( 2 ) ) \displaystyle=2t(\log(2t)+\psi(1/4)-\psi(2)) 
+ + ζ ​ ( 2 , 1 / 4 ) + ∑ n = 2 ∞ ζ ​ ( 2 − n , 1 / 4 ) ​ ( − 2 ​ t ) n n ! \displaystyle\quad+\zeta(2,1/4)+\sum_{n=2}^{\infty}\zeta(2-n,1/4)\frac{(-2t)^{n}}{n!} 
+ for t → 0 + t\to 0+ ,
+where ζ ​ ( s , a ) \zeta(s,a) denotes the Hurwitz zeta function.
+By definition ( 1.3 ), 
+ g ​ ( t ) \displaystyle g(t) 
+ = − 4 ​ ( e t / 2 + e − t / 2 − 2 ) − ( | t | / 2 ) ​ ( ψ ​ ( 1 / 4 ) − log ⁡ π ) − ( 1 / 4 ) ​ ( F ​ ( 0 ) − F ​ ( t ) ) \displaystyle=-4(e^{t/2}+e^{-t/2}-2)-(|t|/2)(\psi(1/4)-\log\pi)-(1/4)(F(0)-F(t)) 
+ + ∑ n ≤ exp ⁡ ( | t | ) Λ ​ ( n ) n ​ ( | t | − log ⁡ n ) , \displaystyle\quad+\sum_{n\leq\exp(|t|)}\frac{\Lambda(n)}{\sqrt{n}}(|t|-\log n), 
+ where 
+ F ​ ( t ) := 2 ​ | t | ​ ( log ⁡ ( 2 ​ | t | ) + ψ ​ ( 1 / 4 ) − ψ ​ ( 2 ) ) + ζ ​ ( 2 , 1 / 4 ) + ∑ n = 2 ∞ ζ ​ ( 2 − n , 1 / 4 ) ​ ( − 2 ​ | t | ) n n ! . F(t):=2|t|(\log(2|t|)+\psi(1/4)-\psi(2))+\zeta(2,1/4)+\sum_{n=2}^{\infty}\zeta(2-n,1/4)\frac{(-2|t|)^{n}}{n!}. 
+ We have
+ ψ ​ ( 2 ) = 1 − C 0 \psi(2)=1-C_{0} [ 6 , (8.365), (8.366)] 
+and
+ ψ ​ ( 1 / 4 ) = − ( π / 2 ) − 3 ​ log ⁡ 2 − C 0 \psi(1/4)=-(\pi/2)-3\log 2-C_{0} [ 6 , (8.366)] ,
+where C 0 C_{0} denotes the Euler–Mascheroni constant.
+It follows from the defining series that
+ Φ ​ ( 1 , 2 , 1 / 4 ) = ζ ​ ( 2 , 1 / 4 ) \Phi(1,2,1/4)=\zeta(2,1/4) .
+Using also
+ ζ ​ ( 0 , 1 / 4 ) = 1 / 4 \zeta(0,1/4)=1/4 [ 6 , (9.523)] ,
+we obtain 
+ g ​ ( t ) \displaystyle g(t) 
+ = 1 2 ​ | t | ​ log ⁡ | t | + A ​ | t | + ∑ n ≤ exp ⁡ ( | t | ) Λ ​ ( n ) n ​ ( | t | − log ⁡ n ) + r ​ ( t ) \displaystyle=\frac{1}{2}|t|\log|t|+A|t|+\sum_{n\leq\exp(|t|)}\frac{\Lambda(n)}{\sqrt{n}}(|t|-\log n)+r(t) 
+ (2.2) 
+ in a neighbourhood of t = 0 t=0 ,
+where r r is an even C 2 C^{2} -function satisfying r ​ ( t ) = O ​ ( t 2 ) r(t)=O(t^{2}) , and 
+ A = 1 2 ​ ( log ⁡ ( 2 ​ π ) − ψ ​ ( 2 ) ) = 1 2 ​ ( log ⁡ ( 2 ​ π ) + C 0 − 1 ) = 0.707546 ​ … . A=\frac{1}{2}(\log(2\pi)-\psi(2))=\frac{1}{2}(\log(2\pi)+C_{0}-1)=0.707546\dots. 
+ The sum involving the von Mangoldt function in ( 2.2 )
+is understood to be zero if | t | < ( 1 / 2 ) ​ log ⁡ 2 |t|<(1/2)\log 2 . 
+ 2.3. Quadratic form formulas 
+ For the quadratic form 
+ Q B a ​ ( v ) := ⟨ B a ​ v , v ⟩ L 2 , v ∈ 𝔇 ​ ( B a ) = H 0 1 ​ ( − a , a ) Q_{B_{a}}(v):=\langle B_{a}v,v\rangle_{L^{2}},\quad v\in\mathfrak{D}(B_{a})=H_{0}^{1}(-a,a) 
+ we compute the quadratic forms corresponding to each term on the right-hand side of ( 2.2 ).
+First, for the first term on the right-hand side, we have 
+ ∫ − a a ∫ − a a | x − y | ​ v ′ ​ ( y ) ​ v ′ ​ ( x ) ¯ ​ 𝑑 x ​ 𝑑 y = − 2 ​ ‖ v ‖ L 2 2 , v ∈ 𝔇 ​ ( B a ) . \int_{-a}^{a}\int_{-a}^{a}|x-y|v^{\prime}(y)\overline{v^{\prime}(x)}dxdy=-2\|v\|_{L^{2}}^{2},\quad v\in\mathfrak{D}(B_{a}). 
+ Next, for the second term on the right-hand side, if we define 
+ ℒ a ​ ( v ) := 1 4 ​ ∫ − a a ∫ − a a | v ​ ( x ) − v ​ ( y ) | 2 | x − y | ​ 𝑑 x ​ 𝑑 y − 1 2 ​ ∫ − a a log ⁡ ( a 2 − x 2 ) ​ | v ​ ( x ) | 2 ​ 𝑑 x \mathcal{L}_{a}(v):=\frac{1}{4}\int_{-a}^{a}\int_{-a}^{a}\frac{|v(x)-v(y)|^{2}}{|x-y|}\,dx\,dy-\frac{1}{2}\int_{-a}^{a}\log(a^{2}-x^{2})|v(x)|^{2}\,dx 
+ (2.3) 
+ for v ∈ 𝔇 ​ ( B a ) v\in\mathfrak{D}(B_{a}) (to ensure the convergence of the second term),
+then we obtain 
+ ∫ − a a ∫ − a a | x − y | ​ log ⁡ | x − y | ​ v ′ ​ ( y ) ​ v ′ ​ ( x ) ¯ ​ 𝑑 x ​ 𝑑 y = 2 ​ ℒ a ​ ( v ) − 2 ​ ‖ v ‖ L 2 2 , v ∈ 𝔇 ​ ( B a ) . \int_{-a}^{a}\int_{-a}^{a}|x-y|\log|x-y|v^{\prime}(y)\overline{v^{\prime}(x)}dxdy=2\mathcal{L}_{a}(v)-2\|v\|_{L^{2}}^{2},\quad v\in\mathfrak{D}(B_{a}). 
+ (2.4) 
+ We verify this relation. Let I ​ ( v ) I(v) denote the left-hand side.
+Applying integration by parts with respect to y y , we have 
+ ∫ − a a | x − y | ​ log ⁡ | x − y | ​ v ′ ​ ( y ) ​ 𝑑 y = − ∫ − a a sgn ​ ( y − x ) ​ ( log ⁡ | x − y | + 1 ) ​ v ​ ( y ) ​ 𝑑 y . \int_{-a}^{a}|x-y|\log|x-y|v^{\prime}(y)dy=-\int_{-a}^{a}\text{sgn}(y-x)(\log|x-y|+1)v(y)dy. 
+ Substituting this into I ​ ( v ) I(v) , we introduce an ϵ \epsilon -cutoff to handle the singularity of the kernel rigorously: 
+ I ​ ( v ) = − lim ϵ → 0 ∫ − a a v ′ ​ ( x ) ¯ ​ ( ∫ | y − x | > ϵ sgn ​ ( y − x ) ​ ( log ⁡ | x − y | + 1 ) ​ v ​ ( y ) ​ 𝑑 y ) ​ 𝑑 x . I(v)=-\lim_{\epsilon\to 0}\int_{-a}^{a}\overline{v^{\prime}(x)}\left(\int_{|y-x|>\epsilon}\text{sgn}(y-x)(\log|x-y|+1)v(y)dy\right)dx. 
+ Let F ϵ ​ ( x ) F_{\epsilon}(x) denote the inner integral inside the brackets.
+Differentiating it by Leibniz’s rule, we obtain 
+ F ϵ ′ ​ ( x ) \displaystyle F_{\epsilon}^{\prime}(x) 
+ = − ( log ⁡ ϵ + 1 ) ​ v ​ ( x − ϵ ) + v ​ ( x + ϵ ) − ∫ | y − x | > ϵ v ​ ( y ) | x − y | ​ 𝑑 y . \displaystyle=-(\log\epsilon+1){v(x-\epsilon)+v(x+\epsilon)}-\int_{|y-x|>\epsilon}\frac{v(y)}{|x-y|}dy. 
+ Using this, we integrate by parts with respect to x x .
+Taking into account the boundary conditions v ​ ( ± a ) = 0 v(\pm a)=0 and the fact that v ​ ( x ± ϵ ) → v ​ ( x ) v(x\pm\epsilon)\to v(x) as ϵ → 0 \epsilon\to 0 , we find 
+ I ​ ( v ) \displaystyle I(v) 
+ = − lim ϵ → 0 ∫ − a a [ 2 ​ ( log ⁡ ϵ + 1 ) ​ | v ​ ( x ) | 2 + ∫ | y − x | > ϵ v ​ ( x ) ¯ ​ v ​ ( y ) | x − y | ​ 𝑑 y ] ​ 𝑑 x . \displaystyle=-\lim_{\epsilon\to 0}\int_{-a}^{a}\left[2(\log\epsilon+1)|v(x)|^{2}+\int_{|y-x|>\epsilon}\frac{\overline{v(x)}v(y)}{|x-y|}dy\right]dx. 
+ Here, we use the identity 2 ​ Re ​ ( v ​ ( x ) ¯ ​ v ​ ( y ) ) = | v ​ ( x ) | 2 + | v ​ ( y ) | 2 − | v ​ ( x ) − v ​ ( y ) | 2 2\text{Re}(\overline{v(x)}v(y))=|v(x)|^{2}+|v(y)|^{2}-|v(x)-v(y)|^{2} 
+to convert the product into a difference of squares
+(the imaginary part vanishes due to the symmetry of the double integral).
+Evaluating the integral concerning | v ​ ( x ) | 2 |v(x)|^{2} yields 
+ ∫ y ∈ ( − a , a ) , | y − x | > ϵ 1 | x − y | ​ 𝑑 y = − 2 ​ log ⁡ ϵ + log ⁡ ( a 2 − x 2 ) . \int_{y\in(-a,a),|y-x|>\epsilon}\frac{1}{|x-y|}dy=-2\log\epsilon+\log(a^{2}-x^{2}). 
+ Substituting this and simplifying the coefficient of | v ​ ( x ) | 2 |v(x)|^{2} , the contribution from the first term is 2 ​ log ⁡ ϵ + 2 2\log\epsilon+2 , while the contribution from the second term is − 2 ​ log ⁡ ϵ + log ⁡ ( a 2 − x 2 ) -2\log\epsilon+\log(a^{2}-x^{2}) . Consequently, log ⁡ ϵ \log\epsilon is cancelled out, and we obtain 
+ I ​ ( v ) = − ∫ − a a | v ​ ( x ) | 2 ​ ( 2 + log ⁡ ( a 2 − x 2 ) ) ​ 𝑑 x + 1 2 ​ ∫ − a a ∫ − a a | v ​ ( x ) − v ​ ( y ) | 2 | x − y | ​ 𝑑 x ​ 𝑑 y . I(v)=-\int_{-a}^{a}|v(x)|^{2}\left(2+\log(a^{2}-x^{2})\right)dx+\frac{1}{2}\int_{-a}^{a}\int_{-a}^{a}\frac{|v(x)-v(y)|^{2}}{|x-y|}dxdy. 
+ Rearranging the terms yields ( 2.4 ). 
+ Furthermore, setting
+ g 0 ​ ( t ) = ∑ n ≤ exp ⁡ ( | t | ) n − 1 / 2 ​ Λ ​ ( n ) ​ ( | t | − log ⁡ n ) g_{0}(t)=\sum_{n\leq\exp(|t|)}n^{-1/2}\Lambda(n)\bigl(|t|-\log n\bigr) 
+and calculating the corresponding integral, 
+ ∫ − a a ∫ − a a g 0 ​ ( x − y ) ​ v ′ ​ ( y ) ​ v ′ ​ ( x ) ¯ ​ 𝑑 x ​ 𝑑 y \displaystyle\int_{-a}^{a}\int_{-a}^{a}g_{0}(x-y)\,v^{\prime}(y)\overline{v^{\prime}(x)}\,dx\,dy 
+ = − ∑ n ≤ exp ⁡ ( 2 ​ a ) Λ ​ ( n ) n ​ ( ∫ − a a − log ⁡ n v ​ ( x + log ⁡ n ) ​ v ​ ( x ) ¯ ​ 𝑑 x + ∫ − a + log ⁡ n a v ​ ( x − log ⁡ n ) ​ v ​ ( x ) ¯ ​ 𝑑 x ) . \displaystyle=-\sum_{n\leq\exp(2a)}\frac{\Lambda(n)}{\sqrt{n}}\Biggl(\int_{-a}^{\,a-\log n}v(x+\log n)\overline{v(x)}\,dx+\int_{-a+\log n}^{\,a}v(x-\log n)\overline{v(x)}\,dx\Biggr). 
+ Computing Q B a ​ ( v ) Q_{B_{a}}(v) by using the asymptotic expansion ( 2.2 ), we get 
+ Q B a ​ ( v ) \displaystyle Q_{B_{a}}(v) 
+ = ℒ a ​ ( v ) − ( 2 ​ A + 1 ) ​ ‖ v ‖ L 2 2 \displaystyle=\mathcal{L}_{a}(v)-(2A+1)\|v\|_{L^{2}}^{2} 
+ (2.5) 
+ − ∑ n ≤ exp ⁡ ( 2 ​ a ) Λ ​ ( n ) n ( ∫ − a a − log ⁡ n v ( x + log n ) v ​ ( x ) ¯ d x \displaystyle\quad-\sum_{n\leq\exp(2a)}\frac{\Lambda(n)}{\sqrt{n}}\Biggl(\int_{-a}^{\,a-\log n}v(x+\log n)\overline{v(x)}\,dx 
+ + ∫ − a + log ⁡ n a v ( x − log n ) v ​ ( x ) ¯ d x ) \displaystyle\qquad\qquad\qquad\qquad\quad+\int_{-a+\log n}^{\,a}v(x-\log n)\overline{v(x)}\,dx\Biggr) 
+ − ∫ − a a ∫ − a a r ′′ ​ ( x − y ) ​ v ​ ( y ) ​ v ​ ( x ) ¯ ​ 𝑑 x ​ 𝑑 y \displaystyle\quad-\int_{-a}^{a}\int_{-a}^{a}r^{\prime\prime}(x-y)\,v(y)\overline{v(x)}dxdy 
+ for v ∈ H 0 1 ​ ( − a , a ) v\in H_{0}^{1}(-a,a) . 
+ 2.4. Formulas in Fourier transforms 
+ Expanding the numerator of 
+ 1 4 ​ ∬ ( − a , a ) 2 , | x − y | > ϵ | v ​ ( x ) − v ​ ( y ) | 2 | x − y | ​ 𝑑 x ​ 𝑑 y . \frac{1}{4}\iint_{(-a,a)^{2},|x-y|>\epsilon}\frac{|v(x)-v(y)|^{2}}{|x-y|}\,dx\,dy. 
+ as
+ | v ​ ( x ) | 2 + | v ​ ( y ) | 2 − 2 ​ Re ⁡ ( v ​ ( x ) ​ v ​ ( y ) ¯ ) |v(x)|^{2}+|v(y)|^{2}-2\operatorname{Re}(v(x)\overline{v(y)}) 
+and using symmetry, it equals 
+ 1 2 ​ ∫ − a a | v ​ ( x ) | 2 ​ ( ∫ ( − a , a ) ∖ ( x − ϵ , x + ϵ ) 1 | x − y | ​ 𝑑 y ) ​ 𝑑 x − 1 2 ​ ∬ ( − a , a ) 2 , | x − y | > ϵ v ​ ( x ) ​ v ​ ( y ) ¯ | x − y | ​ 𝑑 x ​ 𝑑 y . \frac{1}{2}\int_{-a}^{a}|v(x)|^{2}\left(\int_{(-a,a)\setminus(x-\epsilon,x+\epsilon)}\frac{1}{|x-y|}\,dy\right)dx-\frac{1}{2}\iint_{(-a,a)^{2},\ |x-y|>\epsilon}\frac{v(x)\overline{v(y)}}{|x-y|}\,dx\,dy. 
+ Since 
+ ∫ − a x − ϵ 1 x − y ​ 𝑑 y + ∫ x + ϵ a 1 y − x ​ 𝑑 y = log ⁡ ( a 2 − x 2 ) − 2 ​ log ⁡ ϵ , \int_{-a}^{x-\epsilon}\frac{1}{x-y}\,dy+\int_{x+\epsilon}^{a}\frac{1}{y-x}\,dy=\log(a^{2}-x^{2})-2\log\epsilon, 
+ we obtain 
+ ℒ a ​ ( v ) = lim ϵ → 0 [ − log ⁡ ϵ ​ ∫ − a a | v ​ ( x ) | 2 ​ 𝑑 x − 1 2 ​ ∬ ( − a , a ) 2 , | x − y | > ϵ v ​ ( x ) ​ v ​ ( y ) ¯ | x − y | ​ 𝑑 x ​ 𝑑 y ] . \mathcal{L}_{a}(v)=\lim_{\epsilon\to 0}\left[-\log\epsilon\int_{-a}^{a}|v(x)|^{2}\,dx-\frac{1}{2}\iint_{(-a,a)^{2},\ |x-y|>\epsilon}\frac{v(x)\overline{v(y)}}{|x-y|}\,dx\,dy\right]. 
+ The second term may be rewritten, by Plancherel’s theorem,
+as the quadratic form associated with the convolution kernel
+ K ϵ ​ ( x ) = | x | − 1 ​ 𝟏 { | x | > ϵ } ​ ( x ) K_{\epsilon}(x)=|x|^{-1}\mathbf{1}_{\{|x|>\epsilon\}}(x) .
+Its Fourier transform is 
+ K ϵ ^ ​ ( z ) = ∫ | x | > ϵ e − i ​ z ​ x | x | ​ 𝑑 x = 2 ​ ∫ ϵ ​ | z | ∞ cos ⁡ u u ​ 𝑑 u . \widehat{K_{\epsilon}}(z)=\int_{|x|>\epsilon}\frac{e^{-izx}}{|x|}\,dx=2\int_{\epsilon|z|}^{\infty}\frac{\cos u}{u}\,du. 
+ Using the asymptotic expansion of the cosine integral [ 6 , (8.230)] ,
+we obtain 
+ ∫ ϵ ​ | z | ∞ cos ⁡ u u ​ 𝑑 u = − log ⁡ ϵ − log ⁡ | z | − C 0 + o ​ ( 1 ) ( ϵ → 0 ) . \int_{\epsilon|z|}^{\infty}\frac{\cos u}{u}\,du=-\log\epsilon-\log|z|-C_{0}+o(1)\qquad(\epsilon\to 0). 
+ Substituting this into the Fourier representation yields 
+ ℒ a ​ ( v ) \displaystyle\mathcal{L}_{a}(v) 
+ = lim ϵ → 0 1 4 ​ π ​ ∫ − ∞ ∞ ( − 2 ​ log ⁡ ϵ − K ϵ ^ ​ ( z ) ) ​ | v ^ ​ ( z ) | 2 ​ 𝑑 z \displaystyle=\lim_{\epsilon\to 0}\frac{1}{4\pi}\int_{-\infty}^{\infty}\bigl(-2\log\epsilon-\widehat{K_{\epsilon}}(z)\bigr)|\widehat{v}(z)|^{2}\,dz 
+ (2.6) 
+ = 1 2 ​ π ​ ∫ − ∞ ∞ ( log ⁡ | z | + C 0 ) ​ | v ^ ​ ( z ) | 2 ​ 𝑑 z . \displaystyle=\frac{1}{2\pi}\int_{-\infty}^{\infty}\bigl(\log|z|+C_{0}\bigr)|\widehat{v}(z)|^{2}\,dz. 
+ Using the Fourier transform v ^ \widehat{v} of v v (defined as the zero-extension of v v outside ( − a , a ) (-a,a) ) 
+ ∫ − ∞ ∞ v ​ ( x ∓ τ ) ​ v ​ ( x ) ¯ ​ 𝑑 x = 1 2 ​ π ​ ∫ − ∞ ∞ | v ^ ​ ( z ) | 2 ​ e ± i ​ z ​ τ ​ 𝑑 z , \int_{-\infty}^{\infty}v(x\mp\tau)\overline{v(x)}dx=\frac{1}{2\pi}\int_{-\infty}^{\infty}|\widehat{v}(z)|^{2}e^{\pm iz\tau}dz, 
+ which yields 
+ ∫ − a a − log ⁡ n v ​ ( x + log ⁡ n ) ​ v ​ ( x ) ¯ ​ 𝑑 x \displaystyle\int_{-a}^{\,a-\log n}v(x+\log n)\overline{v(x)}\,dx 
+ + ∫ − a + log ⁡ n a v ​ ( x − log ⁡ n ) ​ v ​ ( x ) ¯ ​ 𝑑 x \displaystyle+\int_{-a+\log n}^{\,a}v(x-\log n)\overline{v(x)}\,dx 
+ = 1 π ​ ∫ − ∞ ∞ | v ^ ​ ( z ) | 2 ​ cos ⁡ ( z ​ log ⁡ n ) ​ 𝑑 z . \displaystyle=\frac{1}{\pi}\int_{-\infty}^{\infty}|\widehat{v}(z)|^{2}\cos(z\log n)dz. 
+ Furthermore, noting that
+ ‖ v ‖ L 2 2 = ( 2 ​ π ) − 1 ​ ‖ v ^ ‖ L 2 2 \|v\|_{L^{2}}^{2}=(2\pi)^{-1}\|\widehat{v}\|_{L^{2}}^{2} ,
+we obtain from ( 2.5 ) that 
+ Q B a ​ ( v ) \displaystyle Q_{B_{a}}(v) 
+ = 1 2 ​ π ​ ∫ − ∞ ∞ ( log ⁡ | z | − log ⁡ ( 2 ​ π ) ) ​ | v ^ ​ ( z ) | 2 ​ 𝑑 z \displaystyle=\frac{1}{2\pi}\int_{-\infty}^{\infty}\left(\log|z|-\log(2\pi)\right)|\widehat{v}(z)|^{2}dz 
+ (2.7) 
+ − 1 2 ​ π ​ ∫ − ∞ ∞ | v ^ ​ ( z ) | 2 ​ [ ∑ n ≤ exp ⁡ ( 2 ​ a ) Λ ​ ( n ) n ​ 2 ​ cos ⁡ ( z ​ log ⁡ n ) ] ​ 𝑑 z \displaystyle\quad-\frac{1}{2\pi}\int_{-\infty}^{\infty}|\hat{v}(z)|^{2}\left[\sum_{n\leq\exp(2a)}\frac{\Lambda(n)}{\sqrt{n}}2\cos(z\log n)\right]dz 
+ + 1 2 ​ π ​ ∫ − ∞ ∞ r a ′′ ^ ​ ( z ) ​ | v ^ ​ ( z ) | 2 ​ 𝑑 z \displaystyle\quad+\frac{1}{2\pi}\int_{-\infty}^{\infty}\widehat{r_{a}^{\prime\prime}}(z)|\widehat{v}(z)|^{2}dz 
+ for v ∈ H 0 1 ​ ( − a , a ) v\in H_{0}^{1}(-a,a) .
+To interpret the term r a ′′ ^ ​ ( z ) \widehat{r_{a}^{\prime\prime}}(z) ,
+we decompose r ​ ( t ) r(t) as r ​ ( t ) = r 0 ​ ( t ) + r 1 ​ ( t ) r(t)=r_{0}(t)+r_{1}(t) , where 
+ r 0 ​ ( t ) = − 4 ​ ( e t / 2 + e − t / 2 − 2 ) and r 1 ​ ( t ) = 1 4 ​ ∑ n = 2 ∞ ζ ​ ( 2 − n , 1 / 4 ) ​ ( − 2 ​ | t | ) n n ! . r_{0}(t)=-4(e^{t/2}+e^{-t/2}-2)\quad\text{and}\quad r_{1}(t)=\frac{1}{4}\sum_{n=2}^{\infty}\zeta(2-n,1/4)\frac{(-2|t|)^{n}}{n!}. 
+ Since r ′′ ^ ​ ( z ) \widehat{r^{\prime\prime}}(z) cannot be defined directly,
+we define r a ′′ ^ ​ ( z ) \widehat{r_{a}^{\prime\prime}}(z) by treating these two parts separately.
+For r 0 r_{0} , we take the Fourier transform of
+ r 0 , a ′′ ​ ( x ) := r 0 ′′ ​ ( x ) ​ 𝟏 ( − 2 ​ a , 2 ​ a ) ​ ( x ) , r_{0,a}^{\prime\prime}(x):=r_{0}^{\prime\prime}(x)\mathbf{1}_{(-2a,2a)}(x), 
+whereas for r 1 r_{1} we compute
+ r 1 ′′ ^ ​ ( z ) \widehat{r_{1}^{\prime\prime}}(z) explicitly.
+We then set
+ r a ′′ ^ ​ ( z ) := r 0 , a ′′ ^ ​ ( z ) + r 1 ′′ ^ ​ ( z ) . \widehat{r_{a}^{\prime\prime}}(z):=\widehat{r_{0,a}^{\prime\prime}}(z)+\widehat{r_{1}^{\prime\prime}}(z). 
+As shown below, all resulting terms except those arising from the polar factor s ​ ( s − 1 ) s(s-1) 
+coincide with the explicit formula. 
+ Using ζ ​ ( 2 − n , a ) = − B n − 1 ​ ( a ) / ( n − 1 ) \zeta(2-n,a)=-B_{n-1}(a)/(n-1) [ 10 , (25.11.14)] 
+and the generating series y ​ e a ​ y / ( e y − 1 ) = ∑ n = 0 ∞ B n ​ ( a ) ​ y n / n ! ye^{ay}/(e^{y}-1)=\sum_{n=0}^{\infty}B_{n}(a)y^{n}/n! [ 6 , (9.621)] ,
+we have 
+ r 1 ′′ ​ ( t ) = e − | t | / 2 1 − e − 2 ​ | t | − 1 2 ​ | t | . r_{1}^{\prime\prime}(t)=\frac{e^{-|t|/2}}{1-e^{-2|t|}}-\frac{1}{2|t|}. 
+ Hence, the Fourier transform is given by 
+ r 1 ′′ ^ ​ ( z ) \displaystyle\widehat{r_{1}^{\prime\prime}}(z) 
+ = 2 ​ ∫ 0 ∞ ( e − t / 2 1 − e − 2 ​ t − 1 2 ​ t ) ​ cos ⁡ ( z ​ t ) ​ 𝑑 t = ∫ 0 ∞ ( e − u / 4 1 − e − u − 1 u ) ​ cos ⁡ ( z ​ u / 2 ) ​ 𝑑 u \displaystyle=2\int_{0}^{\infty}\left(\frac{e^{-t/2}}{1-e^{-2t}}-\frac{1}{2t}\right)\cos(zt)\,dt=\int_{0}^{\infty}\left(\frac{e^{-u/4}}{1-e^{-u}}-\frac{1}{u}\right)\cos(zu/2)\,du 
+ = lim ϵ → + 0 R → ∞ [ ∫ ϵ R ( e − u / 4 ​ cos ⁡ ( z ​ u / 2 ) 1 − e − u − e − u u ) ​ 𝑑 u + ∫ ϵ R e − u − cos ⁡ ( z ​ u / 2 ) u ​ 𝑑 u ] . \displaystyle=\lim_{\begin{subarray}{c}\epsilon\to+0\\
+R\to\infty\end{subarray}}\left[\int_{\epsilon}^{R}\left(\frac{e^{-u/4}\cos(zu/2)}{1-e^{-u}}-\frac{e^{-u}}{u}\right)du+\int_{\epsilon}^{R}\frac{e^{-u}-\cos(zu/2)}{u}\,du\right]. 
+ Differentiating [ 6 , (8.341.3)] with respect to z z , we obtain 
+ ψ ​ ( s ) = ∫ 0 ∞ ( e − u u − e − s ​ u 1 − e − u ) ​ 𝑑 u ( Re ​ ( s ) > 0 ) . \psi(s)=\int_{0}^{\infty}\left(\frac{e^{-u}}{u}-\frac{e^{-su}}{1-e^{-u}}\right)\,du\quad(\mathrm{Re}(s)>0). 
+ By taking the real part for s = 1 / 4 + i ​ z / 2 s=1/4+iz/2 , we find 
+ ∫ 0 ∞ ( e − u / 4 ​ cos ⁡ ( z ​ u / 2 ) 1 − e − u − e − u u ) ​ 𝑑 u = − Re ⁡ [ ψ ​ ( 1 4 + i ​ z 2 ) ] \int_{0}^{\infty}\left(\frac{e^{-u/4}\cos(zu/2)}{1-e^{-u}}-\frac{e^{-u}}{u}\right)du=-\operatorname{Re}\left[\psi\left(\frac{1}{4}+\frac{iz}{2}\right)\right] 
+ for real z z . On the other hand, we have 
+ ∫ ϵ ∞ e − u u ​ 𝑑 u − ∫ ϵ ∞ cos ⁡ ( z ​ u / 2 ) u ​ 𝑑 u = E 1 ​ ( ϵ ) + Ci ​ ( | z / 2 | ​ ϵ ) = log ⁡ | z | − log ⁡ 2 + O ​ ( ϵ ) \int_{\epsilon}^{\infty}\frac{e^{-u}}{u}\,du-\int_{\epsilon}^{\infty}\frac{\cos(zu/2)}{u}\,du=\mathrm{E}_{1}(\epsilon)+\mathrm{Ci}(|z/2|\epsilon)=\log|z|-\log 2+O(\epsilon) 
+ for real z z 
+by E 1 ​ ( ϵ ) = − C 0 − log ⁡ ϵ + O ​ ( ϵ ) \mathrm{E}_{1}(\epsilon)=-C_{0}-\log\epsilon+O(\epsilon) [ 10 , (6.6.2)] 
+and
+ Ci ​ ( z ) = C 0 + log ⁡ z + O ​ ( | z | ) \mathrm{Ci}(z)=C_{0}+\log z+O(|z|) [ 10 , (6.6.6)] .
+Therefore, 
+ r 1 ′′ ^ ​ ( z ) = − Re ⁡ [ ψ ​ ( 1 4 + i ​ z 2 ) ] + log ⁡ | z | − log ⁡ 2 = O ​ ( | z | − 2 ) | z | → ∞ . \widehat{r_{1}^{\prime\prime}}(z)=-\operatorname{Re}\left[\psi\left(\frac{1}{4}+\frac{iz}{2}\right)\right]+\log|z|-\log 2=O(|z|^{-2})\quad|z|\to\infty. 
+ It follows that 
+ Q B a ​ ( v ) \displaystyle Q_{B_{a}}(v) 
+ = 1 2 ​ π ​ ∫ − ∞ ∞ ( Re ⁡ [ ψ ​ ( 1 4 + i ​ z 2 ) ] − log ⁡ π ) ​ | v ^ ​ ( z ) | 2 ​ 𝑑 z \displaystyle=\frac{1}{2\pi}\int_{-\infty}^{\infty}\left(\operatorname{Re}\left[\psi\left(\frac{1}{4}+\frac{iz}{2}\right)\right]-\log\pi\right)|\widehat{v}(z)|^{2}dz 
+ − 1 2 ​ π ​ ∫ − ∞ ∞ | v ^ ​ ( z ) | 2 ​ [ ∑ n ≤ exp ⁡ ( 2 ​ a ) Λ ​ ( n ) n ​ 2 ​ cos ⁡ ( z ​ log ⁡ n ) ] ​ 𝑑 z \displaystyle\quad-\frac{1}{2\pi}\int_{-\infty}^{\infty}|\hat{v}(z)|^{2}\left[\sum_{n\leq\exp(2a)}\frac{\Lambda(n)}{\sqrt{n}}2\cos(z\log n)\right]dz 
+ + 1 2 ​ π ​ ∫ − ∞ ∞ r 0 , a ′′ ^ ​ ( z ) ​ | v ^ ​ ( z ) | 2 ​ 𝑑 z . \displaystyle\quad+\frac{1}{2\pi}\int_{-\infty}^{\infty}\widehat{r_{0,a}^{\prime\prime}}(z)|\widehat{v}(z)|^{2}dz. 
+ This formula precisely reflects the structure of the explicit formula.
+From the explicit formula [ 1 , Lemma 3 and its proof] , we have 
+ Q W a ​ ( v ) \displaystyle Q_{W}^{\,a}(v) 
+ = 1 2 ​ π ​ ∫ − ∞ ∞ ℜ ⁡ [ ψ ​ ( 1 4 + i ​ z 2 ) ] ​ | v ^ ​ ( z ) | 2 ​ 𝑑 z − log ⁡ π ​ ∫ − a a | v ​ ( x ) | 2 ​ 𝑑 x \displaystyle=\frac{1}{2\pi}\int_{-\infty}^{\infty}\Re\left[\psi\left(\frac{1}{4}+\frac{iz}{2}\right)\right]|\widehat{v}(z)|^{2}dz-\log\pi\int_{-a}^{a}|v(x)|^{2}dx 
+ + O ​ ( a ) ⋅ ‖ v ‖ L 2 2 , \displaystyle\quad+O(a)\cdot\|v\|_{L^{2}}^{2}, 
+ where O ​ ( a ) O(a) denotes a bounded quantity depending on a a .
+Since 
+ Re ​ [ ψ ​ ( s / 2 ) ] = log ⁡ | s | − log ⁡ 2 + O ​ ( | s | − 2 ) ( ℜ ⁡ ( s ) > 0 ) | s | → ∞ , \text{Re}\left[\psi(s/2)\right]=\log|s|-\log 2+O(|s|^{-2})\quad(\Re(s)>0)\quad|s|\to\infty, 
+ we obtain 
+ Q W a ​ ( v ) = 1 2 ​ π ​ ∫ − ∞ ∞ ( log ⁡ | z | − log ⁡ ( 2 ​ π ) ) ​ | v ^ ​ ( z ) | 2 ​ 𝑑 z + O ​ ( a ) ⋅ ‖ v ‖ L 2 2 . Q_{W}^{\,a}(v)=\frac{1}{2\pi}\int_{-\infty}^{\infty}\left(\log|z|-\log(2\pi)\right)|\widehat{v}(z)|^{2}dz+O(a)\cdot\|v\|_{L^{2}}^{2}. 
+ (2.8) 
+ This perfectly matches the result obtained from ( 2.7 ). 
+ 2.5. Distributional formulas 
+ Since g g is continuous, the distributional second derivative − g ′′ -g^{\prime\prime} is a tempered distribution.
+By ( 1.8 ) and integration by parts, 
+ Q W a ​ ( v ) \displaystyle Q_{W}^{\,a}(v) 
+ = ∫ − a a ∫ − a a g ​ ( x − y ) ​ v ′ ​ ( y ) ​ v ′ ​ ( x ) ¯ ​ 𝑑 x ​ 𝑑 y \displaystyle=\int_{-a}^{a}\int_{-a}^{a}g(x-y)v^{\prime}(y)\overline{v^{\prime}(x)}\,dx\,dy 
+ (2.9) 
+ = ∫ − a a ∫ − a a ( − g ′′ ​ ( x − y ) ) ​ v ​ ( y ) ​ v ​ ( x ) ¯ ​ 𝑑 x ​ 𝑑 y \displaystyle=\int_{-a}^{a}\int_{-a}^{a}(-g^{\prime\prime}(x-y))v(y)\overline{v(x)}\,dx\,dy 
+ for v ∈ C c ∞ ​ ( − a , a ) v\in C_{c}^{\infty}(-a,a) .
+This was already observed in [ 13 , Section 3.5] .
+Combining this with ( 1.1 ), we obtain 
+ ( A a ​ v ) ​ ( x ) = ∫ − a a ( − g ′′ ​ ( x − y ) ) ​ v ​ ( y ) ​ 𝑑 y (A_{a}v)(x)=\int_{-a}^{a}(-g^{\prime\prime}(x-y))v(y)\,dy 
+ (2.10) 
+ for v ∈ C c ∞ ​ ( − a , a ) v\in C_{c}^{\infty}(-a,a) .
+Since g ′′ g^{\prime\prime} is a tempered distribution, the right-hand side is well-defined.
+Formula ( 2.10 ) provides an alternative representation of Bombieri’s Lagrangian
+( [ 1 , Lemma 1] , [ 2 , Sections 5–6] ).
+Let us compute the right-hand side of ( 2.10 ).
+Since 
+ d 2 d ​ t 2 ​ ( | t | ​ log ⁡ | t | ) = Pf ​ ( 1 | t | ) + 2 ​ δ ​ ( t ) \frac{d^{2}}{dt^{2}}(|t|\log|t|)={\rm Pf}\!\left(\frac{1}{|t|}\right)+2\delta(t) 
+ in the sense of distributions,
+it follows from ( 2.2 ) that 
+ − g ′′ ​ ( t ) \displaystyle-g^{\prime\prime}(t) 
+ = − 1 2 ​ Pf ​ ( 1 | t | ) − ( 2 ​ A + 1 ) ​ δ ​ ( t ) \displaystyle=-\frac{1}{2}\,{\rm Pf}\!\left(\frac{1}{|t|}\right)-(2A+1)\delta(t) 
+ − ∑ n ≥ 2 Λ ​ ( n ) n ​ ( δ ​ ( t − log ⁡ n ) + δ ​ ( t + log ⁡ n ) ) − r ′′ ​ ( t ) . \displaystyle\quad-\sum_{n\geq 2}\frac{\Lambda(n)}{\sqrt{n}}\bigl(\delta(t-\log n)+\delta(t+\log n)\bigr)-r^{\prime\prime}(t). 
+ Hence 
+ ∫ − a a ( − g ′′ ​ ( x − y ) ) ​ v ​ ( y ) ​ 𝑑 y \displaystyle\int_{-a}^{a}(-g^{\prime\prime}(x-y))v(y)\,dy 
+ = − 1 2 ​ Pf ​ ∫ − a a v ​ ( y ) | x − y | ​ 𝑑 y − ( 2 ​ A + 1 ) ​ v ​ ( x ) \displaystyle=-\frac{1}{2}\,{\rm Pf}\int_{-a}^{a}\frac{v(y)}{|x-y|}\,dy-(2A+1)v(x) 
+ (2.11) 
+ − ∑ n ≤ e 2 ​ a Λ ​ ( n ) n ​ ( v ​ ( x − log ⁡ n ) + v ​ ( x + log ⁡ n ) ) \displaystyle\quad-\sum_{n\leq e^{2a}}\frac{\Lambda(n)}{\sqrt{n}}\bigl(v(x-\log n)+v(x+\log n)\bigr) 
+ − ∫ − a a r ′′ ​ ( x − y ) ​ v ​ ( y ) ​ 𝑑 y . \displaystyle\quad-\int_{-a}^{a}r^{\prime\prime}(x-y)v(y)\,dy. 
+ Here we note that 
+ ∫ − a a \displaystyle\int_{-a}^{a} 
+ ( Pf ​ ∫ − a a v ​ ( y ) | x − y | ​ 𝑑 y ) ​ v ​ ( x ) ¯ ​ d ​ x \displaystyle\left({\rm Pf}\int_{-a}^{a}\frac{v(y)}{|x-y|}\,dy\right)\overline{v(x)}\,dx 
+ = − 1 2 ​ ∫ − a a ∫ − a a | v ​ ( x ) − v ​ ( y ) | 2 | x − y | ​ 𝑑 x ​ 𝑑 y + ∫ − a a log ⁡ ( a 2 − x 2 ) ​ | v ​ ( x ) | 2 ​ 𝑑 x \displaystyle=-\frac{1}{2}\int_{-a}^{a}\int_{-a}^{a}\frac{|v(x)-v(y)|^{2}}{|x-y|}\,dx\,dy+\int_{-a}^{a}\log(a^{2}-x^{2})|v(x)|^{2}\,dx 
+ which follows by a direct symmetrization argument.
+Using this identity, one verifies that
+( 2.9 ) follows from ( 2.5 ). 
+ For a general element
+ v ∈ 𝔇 ​ ( A a ) ⊂ 𝔇 ​ ( Q W a ) v\in\mathfrak{D}(A_{a})\subset\mathfrak{D}(Q_{W}^{\,a}) ,
+pointwise values need not be well defined, so an expression such as
+( 2.11 ) is not meaningful.
+However, by ( 2.7 ),
+identity ( 2.9 ) remains valid for
+ v ∈ 𝔇 ​ ( A a ) v\in\mathfrak{D}(A_{a}) 
+in the sense of limits of values on elements of
+ C c ∞ ​ ( − a , a ) C_{c}^{\infty}(-a,a) 
+with respect to the form norm of Q W a Q_{W}^{\,a} . 
+ 3. Proof of Theorem  1.1 
+ 3.1. The Relation between A a A_{a} and B a B_{a} 
+ To compare the operators A a A_{a} and B a B_{a} , we begin by recalling some
+basic facts concerning the quadratic form Q W a Q_{W}^{\,a} .
+For general background on quadratic forms, we refer to Schmüdgen  [ 12 , Chapter 10] . 
+ Let Γ \Gamma denote the set of all zeros of the function
+ z ↦ ξ ​ ( 1 / 2 − i ​ z ) z\mapsto\xi(1/2-iz) .
+For each γ ∈ Γ \gamma\in\Gamma , let m γ m_{\gamma} be the multiplicity of γ \gamma 
+as a zero of ξ ​ ( 1 / 2 − i ​ z ) \xi(1/2-iz) .
+By the functional equations
+ ξ ​ ( 1 − s ) = ξ ​ ( s ) \xi(1-s)=\xi(s) and ξ ​ ( s ) = ξ ​ ( s ¯ ) ¯ \xi(s)=\overline{\xi(\bar{s})} ,
+the set Γ \Gamma is invariant under
+ γ ↦ − γ \gamma\mapsto-\gamma and γ ↦ γ ¯ \gamma\mapsto\bar{\gamma} .
+It is customary to write the zeros of ξ ​ ( s ) \xi(s) as
+ ρ = β + i ​ γ \rho=\beta+i\gamma ( β , γ ∈ ℝ \beta,\gamma\in\mathbb{R} ),
+but our notation differs from this convention.
+In particular, an element γ ∈ Γ \gamma\in\Gamma may be non-real.
+RH is equivalent to the inclusion
+ Γ ⊂ ℝ \Gamma\subset\mathbb{R} .
+In this notation, the Weil explicit formula yields 
+ Q W ​ ( v 1 , v 2 ) = ∑ γ ∈ Γ m γ ​ v 1 ^ ​ ( γ ) ​ v 2 ^ ​ ( γ ¯ ) ¯ Q_{W}(v_{1},v_{2})=\sum_{\gamma\in\Gamma}m_{\gamma}\widehat{v_{1}}(\gamma)\overline{\widehat{v_{2}}(\bar{\gamma})} 
+ (3.1) 
+ (cf. [ 14 , (1.2), (3.3)] ).
+The form domain of the closed symmetric quadratic form Q W a Q_{W}^{\,a} is defined by 
+ 𝔇 ​ ( Q W a ) := { v ∈ L 2 ​ ( − a , a ) ∣ | Q W a ​ ( v ) | < ∞ } , \mathfrak{D}(Q_{W}^{\,a}):=\{\,v\in L^{2}(-a,a)\mid|Q_{W}^{\,a}(v)|<\infty\,\}, 
+ and becomes a Hilbert space with respect to the form norm 
+ ‖ v ‖ Q W a 2 := Q W a ​ ( v ) + ( 1 − λ a ) ​ ‖ v ‖ L 2 2 , \|v\|_{Q_{W}^{\,a}}^{2}:=Q_{W}^{\,a}(v)+(1-\lambda_{a})\|v\|_{L^{2}}^{2}, 
+ where λ a \lambda_{a} is the constant defined in ( 1.7 ).
+By ( 2.6 ) and ( 2.8 ), if we define 
+ H log ​ ( − a , a ) : \displaystyle H^{\log}(-a,a): 
+ = { v ∈ L 2 ​ ( − a , a ) | ∫ − ∞ ∞ ( 1 + log + ⁡ | z | ) ​ | v ^ ​ ( z ) | 2 ​ 𝑑 z < ∞ } \displaystyle=\left\{v\in L^{2}(-a,a)\ \middle|\ \int_{-\infty}^{\infty}(1+\log^{+}|z|)|\widehat{v}(z)|^{2}\,dz<\infty\right\} 
+ ⊃ { v ∈ L 2 ​ ( − a , a ) ∣ ℒ a ​ ( v ) < ∞ } , \displaystyle\supset\{\,v\in L^{2}(-a,a)\mid\mathcal{L}_{a}(v)<\infty\,\}, 
+ then 
+ 𝔇 ​ ( Q W a ) ⊂ H log ​ ( − a , a ) . \mathfrak{D}(Q_{W}^{\,a})\subset H^{\log}(-a,a). 
+ In [ 2 , Theorem 5.1] , Bombieri appears to state implicitly that
+ 𝔇 ​ ( Q W a ) \mathfrak{D}(Q_{W}^{\,a}) coincides with the set of all
+ v ∈ L 2 ​ ( − a , a ) v\in L^{2}(-a,a) such that 
+ ∫ − a a ∫ − a a | v ​ ( x ) − v ​ ( y ) | 2 | x − y | ​ 𝑑 x ​ 𝑑 y + ∫ − a a | v ​ ( x ) | 2 ​ 𝑑 x \int_{-a}^{a}\int_{-a}^{a}\frac{|v(x)-v(y)|^{2}}{|x-y|}\,dx\,dy+\int_{-a}^{a}|v(x)|^{2}\,dx 
+ is finite.
+However, taking into account the equivalence between
+( 2.3 ) and ( 2.6 ),
+one finds that this space is in fact slightly larger than
+ 𝔇 ​ ( Q W a ) \mathfrak{D}(Q_{W}^{\,a}) . 
+ The fact that Q W a ​ ( v ) Q_{W}^{\,a}(v) is lower bounded and lower semicontinuous on
+ L 2 ​ ( − a , a ) L^{2}(-a,a) was proved in [ 3 , Proposition 2.1] .
+It is also mentioned in the proof of [ 1 , Lemma 3] and is implicitly contained in [ 17 , Section 2] .
+All of these arguments are based on the formula ( 2.8 ).
+The lower semicontinuity follows immediately from an application of Fatou’s lemma. 
+ We now recall the self-adjoint operator A a A_{a} associated with
+ Q W a Q_{W}^{\,a} through ( 1.1 ).
+Such a self-adjoint operator is uniquely determined.
+Moreover,
+ v ∈ 𝔇 ​ ( A a ) ⊂ 𝔇 ​ ( Q W a ) v\in\mathfrak{D}(A_{a})\subset\mathfrak{D}(Q_{W}^{\,a}) 
+if and only if the map
+ w ⟼ Q W a ​ ( v , w ) w\longmapsto Q_{W}^{\,a}(v,w) 
+is continuous on 𝔇 ​ ( Q W a ) \mathfrak{D}(Q_{W}^{\,a}) with respect to the L 2 L^{2} -norm.
+By the Riesz representation theorem, this is equivalent to
+ [ 12 , Definition 10.4] .
+In this case, A a ​ v A_{a}v is uniquely characterized by
+ Q W a ​ ( v , w ) = ⟨ A a ​ v , w ⟩ L 2 Q_{W}^{\,a}(v,w)=\langle A_{a}v,w\rangle_{L^{2}} ( w ∈ 𝔇 ​ ( Q W a ) w\in\mathfrak{D}(Q_{W}^{\,a}) ). 
+ Lemma 3.1 . 
+ B a ⊂ A a B_{a}\subset A_{a} .
+In particular, A a A_{a} is a self-adjoint extension of B a B_{a} . 
+ Proof. 
+ Let E ⊂ L 2 ​ ( − a , a ) E\subset L^{2}(-a,a) be the linear subspace generated by 
+ e n ​ ( x ) = exp ⁡ ( i ​ π ​ n ​ x / a ) , n ∈ ℤ . e_{n}(x)=\exp(i\pi nx/a),\qquad n\in\mathbb{Z}. 
+ The space E E is a core for the quadratic form Q W a Q_{W}^{\,a} 
+ [ 3 , Proposition 2.3] .
+On the other hand, if v ∈ 𝔇 ​ ( B a ) = H 0 1 ​ ( − a , a ) v\in\mathfrak{D}(B_{a})=H_{0}^{1}(-a,a) , then
+ v ^ ​ ( z ) = O ​ ( | z | − 1 ) \widehat{v}(z)=O(|z|^{-1}) as | z | → ∞ |z|\to\infty .
+Hence, by ( 3.1 ),
+ 𝔇 ​ ( B a ) ⊂ 𝔇 ​ ( Q W a ) . \mathfrak{D}(B_{a})\subset\mathfrak{D}(Q_{W}^{\,a}). 
+Moreover, 
+ e n ^ ​ ( z ) = 2 ​ sin ⁡ ( a ​ z + n ​ π ) z + n ​ π / a , \widehat{e_{n}}(z)=\frac{2\sin(az+n\pi)}{z+n\pi/a}, 
+ so that w ^ ​ ( z ) = O ​ ( | z | − 1 ) \widehat{w}(z)=O(|z|^{-1}) for every w ∈ E w\in E .
+If u = D ​ v u=Dv , then
+ v ^ ​ ( z ) = z − 1 ​ u ^ ​ ( z ) \widehat{v}(z)=z^{-1}\widehat{u}(z) .
+Therefore, by ( 3.1 ) and [ 13 , (3.1)] ,
+ Q W a ​ ( v , w ) = ⟨ B a ​ v , w ⟩ L 2 Q_{W}^{\,a}(v,w)=\langle B_{a}v,w\rangle_{L^{2}} 
+for all
+ v ∈ H 0 1 ​ ( − a , a ) = 𝔇 ​ ( B a ) v\in H_{0}^{1}(-a,a)=\mathfrak{D}(B_{a}) 
+and
+ w ∈ E w\in E .
+It follows from [ 12 , Proposition 10.5 (v)] 
+that B a ⊂ A a B_{a}\subset A_{a} .
+∎ 
+ 3.2. Completion of the proof 
+ For simplicity, we write
+ A = A a A=A_{a} , B = B a B=B_{a} , Q B ​ ( v ) = ⟨ B ​ v , v ⟩ L 2 Q_{B}(v)=\langle Bv,v\rangle_{L^{2}} ,
+ Q = Q W a Q=Q_{W}^{\,a} , and
+ ‖ v ‖ Q 2 = Q ​ ( v ) + ( 1 − λ a ) ​ ‖ v ‖ L 2 2 \|v\|_{Q}^{2}=Q(v)+(1-\lambda_{a})\|v\|_{L^{2}}^{2} .
+Note that Q = Q B Q=Q_{B} on 𝔇 ​ ( B a ) \mathfrak{D}(B_{a}) .
+The Friedrichs extension of the operator B B 
+is the uniquely determined self-adjoint extension associated with
+the closure Q ¯ B \overline{Q}_{B} of the quadratic form Q B Q_{B} .
+The domain 𝔇 ​ ( Q ¯ B ) \mathfrak{D}(\overline{Q}_{B}) of Q ¯ B \overline{Q}_{B} 
+is defined as the completion of the form domain
+ 𝔇 ​ ( Q B ) := 𝔇 ​ ( B ) = H 0 1 ​ ( − a , a ) \mathfrak{D}(Q_{B}):=\mathfrak{D}(B)=H_{0}^{1}(-a,a) 
+with respect to the form norm ∥ ⋅ ∥ Q \|\cdot\|_{Q} .
+Since B ⊂ A B\subset A (Lemma  3.1 ),
+we have
+ 𝔇 ​ ( Q ¯ B ) ⊂ 𝔇 ​ ( Q A ) = 𝔇 ​ ( Q ) \mathfrak{D}(\overline{Q}_{B})\subset\mathfrak{D}(Q_{A})=\mathfrak{D}(Q) .
+Hence, 𝔇 ​ ( Q ¯ B ) \mathfrak{D}(\overline{Q}_{B}) is a closed subspace of
+ 𝔇 ​ ( Q ) \mathfrak{D}(Q) with respect to the form norm.
+On the other hand, the space E E 
+(in the proof of Lemma  3.1 )
+is a core for the quadratic form Q Q 
+(i.e. E ¯ ∥ ⋅ ∥ Q = 𝔇 ​ ( Q ) \overline{E}^{\,\|\cdot\|_{Q}}=\mathfrak{D}(Q) ).
+Since C c ∞ ​ ( − a , a ) ⊂ H 0 1 ​ ( − a , a ) C_{c}^{\infty}(-a,a)\subset H_{0}^{1}(-a,a) ,
+if 
+ E ⊂ C c ∞ ​ ( − a , a ) ¯ ∥ ⋅ ∥ Q , E\subset\overline{C_{c}^{\infty}(-a,a)}^{\,\|\cdot\|_{Q}}, 
+ (3.2) 
+ then
+ 𝔇 ​ ( Q ¯ B ) = 𝔇 ​ ( Q ) \mathfrak{D}(\overline{Q}_{B})=\mathfrak{D}(Q) .
+It follows that the Friedrichs extension of B B coincides with A A .
+Indeed, by [ 12 , Corollary 10.8] ,
+on a given Hilbert space, lower bounded self-adjoint operators
+are in one-to-one correspondence with lower bounded closed symmetric
+quadratic forms having dense domains. 
+ To prove the inclusion ( 3.2 ), it suffices to show that each function
+ e n ∈ E e_{n}\in E belongs to the closure of C c ∞ ​ ( − a , a ) C_{c}^{\infty}(-a,a) 
+with respect to the form norm ∥ ⋅ ∥ Q \|\cdot\|_{Q} .
+In other words, we must construct a sequence
+ v ϵ ∈ C c ∞ ​ ( − a , a ) v_{\epsilon}\in C_{c}^{\infty}(-a,a) 
+such that ‖ e n − v ϵ ‖ Q → 0 \|e_{n}-v_{\epsilon}\|_{Q}\to 0 as ϵ → 0 \epsilon\to 0 .
+For a sufficiently small parameter ϵ > 0 \epsilon>0 , we define a cutoff function
+ η ϵ ​ ( x ) \eta_{\epsilon}(x) which decays to 0 near the boundary of the interval
+ [ − a , a ] [-a,a] . More precisely, η ϵ ​ ( x ) = 1 \eta_{\epsilon}(x)=1 on
+ [ − a + ϵ , a − ϵ ] [-a+\epsilon,a-\epsilon] , and η ϵ ​ ( ± a ) = 0 \eta_{\epsilon}(\pm a)=0 .
+On the boundary intervals [ − a , − a + ϵ ] [-a,-a+\epsilon] and [ a − ϵ , a ] [a-\epsilon,a] ,
+ η ϵ \eta_{\epsilon} is chosen as a smooth monotone cutoff interpolating between these values,
+with | η ϵ ′ ​ ( x ) | ≪ ϵ − 1 |\eta_{\epsilon}^{\prime}(x)|\ll\epsilon^{-1} .
+Define v ϵ ​ ( x ) := e n ​ ( x ) ​ η ϵ ​ ( x ) v_{\epsilon}(x):=e_{n}(x)\eta_{\epsilon}(x) .
+Then v ϵ v_{\epsilon} belongs to C c ∞ ​ ( − a , a ) C_{c}^{\infty}(-a,a) .
+It therefore remains to show that the form norm of the error function
+ w ϵ ​ ( x ) = e n ​ ( x ) ​ ( 1 − η ϵ ​ ( x ) ) w_{\epsilon}(x)=e_{n}(x)(1-\eta_{\epsilon}(x)) 
+tends to zero as ϵ → 0 \epsilon\to 0 . 
+ The function w ϵ w_{\epsilon} is supported only on the two intervals
+ [ − a , − a + ϵ ] [-a,-a+\epsilon] and [ a − ϵ , a ] [a-\epsilon,a] , each of length ϵ \epsilon .
+Moreover, | w ϵ ​ ( x ) | ≤ 1 |w_{\epsilon}(x)|\leq 1 .
+Therefore, 
+ ‖ w ϵ ‖ L 2 2 ≤ ∫ − a − a + ϵ 1 ​ 𝑑 x + ∫ a − ϵ a 1 ​ 𝑑 x = 2 ​ ϵ . \|w_{\epsilon}\|_{L^{2}}^{2}\leq\int_{-a}^{-a+\epsilon}1\,dx+\int_{a-\epsilon}^{a}1\,dx=2\epsilon. 
+ Hence ‖ w ϵ ‖ L 2 → 0 \|w_{\epsilon}\|_{L^{2}}\to 0 as ϵ → 0 \epsilon\to 0 . 
+ By ( 2.7 ) and Plancherel’s theorem, we have 
+ ‖ w ϵ ‖ Q 2 = ∫ − ∞ ∞ ( 1 + log + ⁡ | z | ) ​ | w ϵ ^ ​ ( z ) | 2 ​ 𝑑 z + O ​ ( a ) ⋅ ‖ w ϵ ‖ L 2 2 . \|w_{\epsilon}\|_{Q}^{2}=\int_{-\infty}^{\infty}(1+\log^{+}|z|)\,|\widehat{w_{\epsilon}}(z)|^{2}\,dz+O(a)\cdot\|w_{\epsilon}\|_{L^{2}}^{2}. 
+ Therefore, the principal term in ‖ w ϵ ‖ Q 2 \|w_{\epsilon}\|_{Q}^{2} is 
+ I ϵ = ∫ − ∞ ∞ log ⁡ ( 3 + | z | ) ​ | w ϵ ^ ​ ( z ) | 2 ​ 𝑑 z . I_{\epsilon}=\int_{-\infty}^{\infty}\log(3+|z|)|\widehat{w_{\epsilon}}(z)|^{2}\,dz. 
+ To estimate it, we examine the behavior of w ϵ ^ \widehat{w_{\epsilon}} .
+First, it follows immediately from the definition of the Fourier transform that 
+ | w ϵ ^ ​ ( z ) | ≤ ∫ ℝ | w ϵ ​ ( x ) | ​ 𝑑 x ≤ 2 ​ ϵ . |\widehat{w_{\epsilon}}(z)|\leq\int_{\mathbb{R}}|w_{\epsilon}(x)|\,dx\leq 2\epsilon. 
+ (3.3) 
+ On the other hand,
+ | w ϵ ^ ​ ( z ) | = O ​ ( | z | − 1 ) |\widehat{w_{\epsilon}}(z)|=O(|z|^{-1}) as | z | → ∞ |z|\to\infty ,
+uniformly in ϵ \epsilon .
+Indeed, integrating by parts in
+ w ϵ ^ ​ ( z ) = ∫ − a a w ϵ ​ ( x ) ​ e i ​ z ​ x ​ 𝑑 x \widehat{w_{\epsilon}}(z)=\int_{-a}^{a}w_{\epsilon}(x)e^{izx}\,dx ,
+we obtain 
+ w ϵ ^ ​ ( z ) = [ w ϵ ​ ( x ) ​ e i ​ z ​ x i ​ z ] − a a − ∫ − a a w ϵ ′ ​ ( x ) ​ e i ​ z ​ x i ​ z ​ 𝑑 x . \widehat{w_{\epsilon}}(z)=\left[w_{\epsilon}(x)\frac{e^{izx}}{iz}\right]_{-a}^{a}-\int_{-a}^{a}w_{\epsilon}^{\prime}(x)\frac{e^{izx}}{iz}\,dx. 
+ Here,
+ w ϵ ​ ( a ) = e n ​ ( a ) = ( − 1 ) n w_{\epsilon}(a)=e_{n}(a)=(-1)^{n} 
+and
+ w ϵ ​ ( − a ) = e n ​ ( − a ) = ( − 1 ) n w_{\epsilon}(-a)=e_{n}(-a)=(-1)^{n} .
+Moreover,
+ w ϵ ′ ​ ( x ) = e n ′ ​ ( x ) ​ ( 1 − η ϵ ​ ( x ) ) − e n ​ ( x ) ​ η ϵ ′ ​ ( x ) . w_{\epsilon}^{\prime}(x)=e_{n}^{\prime}(x)(1-\eta_{\epsilon}(x))-e_{n}(x)\eta_{\epsilon}^{\prime}(x). 
+Since | η ϵ ′ ​ ( x ) | ≪ ϵ − 1 |\eta_{\epsilon}^{\prime}(x)|\ll\epsilon^{-1} on intervals of total length 2 ​ ϵ 2\epsilon ,
+we have
+ ∫ | η ϵ ′ ​ ( x ) | ​ 𝑑 x = O ​ ( 1 ) \int|\eta_{\epsilon}^{\prime}(x)|\,dx=O(1) .
+Hence 
+ ‖ w ϵ ′ ‖ L 1 ≤ C 1 ​ ϵ + O ​ ( 1 ) ≤ C 2 , \|w_{\epsilon}^{\prime}\|_{L^{1}}\leq C_{1}\epsilon+O(1)\leq C_{2}, 
+ where C 2 C_{2} is independent of ϵ \epsilon .
+Consequently, there exists a constant M > 0 M>0 independent of ϵ \epsilon such that 
+ | w ϵ ^ ​ ( z ) | ≤ | w ϵ ​ ( a ) | + | w ϵ ​ ( − a ) | + ‖ w ϵ ′ ‖ L 1 | z | ≤ M | z | . |\widehat{w_{\epsilon}}(z)|\leq\frac{|w_{\epsilon}(a)|+|w_{\epsilon}(-a)|+\|w_{\epsilon}^{\prime}\|_{L^{1}}}{|z|}\leq\frac{M}{|z|}. 
+ (3.4) 
+ Finally, we show that I ϵ → 0 I_{\epsilon}\to 0 .
+We split the domain of integration into two parts at
+ | z | = 1 / ϵ |z|=1/\epsilon .
+For | z | ≤ 1 / ϵ |z|\leq 1/\epsilon , ( 3.3 ) gives 
+ ∫ | z | ≤ 1 / ϵ log ⁡ ( 3 + | z | ) ​ | w ϵ ^ ​ ( z ) | 2 ​ 𝑑 z ≤ ( 2 ​ ϵ ) 2 ​ ∫ − 1 / ϵ 1 / ϵ log ⁡ ( 3 + | z | ) ​ 𝑑 z ≪ ϵ ​ log ⁡ ( 1 / ϵ ) . \int_{|z|\leq 1/\epsilon}\log(3+|z|)|\widehat{w_{\epsilon}}(z)|^{2}\,dz\leq(2\epsilon)^{2}\int_{-1/\epsilon}^{1/\epsilon}\log(3+|z|)\,dz\ll\epsilon\log(1/\epsilon). 
+ For | z | > 1 / ϵ |z|>1/\epsilon , ( 3.4 ) gives 
+ ∫ | z | > 1 / ϵ log ⁡ ( 3 + | z | ) ​ | w ϵ ^ ​ ( z ) | 2 ​ 𝑑 z ≤ 2 ​ ∫ 1 / ϵ ∞ log ⁡ ( 3 + z ) ​ M 2 z 2 ​ 𝑑 z ≪ ϵ ​ log ⁡ ( 1 / ϵ ) . \int_{|z|>1/\epsilon}\log(3+|z|)|\widehat{w_{\epsilon}}(z)|^{2}\,dz\leq 2\int_{1/\epsilon}^{\infty}\log(3+z)\frac{M^{2}}{z^{2}}\,dz\ll\epsilon\log(1/\epsilon). 
+ Combining these estimates, we obtain 
+ ‖ e n − v ϵ ‖ Q 2 = I ϵ + ‖ w ϵ ‖ L 2 2 ≪ ϵ ​ log ⁡ ( 1 / ϵ ) → 0 ( ϵ → 0 ) . \|e_{n}-v_{\epsilon}\|_{Q}^{2}=I_{\epsilon}+\|w_{\epsilon}\|_{L^{2}}^{2}\ll\epsilon\log(1/\epsilon)\to 0\qquad(\epsilon\to 0). 
+ Therefore,
+ v ϵ ∈ C c ∞ ​ ( − a , a ) v_{\epsilon}\in C_{c}^{\infty}(-a,a) converges to e n e_{n} 
+with respect to the form norm ∥ ⋅ ∥ Q \|\cdot\|_{Q} .
+Hence every
+ e n ∈ E e_{n}\in E belongs to
+ C c ∞ ​ ( − a , a ) ¯ ∥ ⋅ ∥ Q ( ⊂ 𝔇 ​ ( Q ¯ B ) ) \overline{C_{c}^{\infty}(-a,a)}^{\,\|\cdot\|_{Q}}\,(\subset\mathfrak{D}(\overline{Q}_{B})) ,
+and the inclusion ( 3.2 ) follows.
+ □ \Box 
+ 4. Proof of Theorem  1.3 
+ 4.1. Compact embedding result 
+ The following proposition is the main analytic ingredient in the proof of Theorem  1.3 . 
+ Proposition 4.1 . 
+ For a bounded interval I I , the embedding
+ H log ​ ( I ) ↪ L 2 ​ ( I ) H^{\log}(I)\hookrightarrow L^{2}(I) 
+is compact.
+In other words,
+every bounded sequence in H log ​ ( I ) H^{\log}(I) admits a subsequence converging in L 2 ​ ( I ) L^{2}(I) . 
+ Proof. 
+ The proof is essentially the same as that of [ 4 , Theorem 3.6] .
+∎ 
+ This compact embedding is also the key ingredient
+in the proof of the discreteness of the spectrum of
+ A a A_{a} in [ 4 , Theorem 3.6] .
+By [ 12 , Proposition 10.6] ,
+it suffices to prove that the embedding
+ ( 𝔇 ( Q W a ) , ∥ ⋅ ∥ Q W a ) ↪ ( L 2 ( − 1 , 1 ) , ∥ ⋅ ∥ L 2 ) (\mathfrak{D}(Q_{W}^{\,a}),\|\cdot\|_{Q_{W}^{\,a}})\hookrightarrow(L^{2}(-1,1),\|\cdot\|_{L^{2}}) 
+is compact.
+This follows readily from
+Proposition  4.1 . 
+ 4.2. Scaling transformation of the Rayleigh quotient 
+ Using ( 1.8 ),
+we transfer the Rayleigh quotient in ( 1.7 )
+to the fixed interval [ − 1 , 1 ] [-1,1] by a scaling transformation.
+From definition ( 1.6 ),
+the Rayleigh quotient associated with B a B_{a} for v ∈ H 0 1 ​ ( − a , a ) v\in H_{0}^{1}(-a,a) is given by 
+ ⟨ B a ​ v , v ⟩ L 2 ‖ v ‖ L 2 2 = ⟨ G a ​ D ​ v , D ​ v ⟩ L 2 ‖ v ‖ L 2 2 = ∫ − a a ∫ − a a g ​ ( x − y ) ​ v ′ ​ ( y ) ​ v ′ ​ ( x ) ¯ ​ 𝑑 x ​ 𝑑 y ∫ − a a | v ​ ( x ) | 2 ​ 𝑑 x . \frac{\langle B_{a}v,v\rangle_{L^{2}}}{\|v\|_{L^{2}}^{2}}=\frac{\langle G_{a}Dv,Dv\rangle_{L^{2}}}{\|v\|_{L^{2}}^{2}}=\frac{\displaystyle\int_{-a}^{a}\int_{-a}^{a}g(x-y)v^{\prime}(y)\overline{v^{\prime}(x)}\,dxdy}{\displaystyle\int_{-a}^{a}|v(x)|^{2}dx}. 
+ Setting w ​ ( t ) = v ​ ( a ​ t ) w(t)=v(at) on the fixed interval [ − 1 , 1 ] [-1,1] , we define 
+ q a ​ ( w ) := ∫ − 1 1 ∫ − 1 1 1 a ​ g ​ ( a ​ ( x − y ) ) ​ w ′ ​ ( x ) ​ w ′ ​ ( y ) ¯ ​ 𝑑 x ​ 𝑑 y . q_{a}(w):=\int_{-1}^{1}\int_{-1}^{1}\frac{1}{a}g(a(x-y))w^{\prime}(x)\overline{w^{\prime}(y)}\,dx\,dy. 
+ (4.1) 
+ Then a change of variables gives 
+ ⟨ B a ​ v , v ⟩ L 2 ‖ v ‖ L 2 2 = q a ​ ( w ) ‖ w ‖ L 2 2 , w ​ ( t ) = v ​ ( a ​ t ) ∈ H 0 1 ​ ( − 1 , 1 ) . \frac{\langle B_{a}v,v\rangle_{L^{2}}}{\|v\|_{L^{2}}^{2}}=\frac{q_{a}(w)}{\|w\|_{L^{2}}^{2}},\qquad w(t)=v(at)\in H_{0}^{1}(-1,1). 
+ (4.2) 
+ We write 
+ R ​ ( a , w ) := q a ​ ( w ) ‖ w ‖ L 2 2 . R(a,w):=\frac{q_{a}(w)}{\|w\|_{L^{2}}^{2}}. 
+ (4.3) 
+ For the second term on the right-hand side of ( 2.3 ), we have 
+ ∫ − a a | v ​ ( x ) | 2 ​ log ⁡ ( a 2 − x 2 ) ​ 𝑑 x = 2 ​ ‖ v ‖ L 2 2 ​ log ⁡ a + ∫ − 1 1 | v ​ ( a ​ x ) | 2 ​ log ⁡ ( 1 − x 2 ) ​ 𝑑 x . \int_{-a}^{a}|v(x)|^{2}\log(a^{2}-x^{2})\,dx=2\|v\|_{L^{2}}^{2}\log a+\int_{-1}^{1}|v(ax)|^{2}\log(1-x^{2})\,dx. 
+ Thus, defining 
+ ℒ ​ ( w ) := 1 4 ​ ∫ − 1 1 ∫ − 1 1 | w ​ ( x ) − w ​ ( y ) | 2 | x − y | ​ 𝑑 x ​ 𝑑 y − 1 2 ​ ∫ − 1 1 | w ​ ( x ) | 2 ​ log ⁡ ( 1 − x 2 ) ​ 𝑑 x \displaystyle\mathcal{L}(w)=\frac{1}{4}\int_{-1}^{1}\int_{-1}^{1}\frac{|w(x)-w(y)|^{2}}{|x-y|}\,dx\,dy-\frac{1}{2}\int_{-1}^{1}|w(x)|^{2}\log(1-x^{2})\,dx 
+ (4.4) 
+ for v ∈ H 0 1 ​ ( − 1 , 1 ) v\in H_{0}^{1}(-1,1) 
+(which should not be confused with the case a = 1 a=1 of ( 2.3 )),
+we deduce from ( 2.5 ) that 
+ R ​ ( a , w ) \displaystyle R(a,w) 
+ = − log ⁡ a − ( 2 ​ A + 1 ) + ℒ ​ ( w ) ‖ w ‖ L 2 2 \displaystyle=-\log a-(2A+1)+\frac{\mathcal{L}(w)}{\|w\|_{L^{2}}^{2}} 
+ (4.5) 
+ − 1 ‖ w ‖ L 2 2 ∑ n ≤ e 2 ​ a Λ ​ ( n ) n ( ∫ − 1  1 − log ⁡ n a w ( t + log ⁡ n a ) w ​ ( x ) ¯ d x \displaystyle\quad-\frac{1}{\|w\|_{L^{2}}^{2}}\sum_{n\leq e^{2a}}\frac{\Lambda(n)}{\sqrt{n}}\Biggl(\int_{-1}^{\,1-\frac{\log n}{a}}w\left(t+\frac{\log n}{a}\right)\overline{w(x)}\,dx 
+ + ∫ − 1 + log ⁡ n a  1 w ( x − log ⁡ n a ) w ​ ( x ) ¯ d x ) \displaystyle\qquad\qquad\qquad\qquad\qquad\qquad+\int_{-1+\frac{\log n}{a}}^{\,1}w\left(x-\frac{\log n}{a}\right)\overline{w(x)}\,dx\Biggr) 
+ − a ‖ w ‖ L 2 2 ​ ∫ − 1 1 ∫ − 1 1 r ′′ ​ ( a ​ ( x − y ) ) ​ w ​ ( y ) ​ w ​ ( x ) ¯ ​ 𝑑 x ​ 𝑑 y \displaystyle\quad-\frac{a}{\|w\|_{L^{2}}^{2}}\int_{-1}^{1}\int_{-1}^{1}r^{\prime\prime}(a(x-y))w(y)\overline{w(x)}\,dxdy 
+ for w ∈ H 0 1 ​ ( − 1 , 1 ) w\in H_{0}^{1}(-1,1) . 
+ For the quadratic form ℒ \mathcal{L} defined by ( 4.4 )
+for w ∈ 𝔇 ​ ( ℒ ) := H 0 1 ​ ( − 1 , 1 ) w\in\mathfrak{D}(\mathcal{L}):=H_{0}^{1}(-1,1) ,
+one can show in the same way as in the proof of ( 2.6 ) that 
+ ℒ ​ ( w ) = 1 2 ​ π ​ ∫ − ∞ ∞ ( log ⁡ | z | + C 0 ) ​ | w ^ ​ ( z ) | 2 ​ 𝑑 z . \mathcal{L}(w)=\frac{1}{2\pi}\int_{-\infty}^{\infty}\bigl(\log|z|+C_{0}\bigr)|\widehat{w}(z)|^{2}\,dz. 
+ (4.6) 
+ Hence the form norm ‖ w ‖ ℒ 2 := ℒ ​ ( w ) + ‖ w ‖ L 2 2 \|w\|_{\mathcal{L}}^{2}:=\mathcal{L}(w)+\|w\|_{L^{2}}^{2} 
+is equivalent to ∫ − ∞ ∞ ( 1 + log + ⁡ | z | ) ​ | w ^ ​ ( z ) | 2 ​ 𝑑 z \int_{-\infty}^{\infty}(1+\log^{+}|z|)|\widehat{w}(z)|^{2}\,dz .
+Therefore, the completion of 𝔇 ​ ( ℒ ) \mathfrak{D}(\mathcal{L}) with respect to ∥ ⋅ ∥ ℒ \|\cdot\|_{\mathcal{L}} 
+can be identified with a subspace of H log ​ ( − 1 , 1 ) H^{\log}(-1,1) .
+In particular, formula ( 4.6 ) is valid not only
+for w ∈ 𝔇 ​ ( ℒ ) w\in\mathfrak{D}(\mathcal{L}) , but also for w ∈ 𝔇 ​ ( ℒ ¯ ) w\in\mathfrak{D}(\overline{\mathcal{L}}) . 
+ To prove Theorem  1.3 ,
+it remains to establish the upper semicontinuity 
+ lim sup a → a 0 λ a ≤ λ a 0 . \limsup_{a\to a_{0}}\lambda_{a}\leq\lambda_{a_{0}}. 
+ (4.7) 
+ and lower semicontinuity 
+ lim inf n → ∞ λ a n ≥ λ a 0 . \liminf_{n\to\infty}\lambda_{a_{n}}\geq\lambda_{a_{0}}. 
+ (4.8) 
+ From ( 4.2 ) and Theorem  1.1 ,
+we obtain for the Rayleigh quotient associated with the closure q ¯ a \bar{q}_{a} of q a q_{a} that 
+ Q W a ​ ( v ) ‖ v ‖ L 2 2 = q ¯ a ​ ( w ) ‖ w ‖ L 2 2 , v ​ ( a ​ t ) = w ​ ( t ) ∈ 𝔇 ​ ( q ¯ a ) . \frac{Q_{W}^{a}(v)}{\|v\|_{L^{2}}^{2}}=\frac{\bar{q}_{a}(w)}{\|w\|_{L^{2}}^{2}},\quad v(at)=w(t)\in\mathfrak{D}(\bar{q}_{a}). 
+ (4.9) 
+ By ( 4.5 ), ( 4.6 ), and the definition of H log ​ ( − 1 , 1 ) H^{\log}(-1,1) ,
+we obtain
+ 𝔇 ​ ( q ¯ a ) ⊂ H log ​ ( − 1 , 1 ) \mathfrak{D}(\bar{q}_{a})\subset H^{\log}(-1,1) for every a > 0 a>0 .
+Hence, by ( 1.7 ) and ( 4.9 ),
+it suffices to study the infimum of 
+ R ¯ ​ ( a , w ) := q ¯ a ​ ( w ) ‖ w ‖ L 2 2 . \bar{R}(a,w):=\frac{\bar{q}_{a}(w)}{\|w\|_{L^{2}}^{2}}. 
+ 4.3. Proof of upper semicontinuity 
+ Let q a q_{a} be the quadratic form defined in ( 4.1 ),
+and let R ​ ( a , w ) R(a,w) be the Rayleigh quotient defined in ( 4.3 ).
+We choose w 0 ∈ 𝔇 ​ ( q ¯ a 0 ) ⊂ H log ​ ( − 1 , 1 ) w_{0}\in\mathfrak{D}(\bar{q}_{a_{0}})\subset H^{\log}(-1,1) 
+such that λ a 0 = R ¯ ​ ( a 0 , w 0 ) \lambda_{a_{0}}=\bar{R}(a_{0},w_{0}) ,
+and normalize it by ‖ w 0 ‖ L 2 = 1 \|w_{0}\|_{L^{2}}=1 .
+To avoid referring to pointwise values of w 0 w_{0} and w 0 ^ \widehat{w_{0}} ,
+we choose a sequence w n ∈ C c ∞ ​ ( − 1 , 1 ) w_{n}\in C_{c}^{\infty}(-1,1) 
+such that
+ w n → w 0 w_{n}\to w_{0} 
+with respect to the form norm ∥ ⋅ ∥ 0 \|\cdot\|_{0} 
+(the form norm associated with q a 0 q_{a_{0}} ), and ‖ w n ‖ L 2 = 1 \|w_{n}\|_{L^{2}}=1 .
+Such a sequence exists by the proof of Theorem  1.1 .
+Since C c ∞ ​ ( − 1 , 1 ) ⊂ 𝔇 ​ ( q a ) C_{c}^{\infty}(-1,1)\subset\mathfrak{D}(q_{a}) ,
+each w n w_{n} belongs to 𝔇 ​ ( q a ) \mathfrak{D}(q_{a}) for every a a ,
+and R ​ ( a , w n ) R(a,w_{n}) can be expressed in terms of w n w_{n} and w n ^ \widehat{w_{n}} . 
+ Fix n n .
+By the definition of the infimum
+ λ a ≤ R ​ ( a , w n ) \lambda_{a}\leq R(a,w_{n}) for every a a .
+Moreover,
+( 4.5 ) implies that
+ R ​ ( a , w n ) → R ​ ( a 0 , w n ) R(a,w_{n})\to R(a_{0},w_{n}) as a → a 0 a\to a_{0} .
+Since ‖ w n ‖ L 2 = 1 \|w_{n}\|_{L^{2}}=1 , we obtain 
+ lim sup a → a 0 λ a ≤ R ​ ( a 0 , w n ) = q a 0 ​ ( w n ) . \limsup_{a\to a_{0}}\lambda_{a}\leq R(a_{0},w_{n})=q_{a_{0}}(w_{n}). 
+ Passing to the limit as n → ∞ n\to\infty , we obtain 
+ lim sup a → a 0 λ a ≤ lim n → ∞ q a 0 ​ ( w n ) = q ¯ a 0 ​ ( w 0 ) = R ¯ ​ ( a 0 , w 0 ) = λ a 0 . \limsup_{a\to a_{0}}\lambda_{a}\leq\lim_{n\to\infty}q_{a_{0}}(w_{n})=\bar{q}_{a_{0}}(w_{0})=\bar{R}(a_{0},w_{0})=\lambda_{a_{0}}. 
+ Thus, ( 4.7 ) holds. □ \Box 
+ 4.4. Proof of lower semicontinuity 
+ By ( 4.5 ), we decompose
+ q ¯ a = q ¯ 0 + q ¯ a 1 \bar{q}_{a}=\bar{q}^{0}+\bar{q}_{a}^{1} ,
+where
+ q ¯ 0 ​ ( w ) = ℒ ¯ ​ ( w ) − ( 2 ​ A + 1 ) ​ ‖ w ‖ L 2 2 \bar{q}^{0}(w)=\overline{\mathcal{L}}(w)-(2A+1)\|w\|_{L^{2}}^{2} 
+and q ¯ a 1 \bar{q}_{a}^{1} denotes the remaining terms in
+( 4.5 ).
+Let ( a n ) (a_{n}) be a sequence with a n → a 0 a_{n}\to a_{0} ,
+and let w n ∈ 𝔇 ​ ( q ¯ a n ) ⊂ H log ​ ( − 1 , 1 ) w_{n}\in\mathfrak{D}(\bar{q}_{a_{n}})\subset H^{\log}(-1,1) 
+be a sequence such that λ a n = R ¯ ​ ( a n , w n ) \lambda_{a_{n}}=\bar{R}(a_{n},w_{n}) and ‖ w n ‖ L 2 = 1 \|w_{n}\|_{L^{2}}=1 .
+We first show that there exists a subsequence of ( w n ) (w_{n}) 
+which converges in L 2 L^{2} to some limit w ∗ w_{\ast} .
+Fix an arbitrary w ∈ H 0 1 ​ ( − 1 , 1 ) ⊂ H log ​ ( − 1 , 1 ) w\in H_{0}^{1}(-1,1)\subset H^{\log}(-1,1) .
+Then λ a n ≤ R ​ ( a n , w ) \lambda_{a_{n}}\leq R(a_{n},w) ,
+and since R ​ ( a , w ) R(a,w) is continuous in a a by the formula ( 4.5 ),
+the sequence ( λ a n ) (\lambda_{a_{n}}) is bounded above. 
+ Since
+ λ a n = q ¯ a n ​ ( w n ) \lambda_{a_{n}}=\bar{q}_{a_{n}}(w_{n}) by λ a n = R ¯ ​ ( a n , w n ) \lambda_{a_{n}}=\bar{R}(a_{n},w_{n}) and ‖ w n ‖ L 2 = 1 \|w_{n}\|_{L^{2}}=1 ,
+the sequence
+ q ¯ a n ​ ( w n ) \bar{q}_{a_{n}}(w_{n}) 
+is bounded above.
+As ( a n ) (a_{n}) remains in a compact neighborhood of a 0 a_{0} ,
+the estimate
+ q ¯ a 1 ​ ( v ) = O ​ ( ‖ v ‖ L 2 2 ) \bar{q}_{a}^{1}(v)=O(\|v\|_{L^{2}}^{2}) 
+holds uniformly in a a .
+It follows that the terms other than
+ ℒ ¯ ​ ( w n ) \overline{\mathcal{L}}(w_{n}) 
+in ( 4.5 )
+are uniformly bounded.
+Consequently,
+ ℒ ¯ ​ ( w n ) \overline{\mathcal{L}}(w_{n}) is bounded above.
+Since ℒ ¯ \overline{\mathcal{L}} is bounded below by definition,
+the sequence
+ ℒ ¯ ​ ( w n ) \overline{\mathcal{L}}(w_{n}) 
+is bounded.
+Together with ( 4.6 ),
+this shows that ( w n ) (w_{n}) is bounded in H log ​ ( − 1 , 1 ) H^{\log}(-1,1) .
+Proposition  4.1 therefore implies that
+ ( w n ) (w_{n}) is relatively compact in L 2 L^{2} ,
+and we may extract a subsequence converging in L 2 L^{2} .
+We relabel it again as ( w n ) (w_{n}) and denote its limit by w ∗ w_{\ast} . 
+ The explicit expression for q ¯ a 1 \bar{q}_{a}^{1} shows that it is a finite sum
+of quadratic forms associated with translation operators and integral
+operators with continuous kernels.
+Thus q ¯ a 1 ​ ( w ) \bar{q}_{a}^{1}(w) depends continuously on ( a , w ) (a,w) near ( a 0 , w ∗ ) (a_{0},w_{\ast}) ,
+and therefore 
+ lim n → ∞ q ¯ a n 1 ​ ( w n ) = q ¯ a 0 1 ​ ( w ∗ ) . \lim_{n\to\infty}\bar{q}_{a_{n}}^{1}(w_{n})=\bar{q}_{a_{0}}^{1}(w_{\ast}). 
+ On the other hand, q ¯ 0 \bar{q}^{0} is an a a -independent
+lower bounded closed quadratic form on L 2 ​ ( − 1 , 1 ) L^{2}(-1,1) .
+Hence, by [ 12 , Proposition 10.1] , it is lower semicontinuous with respect to L 2 L^{2} -convergence: 
+ lim inf n → ∞ q ¯ 0 ​ ( w n ) ≥ q ¯ 0 ​ ( w ∗ ) . \liminf_{n\to\infty}\bar{q}^{0}(w_{n})\geq\bar{q}^{0}(w_{\ast}). 
+ Combining these estimates, we obtain 
+ lim inf n → ∞ λ a n = lim inf n → ∞ ( q ¯ 0 ​ ( w n ) + q ¯ a n 1 ​ ( w n ) ) ≥ q ¯ 0 ​ ( w ∗ ) + q ¯ a 0 1 ​ ( w ∗ ) = q ¯ a 0 ​ ( w ∗ ) . \liminf_{n\to\infty}\lambda_{a_{n}}=\liminf_{n\to\infty}\left(\bar{q}^{0}(w_{n})+\bar{q}_{a_{n}}^{1}(w_{n})\right)\geq\bar{q}^{0}(w_{\ast})+\bar{q}_{a_{0}}^{1}(w_{\ast})=\bar{q}_{a_{0}}(w_{\ast}). 
+ Since w n → w ∗ w_{n}\to w_{\ast} in L 2 ​ ( − 1 , 1 ) L^{2}(-1,1) and
+ ‖ w n ‖ L 2 = 1 \|w_{n}\|_{L^{2}}=1 for all n n ,
+we have ‖ w ∗ ‖ L 2 = 1 \|w_{\ast}\|_{L^{2}}=1 .
+Therefore,
+ R ¯ ​ ( a 0 , w ∗ ) = q ¯ a 0 ​ ( w ∗ ) , \bar{R}(a_{0},w_{\ast})=\bar{q}_{a_{0}}(w_{\ast}), 
+and by the definition of λ a 0 \lambda_{a_{0}} as the infimum of
+ R ¯ ​ ( a 0 , ⋅ ) \bar{R}(a_{0},\cdot) ,
+ q ¯ a 0 ​ ( w ∗ ) = R ¯ ​ ( a 0 , w ∗ ) ≥ λ a 0 . \bar{q}_{a_{0}}(w_{\ast})=\bar{R}(a_{0},w_{\ast})\geq\lambda_{a_{0}}. 
+Consequently, 
+ lim inf n → ∞ λ a n ≥ q ¯ a 0 ​ ( w ∗ ) ≥ λ a 0 , \liminf_{n\to\infty}\lambda_{a_{n}}\geq\bar{q}_{a_{0}}(w_{\ast})\geq\lambda_{a_{0}}, 
+ which proves ( 4.8 ).
+ □ \Box 
+ 4.5. A remark on the continuity of λ a \lambda_{a} via parity decomposition 
+ Since the kernel g ​ ( x − y ) g(x-y) is even,
+ G a G_{a} commutes with the parity operator ( J ​ u ) ​ ( x ) = u ​ ( − x ) (Ju)(x)=u(-x) , i.e. G a ​ J = J ​ G a G_{a}J=JG_{a} .
+It follows that both
+ B a = D ∗ ​ G a ​ D B_{a}=D^{\ast}G_{a}D 
+and its Friedrichs extension A a A_{a} 
+commute with J J .
+In particular, each eigenspace E ​ ( λ ) E(\lambda) of A a A_{a} admits a decomposition into even and odd subspaces:
+ E ​ ( λ ) = E + ​ ( λ ) ⊕ E − ​ ( λ ) E(\lambda)=E^{+}(\lambda)\oplus E^{-}(\lambda) .
+For the lowest eigenvalue space
+ E ​ ( λ a ) = E + ​ ( λ a ) ⊕ E − ​ ( λ a ) E(\lambda_{a})=E^{+}(\lambda_{a})\oplus E^{-}(\lambda_{a}) ,
+the assumption in [ 4 , Theorem 5.10] 
+amounts to requiring that
+ dim ​ E + ​ ( λ a ) = 1 {\rm dim}\,E^{+}(\lambda_{a})=1 and E − ​ ( λ a ) = { 0 } E^{-}(\lambda_{a})=\{0\} . 
+ In view of the parity decomposition and Corollary  1.2 ,
+we define 
+ λ a ∙ := inf 0 ≠ v ∈ H ∙ 1 ​ ( − a , a ) ⟨ B a ​ v , v ⟩ L 2 ‖ v ‖ L 2 2 , ∙ ∈ { + , − } . \lambda_{a}^{\bullet}:=\inf_{0\neq v\in H_{\bullet}^{1}(-a,a)}\frac{\langle B_{a}v,v\rangle_{L^{2}}}{\|v\|_{L^{2}}^{2}},\qquad\bullet\in\{+,-\}. 
+ Then the global infimum λ a \lambda_{a} in ( 1.7 ) can be expressed as 
+ λ a = min ⁡ ( λ a + , λ a − ) . \lambda_{a}=\min(\lambda_{a}^{+},\lambda_{a}^{-}). 
+ (4.10) 
+ Thus the continuity of λ a \lambda_{a} 
+follows from that of λ a ± \lambda_{a}^{\pm} ,
+since the minimum of two continuous functions is continuous.
+The continuity of λ a ± \lambda_{a}^{\pm} 
+is asserted in [ 1 , Theorem 5] ,
+although the details of the proof are not fully provided there. 
+ We now verify that ( 4.10 ) holds.
+Every v ∈ H 0 1 ​ ( − a , a ) v\in H_{0}^{1}(-a,a) admits a unique decomposition into even and odd components:
+ v = v + + v − v=v^{+}+v^{-} . Since differentiation reverses parity and G a G_{a} preserves it,
+ D ​ v + Dv^{+} and G a ​ ( D ​ v + ) G_{a}(Dv^{+}) are odd,
+whereas D ​ v − Dv^{-} and G a ​ ( D ​ v − ) G_{a}(Dv^{-}) are even.
+Expanding the quadratic form in the numerator, 
+ ⟨ G a ​ D ​ v , D ​ v ⟩ = ⟨ G a ​ ( D ​ v + ) , D ​ v + ⟩ + ⟨ G a ​ ( D ​ v − ) , D ​ v − ⟩ , \langle G_{a}Dv,Dv\rangle=\langle G_{a}(Dv^{+}),Dv^{+}\rangle+\langle G_{a}(Dv^{-}),Dv^{-}\rangle, 
+ since the cross terms vanish due to the orthogonality.
+Similarly,
+ ‖ v ‖ L 2 2 = ‖ v + ‖ L 2 2 + ‖ v − ‖ L 2 2 \|v\|_{L^{2}}^{2}=\|v^{+}\|_{L^{2}}^{2}+\|v^{-}\|_{L^{2}}^{2} for the denominator.
+Hence the Rayleigh quotient on H 0 1 ​ ( − a , a ) H_{0}^{1}(-a,a) can be written as 
+ ⟨ G a ​ D ​ v , D ​ v ⟩ ‖ v ‖ L 2 2 = ⟨ G a ​ ( D ​ v + ) , D ​ v + ⟩ + ⟨ G a ​ ( D ​ v − ) , D ​ v − ⟩ ‖ v + ‖ 2 + ‖ v − ‖ 2 . \frac{\langle G_{a}Dv,Dv\rangle}{\|v\|_{L^{2}}^{2}}=\frac{\langle G_{a}(Dv^{+}),Dv^{+}\rangle+\langle G_{a}(Dv^{-}),Dv^{-}\rangle}{\|v^{+}\|^{2}+\|v^{-}\|^{2}}. 
+ For each component we have
+ ⟨ G a ​ ( D ​ v ∙ ) , D ​ v ∙ ⟩ ≥ λ a ∙ ​ ‖ v ∙ ‖ 2 \langle G_{a}(Dv^{\bullet}),Dv^{\bullet}\rangle\geq\lambda_{a}^{\bullet}\|v^{\bullet}\|^{2} 
+for
+ ∙ ∈ { + , − } \bullet\in\{+,-\} by definition.
+Therefore, 
+ ⟨ G a ​ D ​ v , D ​ v ⟩ ‖ v ‖ L 2 2 ≥ λ a + ​ ‖ v + ‖ 2 + λ a − ​ ‖ v − ‖ 2 ‖ v + ‖ 2 + ‖ v − ‖ 2 ≥ min ⁡ ( λ a + , λ a − ) , \frac{\langle G_{a}Dv,Dv\rangle}{\|v\|_{L^{2}}^{2}}\geq\frac{\lambda_{a}^{+}\|v^{+}\|^{2}+\lambda_{a}^{-}\|v^{-}\|^{2}}{\|v^{+}\|^{2}+\|v^{-}\|^{2}}\geq\min(\lambda_{a}^{+},\lambda_{a}^{-}), 
+ which yields λ a ≥ min ⁡ ( λ a + , λ a − ) \lambda_{a}\geq\min(\lambda_{a}^{+},\lambda_{a}^{-}) .
+Conversely,
+restricting the Rayleigh quotient to
+ H + 1 ​ ( − a , a ) H_{+}^{1}(-a,a) 
+and
+ H − 1 ​ ( − a , a ) H_{-}^{1}(-a,a) 
+immediately yields
+ λ a ≤ min ⁡ ( λ a + , λ a − ) \lambda_{a}\leq\min(\lambda_{a}^{+},\lambda_{a}^{-}) .
+Thus, ( 4.10 ) is established. 
+ 5. Proof of Theorem  1.4 
+ 5.1. Positivity of the lower bound 
+ By ( 4.9 ), the behavior of λ a \lambda_{a} for small a > 0 a>0 
+is determined by the asymptotics of the Rayleigh quotient
+ R ​ ( a , w ) R(a,w) in ( 4.3 ) as a → 0 + a\to 0+ .
+From ( 4.5 ), we have 
+ R ​ ( a , v ) = log ⁡ 1 a − ( 2 ​ A + 1 ) + ℒ ​ ( v ) ‖ v ‖ 2 + O ​ ( a ) R(a,v)=\log\frac{1}{a}-(2A+1)+\frac{\mathcal{L}(v)}{\|v\|^{2}}+O(a) 
+ (5.1) 
+ for 0 < a < ( 1 / 2 ) ​ log ⁡ 2 0<a<(1/2)\log 2 and v ∈ H 0 1 ​ ( − 1 , 1 ) v\in H_{0}^{1}(-1,1) , so it suffices to study ℒ ​ ( v ) / ‖ v ‖ 2 \mathcal{L}(v)/\|v\|^{2} .
+Note that this quantity is independent of a a .
+In general, the infimum of ℒ ​ ( v ) / ‖ v ‖ 2 \mathcal{L}(v)/\|v\|^{2} need not coincide with that of R ​ ( a , v ) R(a,v) ,
+and hence their minimizers need not agree, but this distinction will not be relevant in what follows.
+By ( 4.6 ), the domain 𝔇 ​ ( ℒ ¯ ) \mathfrak{D}(\bar{\mathcal{L}}) of the closure ℒ ¯ \bar{\mathcal{L}} 
+is contained in H log ​ ( − 1 , 1 ) H^{\log}(-1,1) .
+Furthermore,
+the self-adjoint operator T T associated with
+ ℒ ¯ \bar{\mathcal{L}} has discrete spectrum.
+This can be proved by the same argument as in the proof of
+ [ 4 , Theorem 3.6] , using Proposition  4.1 . 
+ The term log ⁡ ( 1 / a ) \log(1/a) on the right-hand side of ( 5.1 ) diverges to + ∞ +\infty as a → 0 + a\to 0+ .
+Since the closure ℒ ¯ \bar{\mathcal{L}} is a lower bounded closed quadratic form,
+it is lower semicontinuous [ 12 , Proposition 10.1] .
+We claim that
+ inf ‖ v ‖ = 1 ℒ ¯ ​ ( v ) > 0 . \inf_{\|v\|=1}\bar{\mathcal{L}}(v)>0. 
+Indeed, it follows directly from the definition that ℒ ​ ( v ) ≥ 0 \mathcal{L}(v)\geq 0 .
+If there existed a sequence ( v n ) (v_{n}) such that ℒ ​ ( v n ) → 0 \mathcal{L}(v_{n})\to 0 , then
+the first term in ( 4.4 ) would also tend to 0 ,
+hence a subsequence of ( v n ) (v_{n}) converges in L 2 ​ ( − 1 , 1 ) L^{2}(-1,1) to a constant function
+by ( 4.6 ) and Proposition  4.1 .
+However, the second term in ( 4.4 ) is strictly positive for constant functions.
+Therefore, for sufficiently small a > 0 a>0 , we obtain λ a = inf w R ​ ( a , w ) > 0 \lambda_{a}=\inf_{w}R(a,w)>0 . 
+ 5.2. Positivity improving property 
+ The positivity improving property of the semigroup associated with
+ ℒ ¯ \bar{\mathcal{L}} established in this subsection
+will play a key role in proving the simplicity of the lowest eigenvalue.
+From ( 4.4 ), it is easy to see that
+ ℒ ​ ( | v | ) ≤ ℒ ​ ( v ) \mathcal{L}(|v|)\leq\mathcal{L}(v) holds for all
+ v ∈ 𝔇 ​ ( ℒ ) v\in\mathfrak{D}(\mathcal{L}) .
+Hence a minimizer v 0 v_{0} of the Rayleigh quotient
+ ℒ ¯ ​ ( v ) / ‖ v ‖ 2 \bar{\mathcal{L}}(v)/\|v\|^{2} 
+may be chosen to be nonnegative. 
+ To show that v 0 v_{0} is positive, rather than merely nonnegative,
+we apply the theory of Dirichlet forms  [ 5 ] .
+A symmetric closed quadratic form ℰ \mathcal{E} with domain ℱ \mathcal{F} 
+is called a Dirichlet form if it satisfies the Markov property.
+That is, for every v ∈ ℱ v\in\mathcal{F} ,
+the function
+ v ♯ := ϕ ∘ v = ( 0 ∨ v ) ∧ 1 v^{\sharp}:=\phi\circ v=(0\vee v)\wedge 1 ,
+ ϕ ​ ( t ) := min ⁡ ( 1 , max ⁡ ( 0 , t ) ) , \phi(t):=\min(1,\max(0,t)), 
+belongs to ℱ \mathcal{F} and satisfies
+ ℰ ​ ( v ♯ ) ≤ ℰ ​ ( v ) . \mathcal{E}(v^{\sharp})\leq\mathcal{E}(v). 
+Note that ϕ \phi is Lipschitz continuous. 
+ We claim that v ♯ ∈ 𝔇 ​ ( ℒ ¯ ) v^{\sharp}\in\mathfrak{D}(\bar{\mathcal{L}}) and
+ ℒ ¯ ​ ( v ♯ ) ≤ ℒ ¯ ​ ( v ) \bar{\mathcal{L}}(v^{\sharp})\leq\bar{\mathcal{L}}(v) for every
+ v ∈ 𝔇 ​ ( ℒ ¯ ) v\in\mathfrak{D}(\bar{\mathcal{L}}) .
+As the domain 𝔇 ​ ( ℒ ) \mathfrak{D}(\mathcal{L}) is dense in 𝔇 ​ ( ℒ ¯ ) \mathfrak{D}(\bar{\mathcal{L}}) ,
+it suffices to verify these properties on 𝔇 ​ ( ℒ ) \mathfrak{D}(\mathcal{L}) 
+using the Beurling–Deny representation
+( 4.4 )
+of ℒ ¯ \bar{\mathcal{L}} [ 5 , Theorem 3.2.1] .
+For the jumping part, the Lipschitz continuity of ϕ \phi yields 
+ | v ♯ ​ ( x ) − v ♯ ​ ( y ) | 2 = | ϕ ​ ( v ​ ( x ) ) − ϕ ​ ( v ​ ( y ) ) | 2 ≤ | v ​ ( x ) − v ​ ( y ) | 2 . |v^{\sharp}(x)-v^{\sharp}(y)|^{2}=|\phi(v(x))-\phi(v(y))|^{2}\leq|v(x)-v(y)|^{2}. 
+ Multiplying by the kernel | x − y | − 1 |x-y|^{-1} and integrating, we obtain 
+ 1 2 ​ ∫ − 1 1 ∫ − 1 1 | v ♯ ​ ( x ) − v ♯ ​ ( y ) | 2 | x − y | ​ 𝑑 x ​ 𝑑 y ≤ 1 2 ​ ∫ − 1 1 ∫ − 1 1 | v ​ ( x ) − v ​ ( y ) | 2 | x − y | ​ 𝑑 x ​ 𝑑 y . \frac{1}{2}\int_{-1}^{1}\int_{-1}^{1}\frac{|v^{\sharp}(x)-v^{\sharp}(y)|^{2}}{|x-y|}\,dx\,dy\leq\frac{1}{2}\int_{-1}^{1}\int_{-1}^{1}\frac{|v(x)-v(y)|^{2}}{|x-y|}\,dx\,dy. 
+ For the killing part, | v ♯ ​ ( x ) | 2 ≤ | v ​ ( x ) | 2 |v^{\sharp}(x)|^{2}\leq|v(x)|^{2} by | ϕ ​ ( a ) | ≤ | a | |\phi(a)|\leq|a| , and
+ κ ​ ( x ) := − log ⁡ ( 1 − x 2 ) ≥ 0 \kappa(x):=-\log(1-x^{2})\geq 0 . Hence 
+ ∫ − 1 1 κ ​ ( x ) ​ | v ♯ ​ ( x ) | 2 ​ 𝑑 x ≤ ∫ − 1 1 κ ​ ( x ) ​ | v ​ ( x ) | 2 ​ 𝑑 x . \int_{-1}^{1}\kappa(x)|v^{\sharp}(x)|^{2}\,dx\leq\int_{-1}^{1}\kappa(x)|v(x)|^{2}\,dx. 
+ Combining these estimates, we obtain
+ v ♯ ∈ 𝔇 ​ ( ℒ ¯ ) v^{\sharp}\in\mathfrak{D}(\bar{\mathcal{L}}) and ℒ ¯ ​ ( v ♯ ) ≤ ℒ ¯ ​ ( v ) \bar{\mathcal{L}}(v^{\sharp})\leq\bar{\mathcal{L}}(v) .
+Therefore ( ℒ ¯ , 𝔇 ​ ( ℒ ¯ ) ) (\bar{\mathcal{L}},\mathfrak{D}(\bar{\mathcal{L}})) satisfies the Markov property and hence defines a Dirichlet form. 
+ We next show that ( ℒ ¯ , 𝔇 ​ ( ℒ ¯ ) ) (\bar{\mathcal{L}},\mathfrak{D}(\bar{\mathcal{L}})) is irreducible.
+Recall that a Dirichlet form is called irreducible if every invariant set is trivial,
+that is, either it or its complement has measure zero.
+Let A ⊂ ( − 1 , 1 ) A\subset(-1,1) be an ℒ ¯ \bar{\mathcal{L}} -invariant set.
+By the characterization of invariant sets in [ 9 , p. 173] ,
+ ℒ ¯ ​ ( 1 A ​ u , 1 A c ​ u ) = 0 \bar{\mathcal{L}}(1_{A}u,1_{A^{c}}u)=0 for all u ∈ 𝔇 ​ ( ℒ ¯ ) u\in\mathfrak{D}(\bar{\mathcal{L}}) ,
+where A c = ( − 1 , 1 ) ∖ A A^{c}=(-1,1)\setminus A .
+Since 𝔇 ​ ( ℒ ) \mathfrak{D}(\mathcal{L}) is a core of 𝔇 ​ ( ℒ ¯ ) \mathfrak{D}(\bar{\mathcal{L}}) ,
+it suffices to test the condition on 𝔇 ​ ( ℒ ) \mathfrak{D}(\mathcal{L}) .
+We have 
+ ℒ ​ ( 1 A ​ u , 1 A c ​ u ) = − 1 2 ​ ∫ A ∫ A c u ​ ( x ) ​ u ​ ( y ) | x − y | ​ 𝑑 x ​ 𝑑 y = 0 \mathcal{L}(1_{A}u,1_{A^{c}}u)=-\frac{1}{2}\int_{A}\int_{A^{c}}\frac{u(x)u(y)}{|x-y|}\,dx\,dy=0 
+ for all u ∈ 𝔇 ​ ( ℒ ) u\in\mathfrak{D}(\mathcal{L}) , since 
+ ℒ ​ ( u , v ) \displaystyle\mathcal{L}(u,v) 
+ = 1 4 ​ ∫ − 1 1 ∫ − 1 1 ( u ​ ( x ) − u ​ ( y ) ) ​ ( v ​ ( x ) − v ​ ( y ) ) ¯ | x − y | ​ 𝑑 x ​ 𝑑 y − 1 2 ​ ∫ − 1 1 u ​ ( x ) ​ v ​ ( x ) ¯ ​ log ⁡ ( 1 − x 2 ) ​ 𝑑 x . \displaystyle=\frac{1}{4}\int_{-1}^{1}\int_{-1}^{1}\frac{(u(x)-u(y))\overline{(v(x)-v(y))}}{|x-y|}\,dx\,dy-\frac{1}{2}\int_{-1}^{1}u(x)\overline{v(x)}\log(1-x^{2})\,dx. 
+ Because the jumping kernel | x − y | − 1 |x-y|^{-1} is positive on ( − 1 , 1 ) 2 (-1,1)^{2} ,
+the above identity cannot hold when both A A and A c A^{c} have positive measure.
+Thus either A A or A c A^{c} has measure zero, and ℒ ¯ \bar{\mathcal{L}} is irreducible. 
+ By [ 9 , Theorem 1.4] , the irreducibility implies that
+the associated semigroup { e − t ​ T ∣ t > 0 } \{e^{-tT}\mid t>0\} is positivity improving.
+In other words, for every nonnegative function f ∈ L 2 ​ ( − 1 , 1 ) f\in L^{2}(-1,1) 
+with f ≢ 0 f\not\equiv 0 , one has ( e − t ​ T ​ f ) ​ ( x ) > 0 (e^{-tT}f)(x)>0 for a.e. x ∈ ( − 1 , 1 ) x\in(-1,1) .
+In particular, the nonnegative eigenfunction v 0 v_{0} of T T is positive almost everywhere. 
+ 5.3. Simplicity of the lowest eigenvalue and parity of eigenfunctions 
+ Suppose that the lowest eigenvalue of T T admits two orthogonal eigenfunctions.
+Then, by the result of the previous subsection,
+eigenfunctions corresponding to the lowest eigenvalue
+may be chosen to be positive almost everywhere.
+However, two functions that are positive almost everywhere
+cannot be orthogonal to each other,
+which leads to a contradiction.
+Hence the eigenspace corresponding to the lowest
+eigenvalue of T T is one-dimensional, and the lowest eigenvalue is simple. 
+ Next, decompose the quadratic form q ¯ a ​ ( v ) \bar{q}_{a}(v) according to ( 5.1 ).
+The term ( log ⁡ ( 1 / a ) − ( 2 ​ A + 1 ) ) ​ ‖ v ‖ L 2 2 (\log(1/a)-(2A+1))\|v\|_{L^{2}}^{2} merely shifts the spectrum,
+so the asymptotic behavior of λ a \lambda_{a} is governed by the operator associated with
+ ℒ ¯ ​ ( v ) + O ​ ( a ) ​ ‖ v ‖ L 2 2 \bar{\mathcal{L}}(v)+O(a)\|v\|_{L^{2}}^{2} .
+By [ 7 , Chapter VIII, Section 3, Theorems 3.6 and 3.15] ,
+as a → 0 + a\to 0+ , this operator has the same multiplicity for its lowest eigenvalue as T T .
+Therefore, the lowest eigenvalue of the perturbed operator,
+and hence λ a \lambda_{a} , is simple for sufficiently small a > 0 a>0 . 
+ As discussed in Section  4.5 , the eigenspaces of the self-adjoint operator
+associated with q ¯ a \bar{q}_{a} decompose into even and odd parts.
+In particular, since the lowest eigenvalue is simple,
+its eigenfunction must be either even or odd.
+However, since the eigenfunction corresponding to the lowest eigenvalue has a fixed sign,
+it must be even. 
+ 6. Proof of Theorem  1.5 
+ 6.1. Symmetry of the minimal operator 
+ Choose λ < λ a \lambda<\lambda_{a} , and let ℋ ​ ( T a ) \mathcal{H}(T_{a}) denote the Hilbert space obtained as the completion of C c ∞ ​ ( − a , a ) C_{c}^{\infty}(-a,a) with respect to the norm ∥ ⋅ ∥ T a \|\cdot\|_{T_{a}} defined by ( 1.9 ). Define 
+ ⟨ v 1 , v 2 ⟩ T a := ⟨ T a ​ v 1 , v 2 ⟩ L 2 \langle v_{1},v_{2}\rangle_{T_{a}}:=\langle T_{a}v_{1},v_{2}\rangle_{L^{2}} 
+ so that ‖ v ‖ T a 2 = ⟨ v , v ⟩ T a \|v\|_{T_{a}}^{2}=\langle v,v\rangle_{T_{a}} .
+Let 𝒟 a \mathscr{D}_{a} be the operator on ℋ ​ ( T a ) \mathcal{H}(T_{a}) 
+with domain ( 1.10 ) acting as 𝒟 a = i ​ d / d ​ x \mathscr{D}_{a}=i\,d/dx .
+Since the canonical map
+ C c ∞ ​ ( − a , a ) → ℋ ​ ( T a ) C_{c}^{\infty}(-a,a)\to\mathcal{H}(T_{a}) 
+is injective and the image is dense, the operator 𝒟 a \mathscr{D}_{a} is densely defined. 
+ Lemma 6.1 . 
+ The operator 𝒟 a \mathscr{D}_{a} is symmetric on ℋ ​ ( T a ) \mathcal{H}(T_{a}) . 
+ Proof. 
+ We show that
+ ⟨ 𝒟 a ​ u , v ⟩ T a = ⟨ u , 𝒟 a ​ v ⟩ T a \langle\mathscr{D}_{a}u,v\rangle_{T_{a}}=\langle u,\mathscr{D}_{a}v\rangle_{T_{a}} 
+for all u , v ∈ 𝔇 ​ ( 𝒟 a ) u,v\in\mathfrak{D}(\mathscr{D}_{a}) .
+By the definition of the inner product on ℋ ​ ( T a ) \mathcal{H}(T_{a}) and the self-adjointness of A a A_{a} ,
+we have 
+ ⟨ 𝒟 a ​ u , v ⟩ T a = ⟨ A a ​ ( i ​ u ′ ) , v ⟩ L 2 − λ ​ ⟨ i ​ u ′ , v ⟩ L 2 = ⟨ i ​ u ′ , A a ​ v ⟩ L 2 − λ ​ ⟨ i ​ u ′ , v ⟩ L 2 . \langle\mathscr{D}_{a}u,v\rangle_{T_{a}}=\langle A_{a}(iu^{\prime}),v\rangle_{L^{2}}-\lambda\langle iu^{\prime},v\rangle_{L^{2}}=\langle iu^{\prime},A_{a}v\rangle_{L^{2}}-\lambda\langle iu^{\prime},v\rangle_{L^{2}}. 
+ According to the distribution kernel representation ( 2.10 ),
+the function A a ​ v A_{a}v is the convolution of v v with the tempered distribution
+ k := − g ′′ k:=-g^{\prime\prime} .
+Hence, by the general theory of tempered distributions,
+ A a ​ v ∈ C ∞ ​ ( ℝ ) A_{a}v\in C^{\infty}(\mathbb{R}) whenever v ∈ 𝔇 ​ ( 𝒟 a ) v\in\mathfrak{D}(\mathscr{D}_{a}) .
+Using this fact together with the boundary conditions
+ u ​ ( a ) = u ​ ( − a ) = 0 u(a)=u(-a)=0 ,
+integration by parts gives
+ ⟨ i ​ u ′ , A a ​ v ⟩ L 2 = ⟨ u , i ​ ( A a ​ v ) ′ ⟩ L 2 , \langle iu^{\prime},A_{a}v\rangle_{L^{2}}=\langle u,i(A_{a}v)^{\prime}\rangle_{L^{2}}, 
+and
+ ⟨ i ​ u ′ , v ⟩ L 2 = ⟨ u , i ​ v ′ ⟩ L 2 . \langle iu^{\prime},v\rangle_{L^{2}}=\langle u,iv^{\prime}\rangle_{L^{2}}. 
+Furthermore, using ( 2.10 )
+and the boundary conditions v ​ ( a ) = v ​ ( − a ) = 0 v(a)=v(-a)=0 ,
+we obtain by integration by parts that 
+ ( A a ​ v ) ′ ​ ( x ) = d d ​ x ​ ∫ − a a k ​ ( x − y ) ​ v ​ ( y ) ​ 𝑑 y = − ∫ − a a d d ​ y ​ k ​ ( x − y ) ​ v ​ ( y ) ​ 𝑑 y = ∫ − a a k ​ ( x − y ) ​ v ′ ​ ( y ) ​ 𝑑 y . (A_{a}v)^{\prime}(x)=\frac{d}{dx}\int_{-a}^{a}k(x-y)v(y)\,dy=-\int_{-a}^{a}\frac{d}{dy}k(x-y)v(y)\,dy=\int_{-a}^{a}k(x-y)v^{\prime}(y)\,dy. 
+ Therefore,
+ ⟨ u , i ​ ( A a ​ v ) ′ ⟩ L 2 = ⟨ u , A a ​ ( i ​ v ′ ) ⟩ L 2 \langle u,i(A_{a}v)^{\prime}\rangle_{L^{2}}=\langle u,A_{a}(iv^{\prime})\rangle_{L^{2}} ,
+and hence 
+ ⟨ 𝒟 a ​ u , v ⟩ T a = ⟨ u , A a ​ ( i ​ v ′ ) ⟩ L 2 − λ ​ ⟨ u , i ​ v ′ ⟩ L 2 = ⟨ A a ​ u , i ​ v ′ ⟩ L 2 − λ ​ ⟨ u , i ​ v ′ ⟩ L 2 = ⟨ u , 𝒟 a ​ v ⟩ T a . \langle\mathscr{D}_{a}u,v\rangle_{T_{a}}=\langle u,A_{a}(iv^{\prime})\rangle_{L^{2}}-\lambda\langle u,iv^{\prime}\rangle_{L^{2}}=\langle A_{a}u,iv^{\prime}\rangle_{L^{2}}-\lambda\langle u,iv^{\prime}\rangle_{L^{2}}=\langle u,\mathscr{D}_{a}v\rangle_{T_{a}}. 
+ This proves the desired identity.
+∎ 
+ 6.2. Adjoint of the minimal operator 
+ We now derive the adjoint operator 𝒟 a ∗ \mathscr{D}_{a}^{\ast} of 𝒟 a \mathscr{D}_{a} on ℋ ​ ( T a ) \mathcal{H}(T_{a}) .
+For a vector v ∈ ℋ ​ ( T a ) v\in\mathcal{H}(T_{a}) to belong to the domain
+ 𝔇 ​ ( 𝒟 a ∗ ) \mathfrak{D}(\mathscr{D}_{a}^{\ast}) of 𝒟 a ∗ \mathscr{D}_{a}^{\ast} ,
+the linear functional
+ u ↦ ⟨ 𝒟 a ​ u , v ⟩ T a u\mapsto\langle\mathscr{D}_{a}u,v\rangle_{T_{a}} 
+must be continuous on 𝔇 ​ ( 𝒟 a ) \mathfrak{D}(\mathscr{D}_{a}) with respect to the norm of
+ ℋ ​ ( T a ) \mathcal{H}(T_{a}) .
+Since 𝒟 a \mathscr{D}_{a} is symmetric,
+ 𝔇 ​ ( 𝒟 a ) ⊂ 𝔇 ​ ( 𝒟 a ∗ ) \mathfrak{D}(\mathscr{D}_{a})\subset\mathfrak{D}(\mathscr{D}_{a}^{\ast}) .
+Moreover, by the calculation in the previous section,
+we have
+ ⟨ 𝒟 a ​ u , v ⟩ T a = ⟨ u , i ​ ( A a ​ v ) ′ ⟩ L 2 − λ ​ ⟨ u , i ​ v ′ ⟩ L 2 \langle\mathscr{D}_{a}u,v\rangle_{T_{a}}=\langle u,i(A_{a}v)^{\prime}\rangle_{L^{2}}-\lambda\langle u,iv^{\prime}\rangle_{L^{2}} for u ∈ 𝔇 ​ ( 𝒟 a ) u\in\mathfrak{D}(\mathscr{D}_{a}) .
+If this functional is continuous with respect to ∥ ⋅ ∥ T a \|\cdot\|_{T_{a}} ,
+then it is in particular continuous with respect to the L 2 L^{2} -norm.
+Hence it is necessary that
+ v ′ ∈ L 2 ​ ( − a , a ) v^{\prime}\in L^{2}(-a,a) and ( A a ​ v ) ′ ∈ L 2 ​ ( − a , a ) (A_{a}v)^{\prime}\in L^{2}(-a,a) .
+Therefore, 
+ 𝔇 ​ ( 𝒟 a ∗ ) ⊂ { v ∈ ℋ ​ ( T a ) ∣ v ∈ H 1 ​ ( − a , a ) , A a ​ v ∈ H 1 ​ ( − a , a ) } . \mathfrak{D}(\mathscr{D}_{a}^{\ast})~\subset~\{\,v\in\mathcal{H}(T_{a})\mid v\in H^{1}(-a,a),~A_{a}v\in H^{1}(-a,a)\,\}. 
+ The condition that v ∈ 𝔇 ​ ( 𝒟 a ∗ ) v\in\mathfrak{D}(\mathscr{D}_{a}^{\ast}) and
+ 𝒟 a ∗ ​ v = g ∈ ℋ ​ ( T a ) \mathscr{D}_{a}^{\ast}v=g\in\mathcal{H}(T_{a}) means that 
+ ⟨ 𝒟 a u , v ⟩ T a = ⟨ u , g ⟩ T a ( = ⟨ T a u , g ⟩ L 2 = ⟨ u , T a g ⟩ L 2 ) \langle\mathscr{D}_{a}u,v\rangle_{T_{a}}=\langle u,g\rangle_{T_{a}}~(=\langle T_{a}u,g\rangle_{L^{2}}=\langle u,T_{a}g\rangle_{L^{2}}) 
+ holds for every u ∈ 𝔇 ​ ( 𝒟 a ) u\in\mathfrak{D}(\mathscr{D}_{a}) .
+By the calculation in the previous section,
+we have 
+ ⟨ 𝒟 a ​ u , v ⟩ T a = ⟨ u , i ​ ( T a ​ v ) ′ ⟩ L 2 \langle\mathscr{D}_{a}u,v\rangle_{T_{a}}=\langle u,i(T_{a}v)^{\prime}\rangle_{L^{2}} 
+ for u ∈ 𝔇 ​ ( 𝒟 a ) u\in\mathfrak{D}(\mathscr{D}_{a}) . Since 𝔇 ​ ( 𝒟 a ) \mathfrak{D}(\mathscr{D}_{a}) is dense in ℋ ​ ( T a ) \mathcal{H}(T_{a}) ,
+it follows that 
+ T a ​ ( 𝒟 a ∗ ​ v ) = i ​ ( T a ​ v ) ′ . T_{a}(\mathscr{D}_{a}^{\ast}v)=i(T_{a}v)^{\prime}. 
+ If v ∈ 𝔇 ​ ( 𝒟 a ) v\in\mathfrak{D}(\mathscr{D}_{a}) , then this identity becomes 
+ T a ​ ( 𝒟 a ∗ ​ v ) = i ​ ( T a ​ v ) ′ = T a ​ ( i ​ v ′ ) = T a ​ ( 𝒟 a ​ v ) , T_{a}(\mathscr{D}_{a}^{\ast}v)=i(T_{a}v)^{\prime}=T_{a}(iv^{\prime})=T_{a}(\mathscr{D}_{a}v), 
+ and hence 𝒟 a ∗ \mathscr{D}_{a}^{\ast} agrees with 𝒟 a \mathscr{D}_{a} .
+The eigenvalue equations
+ 𝒟 a ∗ ​ v = ± i ​ v \mathscr{D}_{a}^{\ast}v=\pm i\,v 
+are equivalent to
+ i ​ ( T a ​ v ) ′ = ± i ​ ( T a ​ v ) i(T_{a}v)^{\prime}=\pm i(T_{a}v) .
+Hence 
+ ( T a ​ v ) ​ ( x ) = C + ​ e x , ( T a ​ v ) ​ ( x ) = C − ​ e − x , (T_{a}v)(x)=C_{+}e^{x},\qquad(T_{a}v)(x)=C_{-}e^{-x}, 
+ and these functions span the eigenspaces corresponding to the eigenvalues
+ ± i \pm i .
+Therefore we obtain the following result. 
+ Lemma 6.2 . 
+ 𝒟 a \mathscr{D}_{a} has the deficiency indices ( 1 , 1 ) (1,1) . 
+ 6.3. Self-adjoint extensions of the minimal operator 
+ We compute the self-adjoint extensions of 𝒟 a \mathscr{D}_{a} 
+using von Neumann’s theory of deficiency indices ( [ 11 , Section X.1] , [ 12 , Section 3.2] ).
+By the results of the previous subsection, the deficiency spaces
+ Ker ​ ( 𝒟 a ∗ ∓ i ) {\rm Ker}\,(\mathscr{D}_{a}^{\ast}\mp i) 
+are one-dimensional and are spanned by vectors v ± v_{\pm} satisfying
+ ( T a ​ v ± ) ​ ( x ) = exp ⁡ ( ± x ) (T_{a}v_{\pm})(x)=\exp(\pm x) .
+It is immediate that ‖ v + ‖ T a = ‖ v − ‖ T a \|v_{+}\|_{T_{a}}=\|v_{-}\|_{T_{a}} .
+Thus, every self-adjoint extension
+ 𝒟 ¯ a , θ \overline{\mathscr{D}}_{a,\theta} parametrized by θ ∈ [ 0 , 2 ​ π ) \theta\in[0,2\pi) 
+has domain 
+ 𝔇 ​ ( 𝒟 ¯ a , θ ) \displaystyle\mathfrak{D}(\overline{\mathscr{D}}_{a,\theta}) 
+ = { v 0 + c ​ ( v + + e i ​ θ ​ v − ) ∣ v 0 ∈ 𝔇 ​ ( 𝒟 ¯ a ) , c ∈ ℂ } \displaystyle=\{v_{0}+c(v_{+}+e^{i\theta}v_{-})\mid v_{0}\in\mathfrak{D}(\overline{\mathscr{D}}_{a}),c\in\mathbb{C}\} 
+ ⊂ \displaystyle\subset 
+ 𝔇 ​ ( 𝒟 a ∗ ) = { v 0 + a ​ v + + b ​ v − ∣ v 0 ∈ 𝔇 ​ ( 𝒟 ¯ a ) , a , b ∈ ℂ } . \displaystyle\,\,\mathfrak{D}(\mathscr{D}_{a}^{\ast})=\{v_{0}+av_{+}+bv_{-}\mid v_{0}\in\mathfrak{D}(\overline{\mathscr{D}}_{a}),a,b\in\mathbb{C}\}. 
+ These domains are characterized by the boundary form 
+ W ​ ( u , v ) = ⟨ 𝒟 a ∗ ​ u , v ⟩ T a − ⟨ u , 𝒟 a ∗ ​ v ⟩ T a , W(u,v)=\langle\mathscr{D}_{a}^{\ast}u,v\rangle_{T_{a}}-\langle u,\mathscr{D}_{a}^{\ast}v\rangle_{T_{a}}, 
+ namely, v ∈ 𝔇 ​ ( 𝒟 a ∗ ) v\in\mathfrak{D}(\mathscr{D}_{a}^{\ast}) 
+belongs to 𝔇 ​ ( 𝒟 ¯ a , θ ) \mathfrak{D}(\overline{\mathscr{D}}_{a,\theta}) if and only if
+ W ​ ( v , w θ ) = 0 W(v,w_{\theta})=0 for w θ = v + + e i ​ θ ​ v − w_{\theta}=v_{+}+e^{i\theta}v_{-} .
+The action of 𝒟 ¯ a , θ \overline{\mathscr{D}}_{a,\theta} is given by 
+ 𝒟 ¯ a , θ ​ ( v 0 + c ​ ( v + + e i ​ θ ​ v − ) ) := 𝒟 ¯ a ​ v 0 + i ​ c ​ ( v + − e i ​ θ ​ v − ) . \overline{\mathscr{D}}_{a,\theta}\Bigl(v_{0}+c(v_{+}+e^{i\theta}v_{-})\Bigr):=\overline{\mathscr{D}}_{a}v_{0}+ic(v_{+}-e^{i\theta}v_{-}). 
+ 6.4. Proof of Theorem  1.5 
+ Let v z v_{z} be an eigenfunction of 𝒟 a ∗ \mathscr{D}_{a}^{\ast} corresponding to an eigenvalue z ∈ ℝ z\in\mathbb{R} .
+The equation 𝒟 a ∗ ​ v z = z ​ v z \mathscr{D}_{a}^{\ast}v_{z}=zv_{z} implies that ( T a ​ v z ) ​ ( x ) = exp ⁡ ( − i ​ z ​ x ) (T_{a}v_{z})(x)=\exp(-izx) .
+The basis vectors of the deficiency spaces satisfy 𝒟 a ∗ ​ v ± = ± i ​ v ± \mathscr{D}_{a}^{\ast}v_{\pm}=\pm iv_{\pm} and
+ ( T a ​ v ± ) ​ ( x ) = exp ⁡ ( ± x ) (T_{a}v_{\pm})(x)=\exp(\pm x) .
+On the other hand, applying 𝒟 a ∗ \mathscr{D}_{a}^{\ast} to
+ w θ = v + + e i ​ θ ​ v − w_{\theta}=v_{+}+e^{i\theta}v_{-} yields 
+ 𝒟 a ∗ ​ w θ = i ​ v + − i ​ e i ​ θ ​ v − . \mathscr{D}_{a}^{\ast}w_{\theta}=iv_{+}-ie^{i\theta}v_{-}. 
+ Substituting these equalities into the boundary form W W , we obtain 
+ W ​ ( v z , w θ ) = ⟨ z ​ v z , v + + e i ​ θ ​ v − ⟩ T a − ⟨ v z , i ​ v + − i ​ e i ​ θ ​ v − ⟩ T a . W(v_{z},w_{\theta})=\langle zv_{z},v_{+}+e^{i\theta}v_{-}\rangle_{T_{a}}-\langle v_{z},iv_{+}-ie^{i\theta}v_{-}\rangle_{T_{a}}. 
+ Expanding the right-hand side by linearity of the inner product and collecting the terms involving the inner products with v + v_{+} and v − v_{-} , we obtain 
+ W ​ ( v z , w θ ) = ( z + i ) ​ ⟨ v z , v + ⟩ T a + ( z − i ) ​ e − i ​ θ ​ ⟨ v z , v − ⟩ T a = 0 . W(v_{z},w_{\theta})=(z+i)\langle v_{z},v_{+}\rangle_{T_{a}}+(z-i)e^{-i\theta}\langle v_{z},v_{-}\rangle_{T_{a}}=0. 
+ (6.1) 
+ Using the definition of the inner product on the space ℋ ​ ( T a ) \mathcal{H}(T_{a}) and the identity
+ ( T a ​ v z ) ​ ( x ) = exp ⁡ ( − i ​ z ​ x ) (T_{a}v_{z})(x)=\exp(-izx) , we obtain 
+ ⟨ v z , v ± ⟩ T a = ⟨ T a ​ v z , v ± ⟩ L 2 = ∫ − a a e − i ​ z ​ x ​ v ± ​ ( x ) ¯ ​ 𝑑 x . \langle v_{z},v_{\pm}\rangle_{T_{a}}=\langle T_{a}v_{z},v_{\pm}\rangle_{L^{2}}=\int_{-a}^{a}e^{-izx}\overline{v_{\pm}(x)}\,dx. 
+ Because v ± ∈ ℋ ​ ( T a ) ⊂ L 2 ​ ( − a , a ) ⊂ L 1 ​ ( − a , a ) v_{\pm}\in\mathcal{H}(T_{a})\subset L^{2}(-a,a)\subset L^{1}(-a,a) ,
+the above Fourier integrals define entire functions of z z .
+Consequently, upon rewriting the orthogonality condition ( 6.1 ),
+we find that the eigenvalue z z must satisfy the equation
+ W ​ ( a , θ ; z ) = 0 W(a,\theta;z)=0 , where W ​ ( a , θ ; z ) W(a,\theta;z) is defined in ( 1.11 ).
+This proves the first assertion of the theorem. 
+ Next, we show that all zeros of W ​ ( a , θ ; z ) W(a,\theta;z) are real.
+Even when λ ∈ ℂ \lambda\in\mathbb{C} is not real, the function
+ ( T a ​ v λ ) ​ ( x ) = exp ⁡ ( − i ​ λ ​ x ) (T_{a}v_{\lambda})(x)=\exp(-i\lambda x) 
+is infinitely differentiable on the interval ( − a , a ) (-a,a) and belongs to H 1 ​ ( − a , a ) H^{1}(-a,a) .
+Since T a T_{a} is injective, the relation
+ ( T a ​ v λ ) ​ ( x ) = exp ⁡ ( − i ​ λ ​ x ) (T_{a}v_{\lambda})(x)=\exp(-i\lambda x) uniquely determines an element
+ v λ ∈ ℋ ​ ( T a ) v_{\lambda}\in\mathcal{H}(T_{a}) , which belongs to
+ 𝔇 ​ ( 𝒟 a ∗ ) \mathfrak{D}(\mathscr{D}_{a}^{\ast}) .
+Applying 𝒟 a ∗ \mathscr{D}_{a}^{\ast} to v λ v_{\lambda} , and then applying T a T_{a} to the result,
+we obtain 
+ T a ​ ( 𝒟 a ∗ ​ v λ ) = i ​ ( T a ​ v λ ) ′ = i ​ ( − i ​ λ ​ exp ⁡ ( − i ​ λ ​ x ) ) = λ ​ exp ⁡ ( − i ​ λ ​ x ) = T a ​ ( λ ​ v λ ) . T_{a}(\mathscr{D}_{a}^{\ast}v_{\lambda})=i(T_{a}v_{\lambda})^{\prime}=i(-i\lambda\exp(-i\lambda x))=\lambda\exp(-i\lambda x)=T_{a}(\lambda v_{\lambda}). 
+ It follows that
+ 𝒟 a ∗ ​ v λ = λ ​ v λ \mathscr{D}_{a}^{\ast}v_{\lambda}=\lambda v_{\lambda} .
+Thus, v λ v_{\lambda} serves as an eigenfunction of 𝒟 a ∗ \mathscr{D}_{a}^{\ast} 
+even for λ ∈ ℂ \lambda\in\mathbb{C} . 
+ Suppose that a complex number λ 0 ∈ ℂ \lambda_{0}\in\mathbb{C} satisfies
+ W ​ ( a , θ ; λ 0 ) = 0 W(a,\theta;\lambda_{0})=0 .
+By the characterization established above, this means that the corresponding
+ v λ 0 v_{\lambda_{0}} is orthogonal to the deficiency vector w θ w_{\theta} 
+with respect to the boundary form, that is,
+ W ​ ( v λ 0 , w θ ) = 0 W(v_{\lambda_{0}},w_{\theta})=0 .
+By definition, every element satisfying this condition belongs to
+ 𝔇 ​ ( 𝒟 ¯ a , θ ) \mathfrak{D}(\overline{\mathscr{D}}_{a,\theta}) .
+Consequently, v λ 0 v_{\lambda_{0}} is a nonzero element of the domain of the
+self-adjoint extension 𝒟 ¯ a , θ \overline{\mathscr{D}}_{a,\theta} and satisfies
+ 𝒟 ¯ a , θ ​ v λ 0 = λ 0 ​ v λ 0 \overline{\mathscr{D}}_{a,\theta}v_{\lambda_{0}}=\lambda_{0}v_{\lambda_{0}} .
+Hence v λ 0 v_{\lambda_{0}} is a genuine eigenvector of the self-adjoint operator
+ 𝒟 ¯ a , θ \overline{\mathscr{D}}_{a,\theta} with eigenvalue λ 0 \lambda_{0} .
+However, λ 0 \lambda_{0} must be real,
+since every eigenvalue of a self-adjoint operator is real.
+This contradiction shows that any complex number λ \lambda 
+satisfying W ​ ( a , θ ; λ ) = 0 W(a,\theta;\lambda)=0 must lie on the real axis.
+ □ \Box 
+ 7. Heuristic justification of the formula in Corollary  1.6 
+ In this section, we assume RH.
+By Weil’s positivity criterion, we have Q W ≥ 0 Q_{W}\geq 0 and hence A a > 0 A_{a}>0 for all a > 0 a>0 .
+Under this assumption, for each a > 0 a>0 we may take λ = 0 \lambda=0 in the definition ( 1.9 ) of T a = T a , λ T_{a}=T_{a,\lambda} .
+Hence we work with A a A_{a} in place of T a T_{a} , and consider the Hilbert spaces
+ ℋ ​ ( A a ) := ℋ ​ ( T a , 0 ) \mathcal{H}(A_{a}):=\mathcal{H}(T_{a,0}) . 
+ 7.1. The Hilbert Space ℋ ​ ( A ∞ ) \mathcal{H}(A_{\infty}) 
+ In order to study the behavior of the differential operator 𝒟 a \mathscr{D}_{a} on the Hilbert space ℋ ​ ( A a ) \mathcal{H}(A_{a}) as a → ∞ a\to\infty , we first introduce the Hilbert space ℋ ​ ( A ∞ ) \mathcal{H}(A_{\infty}) and the corresponding differential operator 𝒟 ∞ \mathscr{D}_{\infty} .
+Here A ∞ A_{\infty} is only a formal symbol and does not denote an actual operator. 
+ Let 𝔇 ​ ( Q W ) \mathfrak{D}(Q_{W}) denote the completion of C c ∞ ​ ( ℝ ) C_{c}^{\infty}(\mathbb{R}) 
+with respect to the form norm 
+ ‖ v ‖ Q W 2 := Q W ​ ( v ) + ‖ v ‖ L 2 2 . \|v\|_{Q_{W}}^{2}:=Q_{W}(v)+\|v\|_{L^{2}}^{2}. 
+ This space is a Hilbert space with respect to the form norm.
+ 𝒩 := { v ∈ 𝔇 ​ ( Q W ) ∣ Q W ​ ( v ) = 0 } \mathcal{N}:=\{v\in\mathfrak{D}(Q_{W})\mid Q_{W}(v)=0\} 
+is a closed subspace of 𝔇 ​ ( Q W ) \mathfrak{D}(Q_{W}) with respect to the form norm.
+We then consider the quotient space 
+ ℋ ​ ( A ∞ ) := 𝔇 ​ ( Q W ) / 𝒩 . \mathcal{H}(A_{\infty}):=\mathfrak{D}(Q_{W})/\mathcal{N}. 
+ For v ∈ 𝔇 ​ ( Q W ) v\in\mathfrak{D}(Q_{W}) , we denote its equivalence class by [ v ] ∈ ℋ ​ ( A ∞ ) [v]\in\mathcal{H}(A_{\infty}) .
+We define the norm of [ v ] [v] by 
+ ‖ [ v ] ‖ A ∞ 2 := Q W ​ ( v ) . \|[v]\|_{A_{\infty}}^{2}:=Q_{W}(v). 
+ The Hilbert space ℋ ​ ( A ∞ ) \mathcal{H}(A_{\infty}) can be identified with the completion ℋ W \mathcal{H}_{W} of C c ∞ ​ ( ℝ ) C_{c}^{\infty}(\mathbb{R}) with respect to Q W ​ ( v ) Q_{W}(v) studied in [ 14 ] . 
+ Since Q W ​ ( v ) ≠ 0 Q_{W}(v)\neq 0 for any nonzero v ∈ C c ∞ ​ ( ℝ ) v\in C_{c}^{\infty}(\mathbb{R}) , the map v ↦ [ v ] v\mapsto[v] embeds C c ∞ ​ ( ℝ ) C_{c}^{\infty}(\mathbb{R}) injectively into ℋ ​ ( A ∞ ) \mathcal{H}(A_{\infty}) , and its image is dense.
+Hence, by fixing representatives on C c ∞ ​ ( ℝ ) C_{c}^{\infty}(\mathbb{R}) ,
+we define a densely defined operator 𝒟 ∞ \mathscr{D}_{\infty} on
+ ℋ ​ ( A ∞ ) \mathcal{H}(A_{\infty}) by
+ 𝒟 ∞ ​ [ v ] := [ 𝒟 ∞ ​ v ] = [ i ​ v ′ ] . \mathscr{D}_{\infty}[v]:=[\mathscr{D}_{\infty}v]=[iv^{\prime}]. 
+This is well-defined since [ u ] = [ v ] [u]=[v] for u , v ∈ C c ∞ ​ ( ℝ ) u,v\in C_{c}^{\infty}(\mathbb{R}) implies u = v u=v . 
+ We now verify that 𝒟 ∞ \mathscr{D}_{\infty} is symmetric on ℋ ​ ( A ∞ ) \mathcal{H}(A_{\infty}) and hence closable.
+If Q W ​ ( w ) = 0 Q_{W}(w)=0 , it follows that Q W ​ ( w , v ) = 0 Q_{W}(w,v)=0 for all v v 
+by the assumption Q W ≥ 0 Q_{W}\geq 0 
+and
+the Cauchy-Schwarz inequality | Q W ​ ( u , v ) | 2 ≤ Q W ​ ( u ) ​ Q W ​ ( v ) |Q_{W}(u,v)|^{2}\leq Q_{W}(u)Q_{W}(v) .
+This implies Q W ​ ( u + w , v ) = Q W ​ ( u , v ) Q_{W}(u+w,v)=Q_{W}(u,v) and Q W ​ ( u , v + w ) = Q W ​ ( u , v ) Q_{W}(u,v+w)=Q_{W}(u,v) .
+Hence the sesquilinear form 
+ Q W ​ ( [ u ] , [ v ] ) = Q W ​ ( u , v ) = ∫ − ∞ ∞ ∫ − ∞ ∞ ( − g ′′ ​ ( x − y ) ) ​ u ​ ( y ) ​ v ​ ( x ) ¯ ​ 𝑑 x ​ 𝑑 y Q_{W}([u],[v])=Q_{W}(u,v)=\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}(-g^{\prime\prime}(x-y))\,u(y)\,\overline{v(x)}\,dxdy 
+ (7.1) 
+ is well-defined (cf. ( 2.9 )).
+Moreover, the translation operator τ t \tau_{t} ( t ∈ ℝ t\in\mathbb{R} ) defined by 
+ τ t ​ [ u ] := [ τ t ​ u ] , ( τ t ​ u ) ​ ( x ) = u ​ ( x − t ) \tau_{t}[u]:=[\tau_{t}u],\quad(\tau_{t}u)(x)=u(x-t) 
+ is well-defined, since
+ τ t ​ [ u + w ] = [ τ t ​ ( u + w ) ] = [ τ t ​ u ] + [ τ t ​ w ] \tau_{t}[u+w]=[\tau_{t}(u+w)]=[\tau_{t}u]+[\tau_{t}w] 
+and Q W ​ ( [ τ t ​ w ] ) = Q W ​ ( τ t ​ w ) = Q W ​ ( w ) = 0 Q_{W}([\tau_{t}w])=Q_{W}(\tau_{t}w)=Q_{W}(w)=0 if Q W ​ ( w ) = 0 Q_{W}(w)=0 .
+Furthermore, by ( 7.1 ), the norm in ℋ ​ ( A ∞ ) \mathcal{H}(A_{\infty}) 
+is invariant under translations: 
+ ‖ [ v ] ‖ A ∞ = ‖ τ t ​ [ v ] ‖ A ∞ . \|[v]\|_{A_{\infty}}=\|\tau_{t}[v]\|_{A_{\infty}}. 
+ (7.2) 
+ Since 𝒟 ∞ \mathscr{D}_{\infty} commutes with convolution, it follows from ( 7.1 ) that 
+ Q W ​ ( 𝒟 ∞ ​ [ u ] , [ v ] ) = Q W ​ ( [ u ] , 𝒟 ∞ ​ [ v ] ) Q_{W}(\mathscr{D}_{\infty}[u],[v])=Q_{W}([u],\mathscr{D}_{\infty}[v]) 
+ for u , v ∈ C c ∞ ​ ( ℝ ) u,v\in C_{c}^{\infty}(\mathbb{R}) .
+Hence 𝒟 ∞ \mathscr{D}_{\infty} is symmetric with respect to
+ ⟨ ⋅ , ⋅ ⟩ A ∞ \langle\cdot,\cdot\rangle_{A_{\infty}} .
+Since every symmetric operator is closable,
+its closure will be denoted by 𝒟 ¯ ∞ \bar{\mathscr{D}}_{\infty} .
+Thus, for [ v ] ∈ 𝔇 ​ ( 𝒟 ¯ ∞ ) [v]\in\mathfrak{D}(\bar{\mathscr{D}}_{\infty}) ,
+one can choose a sequence v n ∈ C c ∞ ​ ( ℝ ) v_{n}\in C_{c}^{\infty}(\mathbb{R}) such that
+ [ v n ] → [ v ] [v_{n}]\to[v] and
+ 𝒟 ∞ ​ [ v n ] = [ i ​ v n ′ ] → 𝒟 ¯ ∞ ​ [ v ] \mathscr{D}_{\infty}[v_{n}]=[iv_{n}^{\prime}]\to\bar{\mathscr{D}}_{\infty}[v] 
+in ℋ ​ ( A ∞ ) \mathcal{H}(A_{\infty}) . 
+ 7.2. Isomorphism with a de Branges space 
+ We now recall the isometric isomorphism between ℋ ​ ( A ∞ ) \mathcal{H}(A_{\infty}) 
+(denoted by ℋ W \mathcal{H}_{W} in [ 14 ] )
+and a certain de Branges space ℬ \mathcal{B} established in [ 14 ] .
+Here it is sufficient to understand ℬ \mathcal{B} 
+as a reproducing kernel Hilbert space consisting of entire functions. 
+ Let M M be the operator of multiplication by an independent variable on ℬ \mathcal{B} 
+defined by 𝔇 ​ ( M ) = { F ∈ ℬ ∣ z ​ F ​ ( z ) ∈ ℬ } \mathfrak{D}(M)=\{F\in\mathcal{B}\mid zF(z)\in\mathcal{B}\} 
+and ( M ​ F ) ​ ( z ) = z ​ F ​ ( z ) (MF)(z)=zF(z) .
+The operator M M is a densely defined closed symmetric operator with deficiency indices ( 1 , 1 ) (1,1) ,
+and it admits a one-parameter family of self-adjoint extensions parametrized
+by ψ ∈ [ 0 , π ) \psi\in[0,\pi) . In particular, the self-adjoint extension M π / 2 M_{\pi/2} has purely discrete spectrum
+ Γ \Gamma , the set of zeros of ξ ​ ( 1 / 2 − i ​ z ) \xi(1/2-iz) in Section  3 ,
+and one can choose an orthonormal basis of ℬ \mathcal{B} 
+consisting of the corresponding eigenfunctions
+ F γ F_{\gamma} for γ ∈ Γ \gamma\in\Gamma [ 14 , Section 6] .
+In this setting, defining U : ℋ ​ ( A ∞ ) → ℬ U:\mathcal{H}(A_{\infty})\to\mathcal{B} by 
+ U ​ ( [ v ] ) := ∑ γ ∈ Γ m γ ​ v ^ ​ ( γ ) ​ F γ U([v]):=\sum_{\gamma\in\Gamma}\sqrt{m_{\gamma}}\,\widehat{v}(\gamma)F_{\gamma} 
+ (7.3) 
+ yields an isometric isomorphism of Hilbert spaces [ 14 , Theorems 1.1 and 1.4] : 
+ ( Q W ( v ) = ) ∥ [ v ] ∥ A ∞ 2 = ∥ U ( [ v ] ) ∥ ℬ 2 . (Q_{W}(v)=)~\|[v]\|_{A_{\infty}}^{2}=\|U([v])\|_{\mathcal{B}}^{2}. 
+ (7.4) 
+ This U U is precisely the operator denoted
+by π − 1 / 2 ​ 𝒫 D ^ = π − 1 / 2 ​ 𝒫 ^ ​ D \pi^{-1/2}\widehat{\mathcal{P}_{D}}=\pi^{-1/2}\widehat{\mathcal{P}}D in [ 14 ] . 
+ 7.3. Correspondence between 𝒟 ∞ \mathscr{D}_{\infty} and M M 
+ Via the isomorphism U : ℋ ​ ( A ∞ ) → ℬ U:\mathcal{H}(A_{\infty})\to\mathcal{B} ,
+the operator M M induces a self-adjoint operator on
+ ℋ ​ ( A ∞ ) \mathcal{H}(A_{\infty}) .
+However, its relation to the differential operator
+ 𝒟 ¯ ∞ \bar{\mathscr{D}}_{\infty} is not immediately clear.
+On the other hand, the relation between the differential operator 𝒟 ¯ ∞ \bar{\mathscr{D}}_{\infty} and
+the self-adjoint extension M π / 2 M_{\pi/2} of M M can be described in a simple way as follows. 
+ If v ∈ C c ∞ ​ ( ℝ ) v\in C_{c}^{\infty}(\mathbb{R}) , then v ^ \widehat{v} is rapidly decreasing.
+Hence [ v ] [v] belongs to the domain of M π / 2 M_{\pi/2} .
+For each γ ∈ Γ \gamma\in\Gamma , F γ F_{\gamma} is an eigenfunction of
+ M π / 2 M_{\pi/2} with eigenvalue γ \gamma , and therefore 
+ M π / 2 ​ U ​ ( [ v ] ) \displaystyle M_{\pi/2}U([v]) 
+ = ∑ γ γ ​ v ^ ​ ( γ ) ​ F γ = ∑ γ ( i ​ v ′ ) ^ ​ ( γ ) ​ F γ = U ​ ( [ i ​ v ′ ] ) = U ​ ( 𝒟 ∞ ​ [ v ] ) . \displaystyle=\sum_{\gamma}\gamma\widehat{v}(\gamma)F_{\gamma}=\sum_{\gamma}\widehat{(iv^{\prime})}(\gamma)F_{\gamma}=U([iv^{\prime}])=U(\mathscr{D}_{\infty}[v]). 
+ Let 𝖣 π / 2 := U − 1 ​ M π / 2 ​ U \mathsf{D}_{\pi/2}:=U^{-1}M_{\pi/2}U .
+Then the above computation shows that
+ 𝖣 π / 2 ​ [ v ] = [ i ​ v ′ ] = 𝒟 ∞ ​ [ v ] \mathsf{D}_{\pi/2}[v]=[iv^{\prime}]=\mathscr{D}_{\infty}[v] 
+for v ∈ C c ∞ ​ ( ℝ ) v\in C_{c}^{\infty}(\mathbb{R}) .
+Since 𝖣 π / 2 \mathsf{D}_{\pi/2} is closed and extends
+ 𝒟 ∞ \mathscr{D}_{\infty} , it follows that 
+ 𝖣 π / 2 ​ [ v ] = 𝒟 ¯ ∞ ​ [ v ] \mathsf{D}_{\pi/2}[v]=\bar{\mathscr{D}}_{\infty}[v] 
+ for all [ v ] ∈ 𝔇 ​ ( 𝒟 ¯ ∞ ) [v]\in\mathfrak{D}(\bar{\mathscr{D}}_{\infty}) .
+Thus, 𝖣 π / 2 \mathsf{D}_{\pi/2} is a self-adjoint extension of 𝒟 ¯ ∞ \bar{\mathscr{D}}_{\infty} . 
+ Remark.  
+More generally, for any self-adjoint extension M ψ M_{\psi} of M M ,
+one may define 𝖣 ψ := U − 1 ​ M ψ ​ U \mathsf{D}_{\psi}:=U^{-1}M_{\psi}U .
+Since M ψ M_{\psi} is unitarily equivalent to 𝖣 ψ \mathsf{D}_{\psi} ,
+the operator 𝖣 ψ \mathsf{D}_{\psi} is self-adjoint.
+It is natural to ask whether 𝖣 ψ \mathsf{D}_{\psi} 
+can be characterized directly as a self-adjoint extension of
+ 𝒟 ¯ ∞ \bar{\mathscr{D}}_{\infty} .
+We do not pursue this question here. 
+ 7.4. An operator unitarily equivalent to M M 
+ We now consider the operator on ℋ ​ ( A ∞ ) \mathcal{H}(A_{\infty}) induced by M M through U U .
+More precisely, we define 
+ 𝖣 := U − 1 ​ M ​ U . \mathsf{D}:=U^{-1}MU. 
+ By construction, 𝖣 \mathsf{D} and M M are unitarily equivalent via U U ,
+and have the same deficiency indices.
+In particular, the deficiency indices of 𝖣 \mathsf{D} are ( 1 , 1 ) (1,1) . 
+ Writing the Fourier transform as 𝖥 ​ v = v ^ \mathsf{F}v=\widehat{v} ,
+there exists a subspace V ​ ( 0 ) ⊂ L 2 ​ ( 0 , ∞ ) V(0)\subset L^{2}(0,\infty) such that the maps
+ ℬ ∋ F ↦ v F := ℱ − 1 ​ F ∈ V ​ ( 0 ) \mathcal{B}\ni F\mapsto v_{F}:=\mathscr{F}^{-1}F\in V(0) and
+ V ​ ( 0 ) ∋ v ↦ [ v ] ∈ ℋ ​ ( A ∞ ) V(0)\ni v\mapsto[v]\in\mathcal{H}(A_{\infty}) are isomorphisms [ 14 , Theorem 5.5] .
+In this setting, the operator on V ​ ( 0 ) V(0) unitarily equivalent to M M 
+via ℱ − 1 : ℬ → V ​ ( 0 ) \mathscr{F}^{-1}:\mathcal{B}\to V(0) is denoted by D = ℱ − 1 ​ M ​ ℱ D=\mathscr{F}^{-1}M\mathscr{F} .
+Then, via the isomorphism ι : V ​ ( 0 ) → ℋ ​ ( A ∞ ) \iota:V(0)\to\mathcal{H}(A_{\infty}) ,
+the operator corresponding to D D is given by 𝖣 = ι ​ D ​ ι − 1 \mathsf{D}=\iota D\iota^{-1} .
+In particular, we have U = ℱ ​ ι − 1 U=\mathscr{F}\iota^{-1} .
+If F ∈ 𝔇 ​ ( M ) F\in\mathfrak{D}(M) and F = ℱ ​ v F=\mathscr{F}v , then 
+ D ​ v = ℱ − 1 ​ ( M ​ F ) = ℱ − 1 ​ ( z ​ F ) = i ​ v ′ . Dv=\mathscr{F}^{-1}(MF)=\mathscr{F}^{-1}(zF)=iv^{\prime}. 
+ Moreover, for v ∈ V ​ ( 0 ) v\in V(0) , 
+ 𝖣 ​ [ v ] = ι ​ ( D ​ v ) = ι ​ ( i ​ v ′ ) = [ i ​ v ′ ] . \mathsf{D}[v]=\iota(Dv)=\iota(iv^{\prime})=[iv^{\prime}]. 
+ We claim that for a given function u u ,
+the decomposition u = v + w u=v+w 
+with v ∈ V ​ ( 0 ) v\in V(0) and [ w ] = 0 [w]=0 is uniquely determined.
+Once this is established,
+we may define 𝖣 ​ [ u ] := 𝖣 ​ [ v ] \mathsf{D}[u]:=\mathsf{D}[v] 
+by writing u = v + w u=v+w with v ∈ V ​ ( 0 ) v\in V(0) 
+for [ u ] ∈ 𝔇 ​ ( 𝖣 ) [u]\in\mathfrak{D}(\mathsf{D}) 
+(defined via the unitary correspondence with 𝔇 ​ ( M ) \mathfrak{D}(M) ). 
+ The uniqueness of v v in the above decomposition is as follows.
+If u = v + w u=v+w and u = v ~ + w ~ u=\tilde{v}+\tilde{w} are two such decompositions,
+then v − v ~ = w ~ − w v-\tilde{v}=\tilde{w}-w .
+Hence, if v 0 := v − v ~ ≠ 0 v_{0}:=v-\tilde{v}\neq 0 ,
+then 0 ≠ v 0 ∈ V ​ ( 0 ) 0\neq v_{0}\in V(0) and [ v 0 ] = 0 [v_{0}]=0 .
+It follows from
+( 7.3 ) and ( 7.4 )
+that v 0 ^ ​ ( γ ) = 0 \widehat{v_{0}}(\gamma)=0 for all γ \gamma .
+Since ℱ : V ​ ( 0 ) → ℬ \mathscr{F}:V(0)\to\mathcal{B} 
+is an isomorphism, we obtain v 0 = 0 v_{0}=0 ,
+a contradiction. 
+ With this definition, the relation between 
+ C c ∞ ​ ( ℝ ) and 𝔇 ​ ( 𝖣 ) C_{c}^{\infty}(\mathbb{R})\quad\text{and}\quad\mathfrak{D}(\mathsf{D}) 
+ is not clear. Indeed, for u ∈ C c ∞ ​ ( ℝ ) u\in C_{c}^{\infty}(\mathbb{R}) 
+decomposed as u = v + w u=v+w with v ∈ V ​ ( 0 ) v\in V(0) and [ w ] = 0 [w]=0 ,
+it is not clear whether ℱ ​ v ∈ 𝔇 ​ ( M ) \mathscr{F}v\in\mathfrak{D}(M) holds. 
+ 7.5. Infinitesimal generator of translations ( a = ∞ a=\infty ) 
+ The previously defined family ( τ t ) t ∈ ℝ (\tau_{t})_{t\in\mathbb{R}} forms a strongly continuous one-parameter unitary group.
+Indeed, τ t ​ τ s = τ t + s \tau_{t}\tau_{s}=\tau_{t+s} is clear from the definition,
+and each τ t \tau_{t} is a unitary operator by ( 7.2 ).
+It remains to verify strong continuity, namely
+ lim t → 0 ‖ τ t ​ [ v ] − [ v ] ‖ A ∞ = 0 \lim_{t\to 0}\|\tau_{t}[v]-[v]\|_{A_{\infty}}=0 .
+To this end, using the isometric property of U U , we estimate 
+ ‖ U ​ ( τ t ​ [ v ] − [ v ] ) ‖ ℬ 2 = ∑ γ ∈ Γ m γ ​ | e − i ​ t ​ γ − 1 | 2 ​ | v ^ ​ ( γ ) | 2 . \|U(\tau_{t}[v]-[v])\|_{\mathcal{B}}^{2}=\sum_{\gamma\in\Gamma}m_{\gamma}|e^{-it\gamma}-1|^{2}|\widehat{v}(\gamma)|^{2}. 
+ Since A ∞ > 0 A_{\infty}>0 implies RH,
+all elements of Γ \Gamma are real.
+Since | e − i ​ t ​ γ − 1 | 2 ≤ 4 |e^{-it\gamma}-1|^{2}\leq 4 ,
+the dominated convergence theorem implies that the right-hand side tends to 0 as t → 0 t\to 0 .
+Hence τ t \tau_{t} is strongly continuous with respect to the norm of ℋ ​ ( A ∞ ) \mathcal{H}(A_{\infty}) . 
+ Therefore,
+there exists a self-adjoint operator 𝒟 ¯ \overline{\mathscr{D}} on ℋ ​ ( A ∞ ) \mathcal{H}(A_{\infty}) such that 
+ τ t = e i ​ t ​ 𝒟 ¯ ( t ∈ ℝ ) \tau_{t}=e^{it\overline{\mathscr{D}}}\quad(t\in\mathbb{R}) 
+ by Stone’s theorem, where 
+ 𝔇 ​ ( 𝒟 ¯ ) = { [ v ] ∈ ℋ ∞ | lim ϵ → 0 τ ϵ ​ [ v ] − [ v ] ϵ ​  exists } , 𝒟 ¯ ​ [ v ] = − i ​ lim ϵ → 0 τ ϵ ​ [ v ] − [ v ] ϵ . \mathfrak{D}(\overline{\mathscr{D}})=\left\{[v]\in\mathcal{H}_{\infty}\left|~\lim_{\epsilon\to 0}\frac{\tau_{\epsilon}[v]-[v]}{\epsilon}\text{ exists}\right.\right\},\quad\overline{\mathscr{D}}[v]=-i\lim_{\epsilon\to 0}\frac{\tau_{\epsilon}[v]-[v]}{\epsilon}. 
+ For [ v ] ∈ 𝔇 ​ ( 𝖣 ) [v]\in\mathfrak{D}(\mathsf{D}) ,
+we have 
+ 𝒟 ¯ ​ [ v ] = [ i ​ v ′ ] = 𝖣 ​ [ v ] \overline{\mathscr{D}}[v]=[iv^{\prime}]=\mathsf{D}[v] 
+ by considering the action on the ℬ \mathcal{B} side.
+Thus, the self-adjoint operator
+ 𝒟 ¯ \overline{\mathscr{D}} 
+extends the closed symmetric operator
+ 𝖣 \mathsf{D} ,
+whose deficiency indices are ( 1 , 1 ) (1,1) .
+Moreover, 
+ U ​ ( 𝒟 ¯ ​ [ v ] ) = M π / 2 ​ U ​ ( [ v ] ) U(\overline{\mathscr{D}}[v])=M_{\pi/2}U([v]) 
+ holds, that is,
+ 𝒟 ¯ = 𝖣 π / 2 . \overline{\mathscr{D}}=\mathsf{D}_{\pi/2}. 
+Indeed, 
+ ( U ​ 𝒟 ¯ ​ [ v ] ) ​ ( z ) \displaystyle(U\overline{\mathscr{D}}[v])(z) 
+ = − i ​ lim ϵ → 0 ( U ​ τ ϵ ​ [ v ] ) ​ ( z ) − ( U ​ [ v ] ) ​ ( z ) ϵ \displaystyle=-i\lim_{\epsilon\to 0}\frac{(U\tau_{\epsilon}[v])(z)-(U[v])(z)}{\epsilon} 
+ = − i ​ lim ϵ → 0 ∑ γ ∈ Γ m γ ​ e i ​ γ ​ ϵ − 1 ϵ ​ v ^ ​ ( γ ) ​ F γ \displaystyle=-i\lim_{\epsilon\to 0}\sum_{\gamma\in\Gamma}\sqrt{m_{\gamma}}\,\frac{e^{i\gamma\epsilon}-1}{\epsilon}\,\widehat{v}(\gamma)F_{\gamma} 
+ = ∑ γ ∈ Γ m γ ​ γ ​ v ^ ​ ( γ ) ​ F γ = ( M ψ ​ U ​ [ v ] ) ​ ( z ) . \displaystyle=\sum_{\gamma\in\Gamma}\sqrt{m_{\gamma}}\,\gamma\widehat{v}(\gamma)F_{\gamma}=(M_{\psi}U[v])(z). 
+ Viewed on ℋ ​ ( A ∞ ) \mathcal{H}(A_{\infty}) ,
+ 𝒟 ¯ \overline{\mathscr{D}} is characterized as
+the unique self-adjoint extension of 𝖣 \mathsf{D} that commutes with the (usual) translation.
+Moreover, the equality 𝒟 ¯ = 𝖣 π / 2 \overline{\mathscr{D}}=\mathsf{D}_{\pi/2} asserts that
+a Hilbert–Pólya operator is realized as the infinitesimal generator of the translation group
+under the assumption A ∞ > 0 A_{\infty}>0 (RH). 
+ Since 𝒟 ¯ \overline{\mathscr{D}} acts as v ↦ i ​ v ′ v\mapsto iv^{\prime} on C c ∞ ​ ( − a , a ) C_{c}^{\infty}(-a,a) ,
+to approximate the behavior as a → ∞ a\to\infty ,
+it is natural to consider the minimal operator 𝒟 a \mathscr{D}_{a} for each a > 0 a>0 .
+Considering the self-adjoint extensions 𝒟 a , θ \mathscr{D}_{a,\theta} of 𝒟 a \mathscr{D}_{a} , it is expected that by choosing θ = θ ​ ( a ) \theta=\theta(a) appropriately, 
+ 𝒟 ¯ a , θ → 𝒟 ¯ ( a → ∞ ) \overline{\mathscr{D}}_{a,\theta}~\to~\overline{\mathscr{D}}\quad(a\to\infty) 
+ in the sense of strong resolvent convergence. 
+ 7.6. Operator picture via embedding 
+ We denote by ℋ ​ ( A a ) \mathcal{H}(A_{a}) the completion of C c ∞ ​ ( − a , a ) C_{c}^{\infty}(-a,a) with respect to
+ ( Q W | L 2 ​ ( − a , a ) ) ​ ( v ) = Q W a ​ ( v ) = ⟨ A a ​ v , v ⟩ L 2 (Q_{W}|_{L^{2}(-a,a)})(v)=Q_{W}^{\,a}(v)=\langle A_{a}v,v\rangle_{L^{2}} .
+Since U ​ ( v ) ≠ 0 U(v)\neq 0 for every nonzero v ∈ C c ∞ ​ ( − a , a ) v\in C_{c}^{\infty}(-a,a) ,
+the space C c ∞ ​ ( − a , a ) C_{c}^{\infty}(-a,a) embeds injectively into ℋ ​ ( A ∞ ) \mathcal{H}(A_{\infty}) via v ↦ [ v ] v\mapsto[v] 
+as in the case of C c ∞ ​ ( ℝ ) C_{c}^{\infty}(\mathbb{R}) .
+This embedding extends to an injective map 
+ ℋ ​ ( A a ) ↪ ℋ ​ ( A ∞ ) . \mathcal{H}(A_{a})~\hookrightarrow~\mathcal{H}(A_{\infty}). 
+ Through this embedding, we may regard 𝒟 a \mathscr{D}_{a} and 𝒟 ¯ a , θ \overline{\mathscr{D}}_{a,\theta} as operators on ℋ ​ ( A ∞ ) \mathcal{H}(A_{\infty}) ,
+although they are no longer densely defined in ℋ ​ ( A ∞ ) \mathcal{H}(A_{\infty}) .
+However, we still have 
+ 𝒟 a = 𝒟 ∞ | ℋ ​ ( A a ) \mathscr{D}_{a}=\left.\mathscr{D}_{\infty}\right|_{\mathcal{H}(A_{a})} 
+ 𝒟 ¯ ∞ ⊂ 𝖣 π / 2 = 𝒟 ¯ \bar{\mathscr{D}}_{\infty}~\subset~\mathsf{D}_{\pi/2}=\overline{\mathscr{D}} 
+ and thus, as a → ∞ a\to\infty , it is natural to expect that 𝒟 ¯ a , θ \overline{\mathscr{D}}_{a,\theta} approximates the self-adjoint extension 𝖣 π / 2 = 𝒟 ¯ \mathsf{D}_{\pi/2}=\overline{\mathscr{D}} of 𝒟 ¯ ∞ \bar{\mathscr{D}}_{\infty} .
+Since the spectrum of 𝖣 π / 2 \mathsf{D}_{\pi/2} is given by Γ \Gamma , one further expects that
+the eigenvalues of 𝒟 ¯ a , θ \overline{\mathscr{D}}_{a,\theta} approximate Γ \Gamma as a → ∞ a\to\infty . 
+ 7.7. Factorization of A ∞ A_{\infty} 
+ By ( 7.4 ), 
+ Q W ​ ( v ) = ⟨ A ∞ ​ v , v ⟩ L 2 = ⟨ U ​ v , U ​ v ⟩ L 2 = ⟨ U ∗ ​ U ​ v , v ⟩ L 2 . Q_{W}(v)=\langle A_{\infty}v,v\rangle_{L^{2}}=\langle Uv,Uv\rangle_{L^{2}}=\langle U^{\ast}Uv,v\rangle_{L^{2}}. 
+ Using the notation of [ 14 ] and the factorization
+ U = π − 1 / 2 ​ 𝒫 ^ ​ D U=\pi^{-1/2}\widehat{\mathcal{P}}D , we obtain 
+ A ∞ = U ∗ ​ U = π − 1 ​ D ∗ ​ 𝒫 ^ ∗ ​ 𝒫 ^ ​ D , G = π − 1 ​ 𝒫 ^ ∗ ​ 𝒫 ^ A_{\infty}=U^{\ast}U=\pi^{-1}D^{\ast}\widehat{\mathcal{P}}^{\ast}\widehat{\mathcal{P}}D,\quad G=\pi^{-1}\widehat{\mathcal{P}}^{\ast}\widehat{\mathcal{P}} 
+ under RH.
+Conversely, if one could show unconditionally that the kernel of U ∗ ​ U U^{\ast}U 
+coincides with − g ′′ ​ ( x − y ) -g^{\prime\prime}(x-y) , or equivalently that the kernel of
+ π − 1 ​ 𝒫 ^ ∗ ​ 𝒫 ^ \pi^{-1}\widehat{\mathcal{P}}^{\ast}\widehat{\mathcal{P}} 
+coincides with the kernel
+ g ​ ( x − y ) − g ​ ( x ) − g ​ ( − y ) + g ​ ( 0 ) g(x-y)-g(x)-g(-y)+g(0) of G G ,
+then it would follow that A ∞ > 0 A_{\infty}>0 , and hence RH would follow immediately.
+More precisely, using the notation of [ 14 ] , one has unconditionally 
+ ( U ​ v ) ​ ( z ) = π − 1 / 2 ​ ∫ − ∞ ∞ 𝔖 x ​ ( z ¯ ) ¯ ​ v ′ ​ ( x ) ​ 𝑑 x , (Uv)(z)=\pi^{-1/2}\int_{-\infty}^{\infty}\overline{\mathfrak{S}_{x}(\bar{z})}\,v^{\prime}(x)\,dx, 
+ and therefore RH would follow if one could establish unconditionally that 
+ ∫ − ∞ ∞ 𝔖 x ​ ( z ) ​ 𝔖 y ​ ( z ) ¯ ​ 𝑑 z = g ​ ( x − y ) − g ​ ( x ) − g ​ ( − y ) + g ​ ( 0 ) . \int_{-\infty}^{\infty}\mathfrak{S}_{x}(z)\overline{\mathfrak{S}_{y}(z)}\,dz=g(x-y)-g(x)-g(-y)+g(0). 
+ We note that, as in [ 14 , (1.5), (1.6)] ,
+the function 𝔖 x ​ ( z ) \mathfrak{S}_{x}(z) can also be represented without reference
+to Γ \Gamma , just as g g can. 
+ 8. From distribution kernels to continuous kernels 
+ 8.1. Passing from A a A_{a} to G a G_{a} 
+ So far, we have developed the theory of Q W a Q_{W}^{\,a} and A a A_{a} 
+using the screw function associated with ζ ​ ( s ) \zeta(s) .
+However, in the theory of screw functions, as presented
+for example in [ 8 , Section 5] ,
+it is more natural to consider the integral operator
+ G ~ \widetilde{G} defined by 
+ ( G ~ ​ u ) ​ ( x ) := ∫ − ∞ ∞ ( g ​ ( x − y ) − g ​ ( x ) − g ​ ( − y ) + g ​ ( 0 ) ) ​ u ​ ( y ) ​ 𝑑 y (\widetilde{G}u)(x):=\int_{-\infty}^{\infty}(g(x-y)-g(x)-g(-y)+g(0))u(y)\,dy 
+ (8.1) 
+ rather than the integral operator G G in ( 1.4 ).
+As shown in [ 13 , Theorem 1.3] , if
+ Q G ~ ​ ( v ) := ⟨ G ~ ​ v , v ⟩ L 2 Q_{\widetilde{G}}(v):=\langle\widetilde{G}v,v\rangle_{L^{2}} 
+denotes the quadratic form associated with G ~ \widetilde{G} ,
+then the condition Q G ~ ​ ( u ) ≥ 0 Q_{\widetilde{G}}(u)\geq 0 
+for all u ∈ C c ∞ ​ ( ℝ ) ∩ L 0 2 ​ ( − a , a ) u\in C_{c}^{\infty}(\mathbb{R})\cap L_{0}^{2}(-a,a) 
+is equivalent to RH.
+This follows from the relation
+ Q W ​ ( v ) = Q G ~ ​ ( D ​ v ) Q_{W}(v)=Q_{\widetilde{G}}(Dv) , v ∈ C c ∞ ​ ( ℝ ) v\in C_{c}^{\infty}(\mathbb{R}) 
+ [ 13 , Proposition 3.1] .
+Note that if u = D ​ v u=Dv with v ∈ C c ∞ ​ ( ℝ ) v\in C_{c}^{\infty}(\mathbb{R}) ,
+then u ∈ L 0 2 ​ ( − a , a ) u\in L_{0}^{2}(-a,a) .
+If Q G ​ ( v ) := ⟨ G ​ v , v ⟩ L 2 Q_{G}(v):=\langle Gv,v\rangle_{L^{2}} 
+denotes the quadratic form associated with the integral operator G G 
+in ( 1.4 ),
+then Q G ~ ​ ( u ) = Q G ​ ( u ) Q_{\widetilde{G}}(u)=Q_{G}(u) for every
+ u ∈ L 0 2 ​ ( − a , a ) u\in L_{0}^{2}(-a,a) ,
+and hence
+ Q W ​ ( v ) = Q G ~ ​ ( D ​ v ) = Q G ​ ( D ​ v ) Q_{W}(v)=Q_{\widetilde{G}}(Dv)=Q_{G}(Dv) .
+Motivated by this relation, we chose to study Q W Q_{W} 
+through the quadratic form Q G Q_{G} ,
+whose kernel is considerably simpler. 
+ To represent Q W Q_{W} directly on the finite interval ( − a , a ) (-a,a) ,
+one must use the operator A a A_{a} as in ( 1.1 ).
+However, if one is interested only in the positivity of Q W Q_{W} ,
+there is no essential difference in working with G a G_{a} ,
+since Q W ​ ( v ) = Q G ​ ( D ​ v ) Q_{W}(v)=Q_{G}(Dv) and the restriction of Q G Q_{G} to ( − a , a ) (-a,a) 
+is represented by the operator G a G_{a} through
+ ( Q G | L 2 ​ ( − a , a ) ) ​ ( u ) = ⟨ G a ​ u , u ⟩ L 2 (Q_{G}|_{L^{2}(-a,a)})(u)=\langle G_{a}u,u\rangle_{L^{2}} .
+Moreover, G a G_{a} is an integral operator with a continuous kernel
+and is therefore much easier to handle than the unbounded operator A a A_{a} .
+As we shall see below,
+the Hilbert space obtained by completing with respect to
+ ⟨ A a ​ u , u ⟩ L 2 \langle A_{a}u,u\rangle_{L^{2}} 
+and the Hilbert space obtained by completing with respect to
+ ⟨ G a ​ u , u ⟩ L 2 \langle G_{a}u,u\rangle_{L^{2}} 
+are related through the identity
+ Q W ​ ( v ) = Q G ​ ( D ​ v ) Q_{W}(v)=Q_{G}(Dv) ,
+and Theorem  1.5 
+can be interpreted within the framework of G a G_{a} . 
+ Although A a A_{a} and G a G_{a} are very different as operators,
+the former being an unbounded operator with discrete spectrum
+accumulating at + ∞ +\infty 
+and the latter being a compact operator with discrete spectrum
+accumulating at 0 ,
+the situation is analogous from the viewpoint of positivity of quadratic forms,
+since in both cases the relevant quantity is the bottom of the spectrum.
+(There is, of course, the distinction that the infimum may or may not be attained.)
+Furthermore, as we shall see below,
+this difference does not affect the spectrum of the corresponding
+self-adjoint extensions of the differential operator. 
+ To discuss these matters, we first review the relation between
+the norms arising through the differential operator D D . 
+ 8.2. The Inverse Neumann Laplacian 
+ The operator
+ D : H 0 1 ​ ( − a , a ) → L 0 2 ​ ( − a , a ) D:H_{0}^{1}(-a,a)\to L_{0}^{2}(-a,a) 
+is bijective.
+Therefore, if u = D ​ v u=Dv with v ∈ H 0 1 ​ ( − a , a ) v\in H_{0}^{1}(-a,a) , then v = D − 1 ​ u v=D^{-1}u , and hence 
+ ‖ v ‖ L 2 2 = ⟨ D − 1 ​ u , D − 1 ​ u ⟩ L 2 = ⟨ ( D ​ D ∗ ) − 1 ​ u , u ⟩ L 2 . \|v\|_{L^{2}}^{2}=\langle D^{-1}u,D^{-1}u\rangle_{L^{2}}=\langle{(DD^{\ast})}^{-1}u,u\rangle_{L^{2}}. 
+ Note that − Δ N = D ​ D ∗ -\Delta_{N}=DD^{\ast} coincides with the Neumann Laplacian,
+which is the operator acting as
+ − Δ N = − d 2 / d ​ x 2 -\Delta_{N}=-d^{2}/dx^{2} with domain
+ 𝔇 ​ ( − Δ N ) = { u ∈ H 2 ​ ( − a , a ) ∣ u ′ ​ ( a ) = u ′ ​ ( − a ) = 0 } \mathfrak{D}(-\Delta_{N})=\{u\in H^{2}(-a,a)\mid u^{\prime}(a)=u^{\prime}(-a)=0\} ,
+and its range is L 0 2 ​ ( − a , a ) L_{0}^{2}(-a,a) .
+Its inverse
+ ( − Δ N ) − 1 : L 0 2 ​ ( − a , a ) → L 2 ​ ( − a , a ) (-\Delta_{N})^{-1}:L_{0}^{2}(-a,a)\to L^{2}(-a,a) 
+is a compact, self-adjoint, and positive integral operator
+with kernel 
+ N ​ ( x , y ) = x 2 + y 2 4 ​ a − | x − y | 2 + a 6 . N(x,y)=\frac{x^{2}+y^{2}}{4a}-\frac{|x-y|}{2}+\frac{a}{6}. 
+ On the other hand, if u = D ​ v u=Dv with v ∈ H 0 1 ​ ( − a , a ) v\in H_{0}^{1}(-a,a) , then
+ v ​ ( x ) = ∫ − a x u ​ ( t ) ​ 𝑑 t , v(x)=\int_{-a}^{x}u(t)dt, 
+and therefore 
+ ‖ v ‖ L 2 2 \displaystyle\|v\|_{L^{2}}^{2} 
+ = ∫ − a a | v ​ ( x ) | 2 ​ 𝑑 x = ∫ − a a ( ∫ − a a u ​ ( t ) ​ 𝟏 t ≤ x ​ 𝑑 t ) ​ ( ∫ − a a u ​ ( s ) ¯ ​ 𝟏 s ≤ x ​ 𝑑 s ) ​ 𝑑 t \displaystyle=\int_{-a}^{a}|v(x)|^{2}dx=\int_{-a}^{a}\left(\int_{-a}^{a}u(t)\mathbf{1}_{t\leq x}dt\right)\left(\int_{-a}^{a}\overline{u(s)}\mathbf{1}_{s\leq x}ds\right)dt 
+ = ∫ − a a ∫ − a a ( ∫ max ⁡ ( t , s ) a 𝑑 x ) ​ u ​ ( t ) ​ u ​ ( s ) ¯ ​ 𝑑 t ​ 𝑑 s = ∫ − a a ∫ − a a ( a − max ⁡ ( t , s ) ) ​ u ​ ( t ) ​ u ​ ( s ) ¯ ​ 𝑑 t ​ 𝑑 s . \displaystyle=\int_{-a}^{a}\int_{-a}^{a}\left(\int_{\max(t,s)}^{a}dx\right)u(t)\overline{u(s)}dtds=\int_{-a}^{a}\int_{-a}^{a}(a-\max(t,s))u(t)\overline{u(s)}dtds. 
+ Accordingly, defining 
+ ( K ~ a ​ u ) ​ ( x ) := ∫ − a a ( a − max ⁡ ( x , y ) ) ​ u ​ ( y ) ​ 𝑑 y , (\widetilde{K}_{a}u)(x):=\int_{-a}^{a}(a-\max(x,y))u(y)dy, 
+ we obtain 
+ ‖ v ‖ L 2 2 = ⟨ K ~ a ​ u , u ⟩ L 2 . \|v\|_{L^{2}}^{2}=\langle\widetilde{K}_{a}u,u\rangle_{L^{2}}. 
+ The operator K ~ a \widetilde{K}_{a} is compact, self-adjoint, and positive.
+Moreover, the identity 
+ ‖ v ‖ L 2 2 = ⟨ K ~ a ​ u , u ⟩ L 2 = ⟨ ( − Δ N ) − 1 ​ u , u ⟩ L 2 \|v\|_{L^{2}}^{2}=\langle\widetilde{K}_{a}u,u\rangle_{L^{2}}=\langle(-\Delta_{N})^{-1}u,u\rangle_{L^{2}} 
+ (8.2) 
+ holds as an equality of quadratic forms on L 0 2 ​ ( − a , a ) L_{0}^{2}(-a,a) .
+Since the operator-theoretic properties of ( − Δ N ) − 1 (-\Delta_{N})^{-1} 
+are more transparent, we shall henceforth write 
+ K a := ( − Δ N ) − 1 , with integral kernel  ​ N ​ ( x , y ) = x 2 + y 2 4 ​ a − | x − y | 2 + a 6 , K_{a}:=(-\Delta_{N})^{-1},\quad\text{with integral kernel }N(x,y)=\frac{x^{2}+y^{2}}{4a}-\frac{|x-y|}{2}+\frac{a}{6}, 
+ and work with K a K_{a} rather than K ~ a \widetilde{K}_{a} . 
+ 8.3. The Hilbert Space ℋ ​ ( S a ) \mathcal{H}(S_{a}) 
+ Let λ < λ a \lambda<\lambda_{a} .
+Motivated by ( 8.2 ) and by the operator
+ T a = A a − λ ​ I T_{a}=A_{a}-\lambda I considered earlier, we define 
+ S a := G a − λ ​ ( − Δ N ) − 1 . S_{a}:=G_{a}-\lambda(-\Delta_{N})^{-1}. 
+ Since both G a G_{a} and ( − Δ N ) − 1 (-\Delta_{N})^{-1} are self-adjoint with respect to the
+ L 2 L^{2} inner product, so is S a S_{a} , and 
+ ‖ u ‖ S a 2 = ⟨ S a ​ u , u ⟩ L 2 = ⟨ T a ​ v , v ⟩ L 2 = ‖ v ‖ T a 2 , u = D ​ v ∈ L 0 2 ​ ( − a , a ) . \|u\|_{S_{a}}^{2}=\langle S_{a}u,u\rangle_{L^{2}}=\langle T_{a}v,v\rangle_{L^{2}}=\|v\|_{T_{a}}^{2},\quad u=Dv\in L_{0}^{2}(-a,a). 
+ Furthermore, 
+ ℋ ​ ( S a ) := [ the completion of  C c ∞ ​ ( − a , a ) ∩ L 0 2 ​ ( − a , a )  with respect to  ‖ u ‖ S a ] \mathcal{H}(S_{a}):=\Bigl[\text{the completion of $C_{c}^{\infty}(-a,a)\cap L_{0}^{2}(-a,a)$
+with respect to $\|u\|_{S_{a}}$}\Bigr] 
+ is isometrically isomorphic to
+ ℋ ​ ( T a ) \mathcal{H}(T_{a}) ,
+since
+ D : C c ∞ ​ ( − a , a ) → C c ∞ ​ ( − a , a ) ∩ L 0 2 ​ ( − a , a ) D:C_{c}^{\infty}(-a,a)\to C_{c}^{\infty}(-a,a)\cap L_{0}^{2}(-a,a) 
+is bijective.
+The operator D D therefore extends to an isometric isomorphism 
+ D ¯ : ℋ ​ ( T a ) ​ → ∼ ​ ℋ ​ ( S a ) . \bar{D}:\mathcal{H}(T_{a})~\overset{\sim}{\to}~\mathcal{H}(S_{a}). 
+ The operator G a G_{a} extends naturally to a bounded operator on
+ ℋ ​ ( S a ) \mathcal{H}(S_{a}) .
+Using the same notation for this extension, we have 
+ A a = ( D ¯ ) ∗ ​ G a ​ D ¯ . A_{a}=(\bar{D})^{\ast}G_{a}\bar{D}. 
+ Note that
+ ℋ ​ ( T a ) ↪ L 2 ​ ( − a , a ) \mathcal{H}(T_{a})\hookrightarrow L^{2}(-a,a) ,
+whereas
+ ℋ ​ ( S a ) ⊄ L 2 ​ ( − a , a ) \mathcal{H}(S_{a})\not\subset L^{2}(-a,a) .
+It should also be noted that
+ 𝟏 ( − a , a ) ∈ ℋ ​ ( A a ) ∖ 𝔇 ​ ( 𝒟 a ) \mathbf{1}_{(-a,a)}\in\mathcal{H}(A_{a})\setminus\mathfrak{D}(\mathscr{D}_{a}) ,
+while
+ D ¯ ​ ( 𝟏 ( − a , a ) ) ≠ 0 \bar{D}(\mathbf{1}_{(-a,a)})\not=0 . 
+ Through the isomorphism D ¯ \bar{D} ,
+operators on ℋ ​ ( T a ) \mathcal{H}(T_{a}) can be transferred to operators on
+ ℋ ​ ( S a ) \mathcal{H}(S_{a}) .
+Accordingly, we define an operator 𝒟 ~ a \widetilde{\mathscr{D}}_{a} on
+ ℋ ​ ( S a ) \mathcal{H}(S_{a}) by 
+ 𝒟 ~ a := D ​ 𝒟 a ​ D − 1 \widetilde{\mathscr{D}}_{a}:=D\mathscr{D}_{a}D^{-1} 
+ with domain
+ C c ∞ ​ ( − a , a ) ∩ L 0 2 ​ ( − a , a ) C_{c}^{\infty}(-a,a)\cap L_{0}^{2}(-a,a) .
+For u ∈ C c ∞ ​ ( − a , a ) ∩ L 0 2 ​ ( − a , a ) u\in C_{c}^{\infty}(-a,a)\cap L_{0}^{2}(-a,a) , 
+ ( D − 1 ​ u ) ​ ( x ) = − i ​ ∫ − a x u ​ ( t ) ​ 𝑑 t , D ​ 𝒟 a ​ ( D − 1 ​ u ) ​ ( x ) = i ​ u ′ ​ ( x ) , (D^{-1}u)(x)=-i\int_{-a}^{x}u(t)\,dt,\quad D\mathscr{D}_{a}(D^{-1}u)(x)=iu^{\prime}(x), 
+ and hence 𝒟 ~ a \widetilde{\mathscr{D}}_{a} may be regarded as the operator
+with domain
+ C c ∞ ​ ( − a , a ) ∩ L 0 2 ​ ( − a , a ) C_{c}^{\infty}(-a,a)\cap L_{0}^{2}(-a,a) 
+acting by
+ 𝒟 ~ a = i ​ d / d ​ x \widetilde{\mathscr{D}}_{a}=id/dx .
+By construction,
+ 𝒟 ~ a \widetilde{\mathscr{D}}_{a} on ℋ ​ ( S a ) \mathcal{H}(S_{a}) is unitarily equivalent to
+ 𝒟 a \mathscr{D}_{a} on ℋ ​ ( T a ) \mathcal{H}(T_{a}) .
+Therefore, 𝒟 ~ a \widetilde{\mathscr{D}}_{a} has deficiency indices ( 1 , 1 ) (1,1) ,
+and its self-adjoint extensions have the same spectra as those of
+ 𝒟 a \mathscr{D}_{a} . 
+ The eigenvalue equation for the adjoint 𝒟 ~ a ∗ \widetilde{\mathscr{D}}_{a}^{\ast} is determined by 
+ 0 = ⟨ u , ( 𝒟 ~ a ∗ − z ) ​ v ⟩ S a = ⟨ u , S a ​ ( 𝒟 ~ a ∗ − z ) ​ v ⟩ L 2 0=\langle u,(\widetilde{\mathscr{D}}_{a}^{\ast}-z)v\rangle_{S_{a}}=\langle u,S_{a}(\widetilde{\mathscr{D}}_{a}^{\ast}-z)v\rangle_{L^{2}} 
+ for every
+ u ∈ C c ∞ ​ ( − a , a ) ∩ L 0 2 ​ ( − a , a ) u\in C_{c}^{\infty}(-a,a)\cap L_{0}^{2}(-a,a) .
+Here u u ranges not over all of C c ∞ ​ ( − a , a ) C_{c}^{\infty}(-a,a) ,
+but only over those functions satisfying
+ u ^ ​ ( 0 ) = 0 \widehat{u}(0)=0 .
+Since the orthogonal complement in L 2 ​ ( − a , a ) L^{2}(-a,a) 
+of the subspace of functions satisfying u ^ ​ ( 0 ) = 0 \widehat{u}(0)=0 
+is spanned by the constant function 1 1 ,
+it follows that 
+ 1 = S a ​ ( 𝒟 ~ a ∗ − z ) ​ v = i ​ ( S a ​ v ) ′ − z ​ ( S a ​ v ) . 1=S_{a}(\widetilde{\mathscr{D}}_{a}^{\ast}-z)v=i(S_{a}v)^{\prime}-z(S_{a}v). 
+ using
+ S a ​ ( 𝒟 ~ a ∗ ​ v ) = i ​ ( S a ​ v ) ′ S_{a}(\widetilde{\mathscr{D}}_{a}^{\ast}v)=i(S_{a}v)^{\prime} 
+(which is derived exactly as in the case of T a T_{a} ).
+Hence 
+ ( S a ​ v ) ​ ( x ) = C ​ e − i ​ z ​ x − 1 z , ( z ≠ 0 ) , (S_{a}v)(x)=Ce^{-izx}-\frac{1}{z},\quad(z\neq 0), 
+ and 
+ ( S a ​ v ) ​ ( x ) = − i ​ x + C , ( z = 0 ) . (S_{a}v)(x)=-ix+C,\quad(z=0). 
+ On the other hand, 
+ ( S a ​ v ) ​ ( x ) = ∫ − a a ( g ​ ( x − y ) − λ ​ r ​ ( x , y ) ) ​ v ​ ( y ) ​ 𝑑 y . (S_{a}v)(x)=\int_{-a}^{a}(g(x-y)-\lambda r(x,y))v(y)\,dy. 
+ Here r ​ ( x , y ) r(x,y) may be taken to be either of the kernels considered in
+Section  8.2 ,
+since in either case 
+ − d 2 d ​ x 2 ​ ∫ − a a r ​ ( x , y ) ​ u ​ ( y ) ​ 𝑑 y = u ​ ( x ) . -\frac{d^{2}}{dx^{2}}\int_{-a}^{a}r(x,y)u(y)dy=u(x). 
+ Therefore, 
+ − d 2 d ​ x 2 ​ ∫ − a a ( g ​ ( x − y ) − λ ​ r ​ ( x , y ) ) ​ v ​ ( y ) ​ 𝑑 y = ∫ − a a ( − g ′′ ​ ( x − y ) ) ​ v ​ ( y ) ​ 𝑑 y − λ ​ v ​ ( x ) = T a ​ v . -\frac{d^{2}}{dx^{2}}\int_{-a}^{a}(g(x-y)-\lambda r(x,y))v(y)\,dy=\int_{-a}^{a}(-g^{\prime\prime}(x-y))v(y)\,dy-\lambda v(x)=T_{a}v. 
+ It follows from the injectivity of S a S_{a} 
+(equivalently, of T a T_{a} )
+that the eigenfunctions corresponding to z = ± i z=\pm i 
+coincide with those for 𝒟 a ∗ \mathscr{D}_{a}^{\ast} 
+up to multiplication by the constant − λ 2 -\lambda^{2} .
+Consequently, the boundary form determining the eigenvalues
+should also be the same for 𝒟 ~ a ∗ \widetilde{\mathscr{D}}_{a}^{\ast} and 𝒟 a ∗ \mathscr{D}_{a}^{\ast} .
+Therefore,
+it may be advantageous to work with the equation 
+ ( S a v ± ( x ) = ) ∫ − a a ( g ( x − y ) − λ r ( x , y ) ) v ± ( y ) d y = e ± x ± i , (S_{a}v_{\pm}(x)=)~\int_{-a}^{a}(g(x-y)-\lambda r(x,y))v_{\pm}(y)\,dy=e^{\pm x}\pm i, 
+ whose kernel is an ordinary function rather than a distribution. 
+ Assume RH.
+Then G a > 0 G_{a}>0 , so one may take λ = 0 \lambda=0 and hence S a = G a S_{a}=G_{a} .
+Extending v a , ± v_{a,\pm} by zero outside [ − a , a ] [-a,a] ,
+we obtain
+ G a ​ v a , ± = g ∗ v a , ± G_{a}v_{a,\pm}=g\ast v_{a,\pm} ,
+and the right-hand side extends naturally to a function on ℝ \mathbb{R} .
+Thus the equation
+ S a ​ v a , ± = e ± x ± i S_{a}v_{a,\pm}=e^{\pm x}\pm i 
+may be written as
+ g ∗ v a , ± = h a , ± g\ast v_{a,\pm}=h_{a,\pm} ,
+where
+ h a , ± ​ ( x ) = e ± x ± i h_{a,\pm}(x)=e^{\pm x}\pm i 
+for x ∈ [ − a , a ] x\in[-a,a] .
+Taking Fourier transforms yields 
+ v a , ± ^ ​ ( z ) = h a , ± ^ ​ ( z ) g ^ ​ ( z ) . \widehat{v_{a,\pm}}(z)=\frac{\widehat{h_{a,\pm}}(z)}{\widehat{g}(z)}. 
+ Since
+ g ^ ​ ( z ) = z − 2 ​ ξ ′ ​ ( 1 / 2 − i ​ z ) / ξ ​ ( 1 / 2 − i ​ z ) \widehat{g}(z)=z^{-2}\xi^{\prime}(1/2-iz)/\xi(1/2-iz) 
+by [ 13 , (1.2), (1.8)] ,
+we obtain 
+ W ​ ( a , θ ; z ) = z 2 ​ ξ ​ ( 1 / 2 − i ​ z ) ξ ′ ​ ( 1 / 2 − i ​ z ) ​ ( ( z − i ) ​ v a , + ^ ​ ( z ) + e i ​ θ ​ ( z + i ) ​ v a , − ^ ​ ( z ) ) . W(a,\theta;z)=z^{2}\frac{\xi(1/2-iz)}{\xi^{\prime}(1/2-iz)}\Bigl((z-i)\widehat{v_{a,+}}(z)+e^{i\theta}(z+i)\widehat{v_{a,-}}(z)\Bigr). 
+ This suggests the limiting relation ( 1.12 ). 
+ 8.4. Relation to Bombieri’s Problem 1 
+ Using G ~ \widetilde{G} in ( 8.1 )
+and P a P_{a} in ( 2.1 ), define 
+ G ~ a := P a ​ G ~ ​ P a : L 0 2 ​ ( − a , a ) → L 0 2 ​ ( − a , a ) . \widetilde{G}_{a}:=P_{a}\widetilde{G}P_{a}:L_{0}^{2}(-a,a)\to L_{0}^{2}(-a,a). 
+ Recall that G a = P a ​ G ​ P a G_{a}=P_{a}GP_{a} in ( 1.5 ),
+and B a = D ∗ ​ G a ​ D B_{a}=D^{\ast}G_{a}D in ( 1.6 ).
+Then 
+ ⟨ G ~ a ​ D ​ v , D ​ v ⟩ L 2 = ⟨ G a ​ D ​ v , D ​ v ⟩ L 2 = ⟨ B a ​ v , v ⟩ L 2 = Q W ​ ( v ) , v ∈ C c ∞ ​ ( − a , a ) , \langle\widetilde{G}_{a}Dv,Dv\rangle_{L^{2}}=\langle G_{a}Dv,Dv\rangle_{L^{2}}=\langle B_{a}v,v\rangle_{L^{2}}=Q_{W}(v),\quad v\in C_{c}^{\infty}(-a,a), 
+ (8.3) 
+ see [ 13 , Proposition 3.1] .
+For finite a a , the norm on H 0 1 ​ ( − a , a ) H_{0}^{1}(-a,a) defined by
+ ‖ v ‖ L 2 + ‖ v ′ ‖ L 2 \|v\|_{L^{2}}+\|v^{\prime}\|_{L^{2}} is equivalent to that defined by
+ ‖ v ′ ‖ L 2 \|v^{\prime}\|_{L^{2}} .
+Adopting the latter, the linear map
+ H 0 1 ​ ( − a , a ) → L 0 2 ​ ( − a , a ) H_{0}^{1}(-a,a)\to L_{0}^{2}(-a,a) given by v ↦ D ​ v v\mapsto Dv 
+becomes an isometric isomorphism.
+Hence the Rayleigh quotient
+ Q W ​ ( v ) / ‖ v ‖ H 1 2 Q_{W}(v)/\|v\|_{H^{1}}^{2} 
+on H 0 1 ​ ( − a , a ) H_{0}^{1}(-a,a) appearing in
+ [ 1 , Problem 1] 
+(and [ 2 , Problem B] )
+can be rewritten as the Rayleigh quotient on L 0 2 ​ ( − a , a ) L_{0}^{2}(-a,a) 
+ Q W ​ ( v ) ‖ v ‖ H 1 2 = Q G ​ ( u ) ‖ u ‖ L 2 2 , u = D ​ v , \frac{Q_{W}(v)}{\|v\|_{H^{1}}^{2}}=\frac{Q_{G}(u)}{\|u\|_{L^{2}}^{2}},\qquad u=Dv, 
+ by [ 13 , Proposition 3.1] .
+In other words,
+ [ 1 , Problem 1] 
+(and [ 2 , Problem B] )
+is nothing but the eigenvalue problem for
+ G a = P a ​ G ​ P a = P a ​ G ~ ​ P a G_{a}=P_{a}GP_{a}=P_{a}\widetilde{G}P_{a} 
+on L 0 2 ​ ( − a , a ) L_{0}^{2}(-a,a) .
+ [ 1 , Theorem 4] asserts that if this infimum is negative,
+then it is attained in L 2 ​ ( − a , a ) L^{2}(-a,a) .
+From the viewpoint of the eigenvalue problem for G a G_{a} ,
+this is immediate. 
+ Since Q W Q_{W} is bounded with respect to the H 1 H^{1} -norm,
+the Riesz representation theorem implies that it is represented
+by a bounded operator.
+That operator is precisely G ~ a = G a \widetilde{G}_{a}=G_{a} 
+(they coincide on L 0 2 ​ ( − a , a ) L_{0}^{2}(-a,a) ).
+Problem 1 in [ 1 ] corresponds to this formulation. 
+ 8.5. Reformulation as a generalized eigenvalue problem 
+ By ( 8.2 ), 
+ ‖ v ‖ L 2 2 = ⟨ K a ​ u , u ⟩ L 2 \|v\|_{L^{2}}^{2}=\langle K_{a}u,u\rangle_{L^{2}} 
+ with u = D ​ v u=Dv and K a = ( − Δ N ) − 1 K_{a}=(-\Delta_{N})^{-1} .
+Combining this with ( 8.3 ),
+the Rayleigh quotient in ( 1.7 ) can be rewritten as 
+ Q W a ​ ( v ) ‖ v ‖ L 2 2 = ⟨ G a ​ u , u ⟩ L 2 ⟨ K a ​ u , u ⟩ L 2 \frac{Q_{W}^{\,a}(v)}{\|v\|_{L^{2}}^{2}}=\frac{\langle G_{a}u,u\rangle_{L^{2}}}{\langle K_{a}u,u\rangle_{L^{2}}} 
+ (8.4) 
+ for v ∈ H 0 1 ​ ( − a , a ) v\in H_{0}^{1}(-a,a) and u = D ​ v ∈ L 0 2 ​ ( − a , a ) u=Dv\in L_{0}^{2}(-a,a) .
+The right-hand side of ( 8.4 )
+leads to the generalized eigenvalue problem 
+ G a ​ u = λ ​ K a ​ u , u ∈ ℋ ​ ( S a ) . G_{a}u=\lambda K_{a}u,\qquad u\in\mathcal{H}(S_{a}). 
+ The spectrum of this generalized eigenvalue problem
+coincides with that of A a A_{a} .
+Hence it is discrete, bounded from below,
+and accumulates only at + ∞ +\infty .
+(The case λ = 0 \lambda=0 is exceptional:
+then the contribution of K a K_{a} disappears,
+and one is simply looking at the kernel
+(the 0 -eigenspace) of G a G_{a} .) 
+ Although A a A_{a} is unbounded,
+both G a G_{a} and K a K_{a} are compact operators
+with continuous integral kernels.
+In the generalized eigenvalue problem,
+one must analyze not only the spectra of G a G_{a} and K a K_{a} 
+individually but also the interaction between them.
+Thus it cannot be said a priori that the spectral analysis of A a A_{a} 
+becomes simpler.
+Nevertheless, the availability of compact-operator techniques
+may provide certain advantages. 
+ Acknowledgment 
+ This work was supported by JSPS KAKENHI Grant Number JP23K03050.
+This work was also supported by the Research Institute for Mathematical Sciences,
+an International Joint Usage/Research Center located in Kyoto University. 
+ References 
+ [1] 
+E. Bombieri,
+ Remarks on Weil’s quadratic functional in the theory of prime numbers. I,
+ Atti Accad. Naz. Lincei Cl. Sci. Fis. Mat. Natur. Rend. Lincei (9) Mat. Appl. 
+ 11 (2000), no. 3, 183–233 (2001).
+ [2] 
+E. Bombieri,
+ A variational approach to the explicit formula,
+ Comm. Pure Appl. Math. 
+ 56 (2003), no. 8, 1151–1164.
+ [3] 
+A. Connes, C. Consani,
+ Spectral triples and ζ \zeta -cycles,
+ Enseign. Math. 
+ 69 (2023), no. 1-2, 93–148.
+ [4] 
+A. Connes, C. Consani, H. Moscovici,
+ Zeta spectral triples,
+ https://arxiv.org/abs/2511.22755 
+ [5] 
+M. Fukushima, Y. Oshima, M. Takeda,
+ Dirichlet forms and symmetric Markov processes,
+ Second revised and extended edition, De Gruyter Studies in Mathematics, 19 ,
+ Walter de Gruyter & Co., Berlin ,
+ 2011.
+ [6] 
+I. S. Gradshteyn, I. M. Ryzhik,
+ Table of integrals, series, and products. Seventh edition,
+ Elsevier/Academic Press, Amsterdam ,
+ 2007.
+ [7] 
+T. Kato,
+ Perturbation theory for linear operators. Reprint of the 1980 edition. Classics in Mathematics,
+ Springer-Verlag, Berlin ,
+ 1995.
+ [8] 
+M. G. Kreĭn, H. Langer,
+ Continuation of hermitian positive definite functions and related questions,
+ Integral Equations Operator Theory 
+ 78 (2014), no. 1, 1–69.
+ [9] 
+D. Lenz, P. Stollmann, I. Veselić,
+ The Allegretto-Piepenbrink theorem for strongly local Dirichlet forms,
+ Doc. Math. 
+ 14 (2009), 167–189.
+ [10] 
+F. Olver, D. Lozier, R. Boisvert, C. Clark (eds),
+ NIST handbook of mathematical functions,
+ Cambridge University Press, Cambridge ,
+ 2010.
+ [11] 
+M. Reed, B. Simon,
+ Methods of modern mathematical physics. II. Fourier analysis, self-adjointness,
+ Academic Press [Harcourt Brace Jovanovich, Publishers], New York-London ,
+ 1975.
+ [12] 
+K. Schmüdgen,
+ Unbounded self-adjoint operators on Hilbert space,
+ Graduate Texts in Mathematics 265 ,
+ Springer, Dordrecht ,
+ 2012.
+ [13] 
+M. Suzuki,
+ Aspects of the screw function corresponding to the Riemann zeta function,
+ J. Lond. Math. Soc. 
+ 108 (2023), no.4, 1448-1487.
+ [14] 
+M. Suzuki,
+ On the Hilbert space derived from the Weil distribution,
+ Canadian Journal of Mathematics 
+ (FirstView).
+ [15] 
+A. Weil,
+ Sur les “formules explicites” de la théorie des nombres
+premiers,
+ Comm. Sém. Math. Univ. Lund [Medd. Lunds Univ. Mat. Sem.] ,
+ 1952 (1952), Tome Supplémentaire, 252–265.
+ [16] 
+A. Weil,
+ Sur les formules explicites de la théorie des nombres,
+ Izv. Akad. Nauk SSSR Ser. Mat. ,
+ 36 (1972), 3–18..
+ [17] 
+H. Yoshida,
+ On Hermitian forms attached to zeta functions,
+ Zeta functions in geometry (Tokyo, 1990) ,
+ 281–325, Adv. Stud. Pure Math., 21,
+ Kinokuniya, Tokyo ,
+ 1992.
+ Department of Mathematics, 
+ School of Science, 
+ Institute of Science Tokyo 
+ 2-12-1 Ookayama, Meguro-ku, 
+ Tokyo 152-8551, Japan 
+Email: msuzuki@math.sci.isct.ac.jp 
+ Experimental support, please
+ view the build logs 
+ for errors. Generated by
+ L
+ A 
+ T
+ E 
+ xml 
+ .
+ Instructions for reporting errors 
+ We are continuing to improve HTML versions of papers, and your feedback helps enhance accessibility and mobile
+ support. To report errors in the HTML that will help us improve conversion and rendering, choose any of the
+ methods listed below: 
+ Click the "Report Issue" ( 
+ ) button, located in the page header. 
+ Tip: You can select the relevant text first, to include it in your report. 
+ Our team has already identified the following issues . We appreciate your time reviewing and reporting rendering errors we
+ may not have found yet. Your efforts will help us improve the HTML versions for all readers, because disability
+ should not be a barrier to accessing research. Thank you for your continued support in championing open access for
+ all. 
+ Have a free development cycle? Help support accessibility at arXiv! Our collaborators at LaTeXML maintain a list of packages that need conversion , and welcome developer contributions . 
+ We gratefully acknowledge support from
+ our major funders ,
+ member institutions , ,
+ and all contributors.
+ About 
+ · 
+ Help 
+ · 
+ Contact 
+ · 
+ Subscribe 
+ · 
+ Copyright 
+ · 
+ Privacy 
+ · 
+ Accessibility 
+ · 
+ Operational Status (opens in new tab) 
+ Major funding support from 

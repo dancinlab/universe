@@ -6,7 +6,7 @@ title: 스즈키 2026 논문이 제타 영점과 원자 에너지 준위의 직�
 domain: 수론-양자역학 대응
 tier: 🔴 FALSIFIED
 status: closed
-wired: none
+wired: source-checked
 pre_register_frozen: true
 frozen_at: 2026-07-25
 since: 2026-07-25
@@ -68,27 +68,44 @@ related: [H_002]
 
 ## 정직한 한계
 
-- **L1**: 1차 대조 근거는 초록·서지 원문이고, 본문 30쪽 전문은 한 경로(Codex 5.6 의 HTML 판독)
-  에서만 확인됐다. 본문 인용(§1.1 · §1.2 · Corollary 1.6) 은 단일 경로 근거다.
+- **L1**: 대조 대상은 arXiv 의 LaTeXML HTML 렌더링을 평문화한 것이지 PDF 원본이 아니다. 수식은
+  MathML 이 평문으로 풀린 형태로 들어온다. 다만 판정에 쓰인 어휘는 전부 산문이고, 변환이 산문을
+  보존했다는 대조군으로 수학 용어 빈도(theorem 68 · self-adjoint 54 · screw function 25) 를
+  같은 스캔에서 함께 센다 — 변환 유실이면 이쪽도 0 이 나와야 한다.
 - **L2**: 영상 텍스트는 자동자막이라 음차 오류가 있다("리반 가설" 등). 다만 주장 사슬의 골자는
   반복 등장해 오인 여지가 낮다.
 - **L3**: 정확도 점수(아래)는 정량 측정이 아니라 두 모델의 판단이며, 각각 18점·20점으로 갈렸다.
+  판정 자체(FALSIFIED) 는 이 점수와 무관하게 기계 검사만으로 선다.
+- **L4**: C1 은 어휘 부재로 판정한다. 논문이 물리 개념을 완전히 다른 용어로만 부르는 경우는
+  이 검사가 놓칠 수 있다. 다만 분류(C2)·추측 여부(C3)·산술(C4) 이 독립적으로 같은 방향이라
+  단일 검사에 판정이 걸려 있지는 않다.
 
 ## 교차 링크
 
 - **paper**: `arXiv:2606.09096` — Masatoshi Suzuki, "Weil's quadratic form via the screw
   function", 2026-06-08, 30쪽, math.NT · math.FA
 - **prior**: `arXiv:2308.11860` — Suzuki (2023), screw function 도입
-- **evidence_paths**: `state/verdicts/zeta_zeros_vs_atomic_levels/H_001.txt`
-- **source_paths**: `state/zeta_zeros_vs_atomic_levels/`
+- **evidence_paths**: `state/verdicts/zeta_zeros_vs_atomic_levels/H_001_source_check.txt` (원문 기계
+  검사 · 1차 증거) · `state/verdicts/zeta_zeros_vs_atomic_levels/H_001.txt` (2모델 독립 판독 · 보조)
+- **source_paths**: `state/zeta_zeros_vs_atomic_levels/` (자막 전문 · 서지 · 본문 전문 · 검사 스크립트)
 - **related**: H_002 (영상이 왜곡한 실제 대응 — GUE 보편성의 직접 재현)
 
 ## 판정
 
 ```
 verdict_class: FALSIFIED
+measured (원문 기계 검사 · 본문 30쪽 평문 150,952자 전수 스캔):
+  물리 어휘 빈도    atom 0 · atomic 0 · hydrogen 0 · energy level 0 · electron 0 · eV 0
+                    Schrodinger 0 · Schrödinger 0 · Hamiltonian 0 · quantum jump 0  (합계 0)
+  수학 어휘 빈도    theorem 68 · self-adjoint 54 · screw function 25 · Weil quadratic form 7
+                    Riemann zeta 5 · nontrivial zeros 3 · conjecture 2 · nonlocal 1
+                    (변환 유실 대조군 — 산문이 보존됐음을 같은 스캔이 스스로 보인다)
+  분류              Number Theory (math.NT); Functional Analysis (math.FA) — 물리 분류 0건
+  수소 보어 준위    n=4 -0.8500 · n=5 -0.5440 · n=6 -0.3778 · n=7 -0.2776 eV
+                    → 영상이 '간격'이라 부른 네 숫자와 전부 일치 = 그것들은 준위값이다
+  실제 인접 간격    0.3060 · 0.1662 · 0.1002 eV — 영상이 든 숫자와 일치하는 것이 하나도 없다
 evidence_summary:
-  - C1 FAIL — 초록에 원자·수소·eV 없음. 대상은 "비자명 영점의 허수부를 고유값으로 갖는 자기수반
+  - C1 FAIL — 본문 전체에 원자·수소·eV 없음(빈도 0). 대상은 "비자명 영점의 허수부를 고유값으로 갖는 자기수반
     연산자"이며, 유한구간 [-a,a] 위 1계 미분연산자의 비국소 실현의 a→∞ 극한으로 얻는 구성.
   - C2 FAIL — 분류 math.NT + math.FA 뿐. 물리 분류 없음 (MSC 11M26·42A82·46E22·47B25).
   - C3 FAIL — 초록이 "we formulate a conjecture" 로 명시. 정리가 아니라 추측이며, 논문은
@@ -113,10 +130,17 @@ biggest_misrepresentation: >
   보조함수의 실수 영점(정리) → 제타 영점으로 수렴한다는 극한(미증명 추측) → 실제 원자의 에너지
   준위(물리) — 서로 다른 세 대상을 하나로 합친 것. 과장이 아니라 수학적 대상의 바꿔치기.
 accuracy_score: 18-20 / 100 (2경로 독립 채점 · 소수-오일러곱-리만 배경만 정확)
+verification_path: >
+  1차 판정은 두 프런티어 모델의 독립 판독이었고, 저장소 규칙이 모델 자가판정을 증거로 인정하지
+  않으므로 본문 전문을 내려받아 어휘 빈도·분류·산술만으로 재판정했다. 판단 단계가 없는 검사이며
+  재실행 시 같은 수치가 나온다. 두 경로의 결론이 일치했다.
 next:
-  - H_002 — 영상이 왜곡한 대응(GUE 보편성) 을 우리가 직접 수치로 재현
+  - H_002 — 영상이 왜곡한 대응(GUE 보편성) 을 우리가 직접 수치로 재현 (완료 · 🟢 VERIFIED)
 artifact_paths:
+  - state/zeta_zeros_vs_atomic_levels/verify.py
+  - state/zeta_zeros_vs_atomic_levels/data/arxiv-2606.09096v1-fulltext.txt
   - state/zeta_zeros_vs_atomic_levels/transcript.txt
   - state/zeta_zeros_vs_atomic_levels/arxiv-2606.09096-abstract.txt
+  - state/verdicts/zeta_zeros_vs_atomic_levels/H_001_source_check.txt
   - state/verdicts/zeta_zeros_vs_atomic_levels/H_001.txt
 ```
