@@ -37,3 +37,6 @@ Thumbs.db
 # scratch
 drafts/
 tmp/
+
+# sidecar harness session logs
+.harness/logs/

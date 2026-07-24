@@ -1,0 +1,132 @@
+{
+  "schemaVersion": "2.0",
+  "kind": "architecture-tree",
+  "title": "universe — 아키텍처 SSOT",
+  "summary": "우주·양자역학·리만가설 주장을 등록·반증하는 가설 레지스트리. 핵심: 결론을 인용해 쌓지 않고, 기준선을 사전 동결한 뒤 측정으로 판정해 카드로 박제한다.",
+  "columns": [
+    { "key": "name", "label": "name", "tree": true },
+    { "key": "role", "label": "role" },
+    { "key": "id", "label": "id" },
+    { "key": "detail", "label": "detail" }
+  ],
+  "tree": {
+    "name": "universe",
+    "role": "가설 레지스트리 저장소 — 주장마다 기준선 동결 → 측정 → 판정 박제",
+    "id": "universe",
+    "detail": "가설 폴더 체계는 dancinlab/anima 채택. 도메인은 수론-양자역학 대응(제타 영점·스펙트럼 해석·무작위행렬 보편성).",
+    "children": [
+      {
+        "name": "HYPOTHESES/",
+        "role": "가설·판정 레지스트리",
+        "id": "hypotheses",
+        "detail": "3-표면 불변식 — git 추적 대상은 cards/** + HYPOTHESES.jsonl + CLAUDE.md 뿐. 코드·결과는 state/<slug>/ 로 분리한다.",
+        "children": [
+          {
+            "name": "cards/",
+            "role": "한 가설의 SSOT 본문",
+            "id": "hypotheses-cards",
+            "detail": "H_<id>_<slug>.md — YAML 머리말 + 고정 섹션(가설·근거·예측·변수·실행규약·판정기준·반증조건·정직한한계·교차링크·판정). _TEMPLATE.md 는 밑줄 접두사라 인덱스 제외."
+          },
+          {
+            "name": "HYPOTHESES.jsonl",
+            "role": "카드에서 파생된 id 순 인덱스",
+            "id": "hypotheses-index",
+            "detail": "손으로 고치지 않는다. tool/build_hypotheses_index.py 로 재생성."
+          },
+          {
+            "name": "CLAUDE.md",
+            "role": "폴더 규칙 + 등급 정의 + 판정 전 5초 체크",
+            "id": "hypotheses-guide",
+            "detail": "매 턴 재주입되므로 영문·간결 유지."
+          }
+        ]
+      },
+      {
+        "name": "tool/",
+        "role": "불변식 유지 스크립트",
+        "id": "tool",
+        "detail": "표준 라이브러리만 사용 · 의존성 0 · 어디서 실행해도 자기 경로에서 저장소 루트를 찾는다.",
+        "children": [
+          {
+            "name": "build_hypotheses_index.py",
+            "role": "카드 → HYPOTHESES.jsonl 재생성",
+            "id": "tool-build-index",
+            "detail": "멱등. 카드 머리말에서 id·slug·title·domain·tier·status·wired·frozen_at·since·related 를 뽑아 id 순으로 쓴다."
+          },
+          {
+            "name": "check_hypotheses_surface.py",
+            "role": "3-표면 불변식 + 인덱스 신선도 게이트",
+            "id": "tool-check-surface",
+            "detail": "위반 시 exit 1. 커밋·CI 게이트로 쓸 수 있다."
+          }
+        ]
+      },
+      {
+        "name": "state/",
+        "role": "모든 작업 산출물의 단일 위치",
+        "id": "state",
+        "detail": "실험·측정·판정 증거·스크래치를 여기 하나로 모아 git 으로 추적한다.",
+        "children": [
+          {
+            "name": "state/<slug>/",
+            "role": "원자료",
+            "id": "state-raw",
+            "detail": "자막 전문·논문 초록 원문 등 판정의 입력이 된 1차 자료."
+          },
+          {
+            "name": "state/verdicts/<slug>/",
+            "role": "판정 근거",
+            "id": "state-verdicts",
+            "detail": "판정에 쓴 출력을 가공 없이 그대로 캡처해 둔다."
+          }
+        ]
+      },
+      {
+        "name": "판정 등급",
+        "role": "카드 tier 의 값 집합",
+        "id": "tiers",
+        "detail": "등급은 카드 머리말 tier 와 인덱스에 동시에 나타난다.",
+        "children": [
+          { "name": "PROPOSED", "role": "사전등록 완료 · 미실행", "id": "tier-proposed", "detail": "기준선만 동결된 상태." },
+          { "name": "RUNNING", "role": "측정 진행 중", "id": "tier-running", "detail": "결과 미확정." },
+          { "name": "VERIFIED", "role": "기준선 통과 + 배선 완료", "id": "tier-verified", "detail": "검증만 하고 실제 시스템에 안 붙었으면 VERIFIED 가 아니다." },
+          { "name": "WALL", "role": "측정했고 막힘", "id": "tier-wall", "detail": "진짜 부정 결과이며 재개방 가능." },
+          { "name": "FALSIFIED", "role": "사전등록 반증조건 발동", "id": "tier-falsified", "detail": "어느 반증조건이 발동했는지 카드에 남긴다." },
+          { "name": "INSTRUMENT-DEAD", "role": "측정 경로 자체가 무효", "id": "tier-instrument-dead", "detail": "과학적 주장 없음." },
+          { "name": "BLOCKED-INFRA", "role": "인프라 장애", "id": "tier-blocked-infra", "detail": "판정이 아니다. 기준선은 움직이지 않는다." }
+        ]
+      },
+      {
+        "name": "데이터 흐름",
+        "role": "등록에서 커밋까지",
+        "id": "flow",
+        "detail": "연구 → 사전등록(기준선 동결) → 실행 → 출력 그대로 캡처 → state/verdicts/<slug>/<id>.txt → cards/H_<id>_<slug>.md → 인덱스 재생성 → 게이트 통과 → 커밋"
+      },
+      {
+        "name": "언어 정책",
+        "role": "문서는 한글 · 재주입 문서와 코드는 영문",
+        "id": "language-policy",
+        "detail": "README·카드·ARCHITECTURE 사람필드·CHANGELOG 본문은 한글. CLAUDE.md 와 .harness/commons.md 는 매 턴 재주입되므로 영문·간결(하네스 가드 INJECT-NON-ENGLISH). 코드 식별자·주석·커밋 제목은 영문."
+      }
+    ]
+  },
+  "convergence": {
+    "note": "재발방지 학습 SSOT. state = pos-conv🟢(포지티브 수렴) | in-prog🔄(진행·검토) | neg-conv🔴(네거티브·반증). 재발 시 update-in-place.",
+    "records": [
+      {
+        "id": "POPSCI_OBJECT_SUBSTITUTION",
+        "state": "pos-conv",
+        "value": "주장을 검증할 때는 강도(얼마나 세게 말했나)가 아니라 대상(무엇에 대한 진술인가)이 보존되는지를 먼저 본다.",
+        "threshold": "H_001 — 대중과학 서사가 '보조함수의 실수 영점(정리) → 제타 영점으로 수렴한다는 미증명 추측 → 실제 원자의 에너지 준위(물리)' 세 대상을 하나로 합쳤다. 과장이 아니라 대상 바꿔치기였다.",
+        "source": "HYPOTHESES/cards/H_001_zeta_zeros_vs_atomic_levels.md"
+      },
+      {
+        "id": "CONJECTURE_NOT_THEOREM",
+        "state": "pos-conv",
+        "value": "논문 분류(subject)와 초록의 동사만 봐도 물리적 발견 주장인지 순수수학 추측인지 갈린다 — 1차 대조를 건너뛰지 않는다.",
+        "threshold": "H_001 — 초록에 'we formulate a conjecture' 가 있었고 분류는 math.NT·math.FA 뿐이었는데, 2차 서술은 이를 '발견'으로 옮겼다.",
+        "source": "HYPOTHESES/cards/H_001_zeta_zeros_vs_atomic_levels.md"
+      }
+    ]
+  }
+}
