@@ -4,9 +4,9 @@ id: H_002
 slug: zeta_gue_universality
 title: 제타 영점의 정규화된 간격 분포는 포아송이 아니라 GUE 를 따른다
 domain: 수론-양자역학 대응
-tier: 🔵 PROPOSED
-status: proposed
-wired: none
+tier: 🟢 VERIFIED
+status: closed
+wired: reproducible-script
 pre_register_frozen: true
 frozen_at: 2026-07-25
 since: 2026-07-25
@@ -71,25 +71,55 @@ H_001 에서 확인했듯, 대중 서사가 "원자 에너지 준위와 일치" 
 - **L2**: unfolding 방식에 결과가 민감할 수 있다 — 밀도 공식과 구간 폭을 사전 고정해 둔다.
 - **L3**: 이 가설이 통과해도 "리만가설이 참" 이나 "물리적 해밀토니안이 존재한다" 는 따라 나오지
   않는다. 통계적 일치는 힐베르트-폴리아 프로그램의 정황 증거이지 증명이 아니다.
+- **L4** (실행 후 기록 · 규약 이탈): 사전등록한 세 번째 구간은 "10^6 번째 부근" 이었으나, 확보
+  가능한 공개 표가 10^12 부근이라 그것으로 대체했다. 더 높은 구간이므로 C3(높이가 오를수록
+  일치가 좋아진다) 에는 더 엄격한 시험이 됐다. 기준선은 손대지 않았고 구간 축만 바뀌었다.
+- **L5** (실행 후 기록): 비교 기준은 GUE 위그너 추측식(=2×2 근사식) 이지 정확한 GUE 간격 법칙
+  (Gaudin) 이 아니다. 절대 적합도 진단에서 W1·W2 는 KS 5% 임계값(0.01360) 을 넘었고 W3 만 그
+  안에 들었다. 즉 "포아송보다 GUE 에 압도적으로 가깝다" 는 결론은 강하게 서지만, "낮은 구간에서
+  위그너 추측식과 통계적으로 구별되지 않는다" 는 주장은 서지 않는다.
+- **L6**: 세 구간은 서로 겹치지 않는 독립 표본이고 계산은 난수를 쓰지 않아 재실행 시 출력이
+  바이트 단위로 동일하다. 다만 이는 결정론일 뿐 표본 다양성의 대체물은 아니다.
 
 ## 교차 링크
 
 - **prior**: 몽고메리(1973) 쌍상관 · 오들리즈코(1987) 수치 · 베리-키팅(1999) H=xp 반고전 모형
 - **related**: H_001 (이 대응을 왜곡한 대중 서사의 판정)
-- **evidence_paths**: `state/verdicts/zeta_gue_universality/H_002.txt` (미생성 — 실행 전)
+- **evidence_paths**: `state/verdicts/zeta_gue_universality/H_002.txt`
+- **data_source**: 오들리즈코 공개 표 — `zeros1`(최초 10^5 개) · `zeros3`(10^12+1 .. 10^12+10^4)
 
 ## 판정
 
 ```
-verdict_class: PROPOSED
+verdict_class: VERIFIED
+measured:
+  window                        n_s    mean_s   KS_GUE   KS_GOE   KS_Poisson   P(s<=0.2)
+  W1 최초 10^4                  9999   1.00002  0.02755  0.09524  0.30678      0.00420
+  W2 9*10^4..10^5               9999   1.00000  0.01897  0.08528  0.29682      0.00670
+  W3 10^12+1..10^12+10^4        9999   1.00011  0.00569  0.06942  0.28304      0.00830
+  (포아송 기준 P(s<=0.2) = 0.18127 · 평균 간격 1.0000x = unfolding 정상 동작 확인)
 evidence_summary:
-  - 미실행. 기준선(C1·C2·C3) 만 사전 동결됨.
-falsifiers_triggered: none
+  - C1 PASS — 세 구간 모두에서 KS(관측,GUE) 가 KS(관측,포아송) 의 절반보다 훨씬 작다.
+    W3 에서는 0.00569 대 0.14152 로 25배 차이.
+  - C2 PASS — s<=0.2 구간 질량이 포아송 예측(0.18127) 의 절반은커녕 1/20 수준(0.0042~0.0083).
+    준위 반발(=영점끼리 서로 가까워지길 꺼리는 성질) 이 뚜렷하다.
+  - C3 PASS — 높이가 오를수록 GUE 와의 거리가 단조 감소: 0.02755 → 0.01897 → 0.00569.
+  - GOE 는 세 구간 모두에서 GUE 보다 나빴다(0.069~0.095). 대칭 부류 귀속은 GUE 가 맞다.
+  - 재실행 출력이 바이트 단위로 동일 — 난수 미사용, 결정론적.
+falsifiers_triggered: none (F1·F2·F3 전부 미발동)
 criteria_met:
-  - C1: 미측정
-  - C2: 미측정
-  - C3: 미측정
+  - C1: PASS
+  - C2: PASS
+  - C3: PASS
+diagnostic:
+  - 절대 적합도(기준선 아님): KS 5% 임계값 1.36/sqrt(9999)=0.01360 대비 W1·W2 는 초과, W3 만
+    이내. 낮은 구간에서 위그너 추측식과의 편차는 실재하며 L5 에 기록.
 next:
-  - 영점 데이터 출처 확정 → unfolding → KS 3종 비교 실행
-artifact_paths: []
+  - H_003 후보 — 쌍상관 함수와 수 분산(number variance) 으로 축 확장 (현재는 이웃 간격만 측정)
+  - H_004 후보 — 위그너 추측식 대신 정확한 GUE(Gaudin) 법칙으로 W1·W2 편차가 사라지는지 확인
+artifact_paths:
+  - state/zeta_gue_universality/measure.py
+  - state/zeta_gue_universality/data/odlyzko_zeros1.txt
+  - state/zeta_gue_universality/data/odlyzko_zeros3.txt
+  - state/verdicts/zeta_gue_universality/H_002.txt
 ```

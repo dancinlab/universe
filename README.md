@@ -23,7 +23,7 @@ universe/
 | id | 등급 | 주장 |
 | --- | --- | --- |
 | H_001 | 🔴 FALSIFIED | 스즈키 2026 논문이 제타 영점과 원자 에너지 준위의 직접 관련을 발견했다 |
-| H_002 | 🔵 PROPOSED | 제타 영점의 정규화된 간격 분포는 포아송이 아니라 GUE 를 따른다 |
+| H_002 | 🟢 VERIFIED | 제타 영점의 정규화된 간격 분포는 포아송이 아니라 GUE 를 따른다 |
 
 전체 목록은 `HYPOTHESES/HYPOTHESES.jsonl`, 규칙과 등급 정의는 `HYPOTHESES/CLAUDE.md` 를 본다.
 

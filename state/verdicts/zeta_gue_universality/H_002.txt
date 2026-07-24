@@ -1,0 +1,34 @@
+loaded: zeros1 n=100000 (gamma 14.134725 .. 74920.827499)
+loaded: zeros3 n=10000 (gamma 267653395648.847534 .. 267653398216.046265)
+
+window                              n_s   mean s   KS_GUE   KS_GOE  KS_Pois  P(s<=.2)
+-------------------------------------------------------------------------------------
+W1  first 10^4 zeros               9999  1.00002  0.02755  0.09524  0.30678   0.00420
+W2  zeros 9*10^4..10^5             9999  1.00000  0.01897  0.08528  0.29682   0.00670
+W3  zeros 10^12+1..10^12+10^4      9999  1.00011  0.00569  0.06942  0.28304   0.00830
+
+Poisson reference mass below s=0.2: 0.18127
+
+diagnostic (not a criterion) — absolute goodness of fit vs the GUE Wigner surmise:
+  W1  first 10^4 zeros             KS_GUE=0.02755  5% crit=0.01360  -> exceeds
+  W2  zeros 9*10^4..10^5           KS_GUE=0.01897  5% crit=0.01360  -> exceeds
+  W3  zeros 10^12+1..10^12+10^4    KS_GUE=0.00569  5% crit=0.01360  -> within
+
+criteria (frozen before measurement):
+  C1  KS_GUE < 0.5 * KS_Poisson in every window          : PASS
+        W1  first 10^4 zeros             0.02755 vs 0.15339
+        W2  zeros 9*10^4..10^5           0.01897 vs 0.14841
+        W3  zeros 10^12+1..10^12+10^4    0.00569 vs 0.14152
+  C2  mass(s<=0.2) <= 0.5 * Poisson in every window      : PASS
+        W1  first 10^4 zeros             0.00420 vs 0.09063
+        W2  zeros 9*10^4..10^5           0.00670 vs 0.09063
+        W3  zeros 10^12+1..10^12+10^4    0.00830 vs 0.09063
+  C3  KS_GUE decreases monotonically with height         : PASS
+        0.02755 -> 0.01897 -> 0.00569
+
+falsifiers:
+  F1  KS_Poisson <= KS_GUE anywhere : not fired
+  F2  no suppression at small s     : not fired
+  F3  GOE beats GUE in every window : not fired
+
+verdict_class: VERIFIED  (rule: VERIFIED=C1+C2+C3, PARTIAL=C1+C2, FALSIFIED=C1 fails)
